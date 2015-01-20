@@ -1,0 +1,46 @@
+/***** SASS VARIABLES *****/
+
+$font-base:	'FranklinGothicLTCom-Bk', Arial, sans-serif;
+$font-bold:	'FranklinGothicLTCom-Md', 'Franklin Gothic Medium', Arial, sans-serif;
+
+$text-color: #333;
+
+$text-small: 0.7rem;
+$text-base: 1rem;
+$text-large: 1.4rem;
+$text-xlarge: 1.8rem;
+
+$menu-collapse-padding: 18px;
+
+@mixin text-small-caps {
+	font-size: $text-small;
+	text-transform: uppercase;
+	letter-spacing: 0.05rem;
+}
+
+@mixin text-base-caps {
+	font-size: $text-base;
+	text-transform: uppercase;
+	letter-spacing: 0.05rem;
+}
+
+@mixin text-large-lower {
+	font-size: $text-large;
+	text-transform: lowercase;
+}
+
+@mixin text-xlarge-quote {
+	font-family: $font-base;
+	@media #{$small-only} { 
+		font-size: $text-large;
+	}
+	@media #{$medium-up} {
+		font-size: $text-xlarge;
+	}	
+}
+
+@mixin text-large-quote {
+	font-family: $font-quote;
+	font-weight: bold;
+	font-size: $text-large;
+}
