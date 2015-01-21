@@ -61,6 +61,7 @@
 
 	ga('create', 'UA-58632349-1', 'auto');
 	ga('require', 'linkid', 'linkid.js');	
+	ga('require', 'displayfeatures');
 	ga('send', 'pageview');
 </script>
 	
