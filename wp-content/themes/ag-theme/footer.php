@@ -19,8 +19,10 @@
 						<a href="<?php echo home_url(); ?>/contact/">Contact Us</a><br />
 						<a href="<?php echo home_url(); ?>/funding/">Government Funding</a><br />
 						<br />
+<!--						
 						<a href="<?php echo home_url(); ?>/terms/">Terms of Use</a><br />
 						<a href="<?php echo home_url(); ?>/privacy/">Privacy</a>
+-->					
 					</div>
 				</div>	
 				<div class="small-12 large-6 columns">
