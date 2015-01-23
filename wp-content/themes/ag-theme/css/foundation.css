@@ -7953,6 +7953,18 @@ figure {
   border: none;
   font-style: normal; }
 
+@media only screen {
+  .radius-left {
+    border-radius: 3px !important; }
+
+  .radius-right {
+    border-radius: 3px !important; } }
+@media only screen and (min-width: 40.063em) {
+  .radius-left {
+    border-radius: 3px 0 0 3px !important; }
+
+  .radius-right {
+    border-radius: 0 3px 3px 0 !important; } }
 .prePostfix-radius--fix-left {
   border-radius: 3px 0 0 3px !important; }
 
@@ -8395,7 +8407,7 @@ button.filter:hover {
   display: none; }
 
 /***** NINJA FORMS *****/
-.ninja-forms-field {
+.ninja-forms-field, .newsletter__input {
   margin-bottom: 1em !important; }
 
 .ninja-forms-required-items {

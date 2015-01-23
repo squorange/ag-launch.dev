@@ -18,13 +18,23 @@
 	    <input type="hidden" name="reallistid" value="1">
 	    <input type="hidden" name="doubleopt" value="0">
 		
-			<div class="medium-8 medium-offset-2 columns">
-	      <div class="row collapse postfix-radius">			
-	        <div class="small-8 columns">
-	          <input class="prePostfix-radius--fix-left" type="text" name="fields_email" placeholder="What is your email?">
+			<div class="medium-6 medium-offset-3 columns">
+	      <div class="row medium-collapse">			
+	        <div class="medium-6 columns">
+						<input type="text" class="newsletter__input radius-left" name="fields_fname" placeholder="First name">
+					</div>
+	        <div class="medium-6 columns">
+						<input type="text" class="newsletter__input radius-right" name="fields_lname" placeholder="Last name">
+					</div>
+				</div>
+				<div class="row small-uncollapse medium-collapse">
+					<div class="medium-12 columns">
+	          <input type="text" class="newsletter__input radius" name="fields_email" placeholder="What is your email?">
 	        </div>
-	        <div class="small-4 columns">
-	          <a href="javascript:{}" class="button radius postfix text--bold" onclick="document.getElementById('icpsignup3221').submit(); return false;">Sign up</a>
+				</div>
+				<div class="row">
+	        <div class="medium-8 medium-offset-2 large-6 large-offset-3 columns">
+	          <a href="javascript:{}" class="button radius expand text--bold" onclick="document.getElementById('icpsignup3221').submit(); return false;">Get Newsletter</a>
 	        </div>				
 	      </div>
 			</div>
