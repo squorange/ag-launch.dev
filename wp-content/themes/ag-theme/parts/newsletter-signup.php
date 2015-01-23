@@ -33,8 +33,8 @@
 	        </div>
 				</div>
 				<div class="row">
-	        <div class="medium-6 medium-offset-3 columns">
-	          <a href="javascript:{}" class="button radius expand text--bold" onclick="document.getElementById('icpsignup3221').submit(); return false;">Sign up</a>
+	        <div class="medium-8 medium-offset-2 large-6 large-offset-3 columns">
+	          <a href="javascript:{}" class="button radius expand text--bold" onclick="document.getElementById('icpsignup3221').submit(); return false;">Get Newsletter</a>
 	        </div>				
 	      </div>
 			</div>
