@@ -67,7 +67,7 @@
 				
 			</section>
 		
-			<section class="clearfix l-gray-light">
+			<section class="clearfix <?php the_field('testimonial_present'); ?>">
 				<div class="row">
 					<div class="small-12 medium-8 medium-offset-2 columns text--center">
 						<h2 class="post__subtitle">Here's what our client has to say</h2>
