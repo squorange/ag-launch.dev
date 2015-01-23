@@ -22,6 +22,7 @@
 						<?php the_content(); ?>
 						<div class="post__credits">
 							<?php the_field('artist_credits'); ?>
+							Curated by <a href="http://artangel.co.kr/" target="_blank">Art Angel Company</a>
 						</div>
 					</div>
 				</div>
