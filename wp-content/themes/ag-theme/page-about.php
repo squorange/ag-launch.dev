@@ -69,8 +69,6 @@ Template Name: About
 				</div>
 		</div>
 	</section>
-
-	<a name="values"></a>
 		
 	<section class="l-header-featured l-gray-dark section--airtight clearfix">
 		<div class="row">
@@ -83,6 +81,7 @@ Template Name: About
 
   <section class="clearfix section--airtight"> <!-- BEGIN TILES -->
 		<div id="Container" class="l-tiles container clearfix">
+			<a name="values"></a>
 			<div class="tile-single-wide">
 				<a href="<?php the_field('core_beliefs_video'); ?>" class="swipebox-video">
 					<div class="tile__image-wrap">

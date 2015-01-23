@@ -99,11 +99,11 @@ $GLOBALS['REPLACE_LIST']
   ================================================================================================= */
 
 $GLOBALS['FW_TABLEPREFIX'] = 'wp_';
-$GLOBALS['FW_URL_OLD'] = 'http://agtest.squorange.com';
+$GLOBALS['FW_URL_OLD'] = 'http://awakengroup.com';
 $GLOBALS['FW_URL_NEW'] = '';
-$GLOBALS['FW_PACKAGE_NAME'] = '20150119_awakengroupwp_54be95b1e12868772150120175145_archive.zip';
+$GLOBALS['FW_PACKAGE_NAME'] = '20150122_awakengroupwp_54c18d49390765067150122235241_archive.zip';
 $GLOBALS['FW_PACKAGE_NOTES'] = '';
-$GLOBALS['FW_SECURE_NAME'] = '20150119_awakengroupwp_54be95b1e12868772150120175145';
+$GLOBALS['FW_SECURE_NAME'] = '20150122_awakengroupwp_54c18d49390765067150122235241';
 $GLOBALS['FW_DBHOST'] = '';
 $GLOBALS['FW_DBHOST'] = empty($GLOBALS['FW_DBHOST']) ? 'localhost' : $GLOBALS['FW_DBHOST'];
 $GLOBALS['FW_DBNAME'] = '';
@@ -113,8 +113,8 @@ $GLOBALS['FW_SSL_ADMIN'] = 0;
 $GLOBALS['FW_SSL_LOGIN'] = 0;
 $GLOBALS['FW_CACHE_WP'] = 0;
 $GLOBALS['FW_CACHE_PATH'] = 0;
-$GLOBALS['FW_BLOGNAME'] = 'Awaken Group WP';
-$GLOBALS['FW_WPROOT'] = '/home3/wtang18/public_html/sandbox/agwp/';
+$GLOBALS['FW_BLOGNAME'] = 'Awaken Group';
+$GLOBALS['FW_WPROOT'] = '/home2/awakengr/public_html/';
 $GLOBALS['FW_DUPLICATOR_VERSION'] = '0.5.12';
 $GLOBALS['FW_OPTS_DELETE'] = json_decode('["duplicator_ui_view_state","duplicator_package_active","duplicator_settings"]', true);
 

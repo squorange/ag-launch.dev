@@ -61,7 +61,7 @@ Template Name: Advise
 										<?php the_title(); ?>
 									</div>
 									<div class="tile__label-caption">
-										<?php the_field('project_challenge'); ?>
+										<?php echo get_the_excerpt(); ?>
 									</div>
 								</div><!-- end .tile__label-inner -->
 							</div><!-- end .tile__label-wrap -->
