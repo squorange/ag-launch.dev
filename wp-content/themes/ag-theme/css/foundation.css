@@ -8022,6 +8022,14 @@ figure {
   .l-gray-dark h2, .l-gray-dark h3 {
     color: #FFFFFF; }
 
+.l-testimonials em {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-style: normal;
+  margin-bottom: 3em; }
+
 .single-ag_share .l-newsletter {
   background: #F9F9F9; }
 

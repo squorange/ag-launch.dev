@@ -15,7 +15,7 @@ get_header(); ?>
 		</div>
 		<div class="row">
 			<div class="large-4 large-offset-4 medium-6 medium-offset-3 columns">
-				<a href="<?php echo home_url(); ?>/about/" class="button expand radius text--bold"><?php the_field('header_blurb'); ?></a>
+				<a href="<?php echo home_url(); ?>/about/" class="button expand"><?php the_field('header_blurb'); ?></a>
 			</div>
 		</div>
 	</header>

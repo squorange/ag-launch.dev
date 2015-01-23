@@ -21,20 +21,20 @@
 			<div class="medium-6 medium-offset-3 columns">
 	      <div class="row medium-collapse">			
 	        <div class="medium-6 columns">
-						<input type="text" class="newsletter__input radius-left" name="fields_fname" placeholder="First name">
+						<input type="text" class="newsletter__input" name="fields_fname" placeholder="First name">
 					</div>
 	        <div class="medium-6 columns">
-						<input type="text" class="newsletter__input radius-right" name="fields_lname" placeholder="Last name">
+						<input type="text" class="newsletter__input" name="fields_lname" placeholder="Last name">
 					</div>
 				</div>
 				<div class="row small-uncollapse medium-collapse">
 					<div class="medium-12 columns">
-	          <input type="text" class="newsletter__input radius" name="fields_email" placeholder="What is your email?">
+	          <input type="text" class="newsletter__input" name="fields_email" placeholder="What is your email?">
 	        </div>
 				</div>
 				<div class="row">
 	        <div class="medium-8 medium-offset-2 large-6 large-offset-3 columns">
-	          <a href="javascript:{}" class="button radius expand text--bold" onclick="document.getElementById('icpsignup3221').submit(); return false;">Get Newsletter</a>
+	          <a href="javascript:{}" class="button xradius expand" onclick="document.getElementById('icpsignup3221').submit(); return false;">Get Newsletter</a>
 	        </div>				
 	      </div>
 			</div>

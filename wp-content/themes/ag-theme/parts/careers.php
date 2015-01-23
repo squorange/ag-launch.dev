@@ -9,7 +9,7 @@
 	</div>
 	<div class="row row--last">
 		<div class="large-4 large-offset-4 medium-6 medium-offset-3 columns">
-			<a href="mailto:careers@awakengroup.com" class="button expand radius">careers@awakengroup.com</a>
+			<a href="mailto:careers@awakengroup.com" class="button expand">careers@awakengroup.com</a>
 		</div>
 	</div>	
 

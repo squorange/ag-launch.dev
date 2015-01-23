@@ -133,6 +133,13 @@ figure {
 	}
 }
 
+.l-testimonials em {
+	display: block;
+	@include text-small-caps;
+	font-style: normal;
+	margin-bottom: 3em;
+}
+
 .single-ag_share .l-newsletter {
 	background: $snow;
 }

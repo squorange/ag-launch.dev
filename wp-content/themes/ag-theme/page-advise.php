@@ -83,27 +83,93 @@ Template Name: Advise
 	
 		<div class="row clearfix text--center ">
 	    <div class="large-12 columns">
-				<h2 class="post__subtitle">Here's what our clients have to say</h2>
+				<h2 class="post__title text--bold">Here's what our clients have to say</h2>
 			</div>
 		</div>
-		<div class="row clearfix">
+		<div class="row clearfix l-testimonials">
 			<div class="medium-4 columns">
 				<?php the_field('advise_testimonial_1'); ?>
-				<br /><br />
 			</div>
 			<div class="medium-4 columns">
 				<?php the_field('advise_testimonial_2'); ?>
-				<br /><br />				
 			</div>
 			<div class="medium-4 columns">
 				<?php the_field('advise_testimonial_3'); ?>
-				<br /><br />				
 			</div>
 		</div>
-		<div class="row text--center ">			
-			<div class="large-12 columns">
-				<!--Client Logos-->
+		
+		<div class="row">		
+			<br />
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-borouge.png" />
 			</div>
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-choon.png" />
+			</div>
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-chung.png" />
+			</div>
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-csc.png" />
+			</div>
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-dama.png" />
+			</div>
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-elements.png" />
+			</div>			
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-hcd.png" />
+			</div>
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-hdb.png" />
+			</div>
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-hyundai.png" />
+			</div>
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-iloilo.png" />
+			</div>
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-imd.png" />
+			</div>
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-mnd.png" />
+			</div>		
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-mothercare.png" />
+			</div>
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-ngeeann.png" />
+			</div>
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-pernod.png" />
+			</div>
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-psd.png" />
+			</div>
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-pub.png" />
+			</div>
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-sas.png" />
+			</div>		
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-sentosa.png" />
+			</div>
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-siahuat.png" />
+			</div>
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-sia.png" />
+			</div>
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-singtel.png" />
+			</div>
+			<div class="large-2 medium-3 small-4 columns end">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-spring.png" />
+			</div>
+																					
 		</div>
 
 	</section> <!-- END TESTIMONIALS -->

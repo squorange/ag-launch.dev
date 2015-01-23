@@ -67,10 +67,10 @@
 				
 			</section>
 		
-			<section class="clearfix <?php the_field('testimonial_present'); ?>">
+			<section class="clearfix <?php the_field('testimonial_present'); ?> l-testimonials">
 				<div class="row">
 					<div class="small-12 medium-8 medium-offset-2 columns text--center">
-						<h2 class="post__subtitle">Here's what our client has to say</h2>
+						<h2 class="post__title text--bold">Here's what our client has to say</h2>
 						<p><?php the_field('project_testimonials'); ?></p>
 					</div>
 				</div>
