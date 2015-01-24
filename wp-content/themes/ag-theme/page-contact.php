@@ -60,7 +60,7 @@ Template Name: Contact
 				<div class="large-10 large-offset-1 columns">
 					<h2 class="text--bold">Getting to our office <img class="icon--map" src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/icon-map-pin.png" /></h2>
 					<p>
-					51 Waterloo St #03-06, Singapore 187969
+					51 Waterloo St #03-06, Singapore 187969 &ndash; <a target="_blank" href="http://bit.ly/awaken-map">View Map</a>
 					</p><p>
 					We encourage using public transportation or taxis as parking nearby can be difficult. Our nearest MRT station is Bras Basah.
 					</p>

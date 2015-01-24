@@ -98,7 +98,7 @@ Template Name: Advise
 			</div>
 		</div>
 		
-		<div class="row">		
+		<div class="row large-collapse l-clients">		
 			<br />
 			<div class="large-2 medium-3 small-4 columns">
 				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-borouge.png" />
