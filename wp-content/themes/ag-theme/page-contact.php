@@ -19,6 +19,7 @@ Template Name: Contact
 				<p class="form__input">
 				<?php the_field('header_blurb'); ?>
 				</p>
+
 				<div class="clearfix">
 				<address class="vcard"> 
 				<h2 class="text--bold org">Singapore</h2>
@@ -28,7 +29,6 @@ Template Name: Contact
 				</address>
 				</div>
 				<br />
-
 				<div class="clearfix">
 				<address class="vcard"> 
 				<h2 class="text--bold org">USA</h2>

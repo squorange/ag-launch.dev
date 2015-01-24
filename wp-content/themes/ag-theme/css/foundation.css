@@ -8030,6 +8030,9 @@ figure {
   font-style: normal;
   margin-bottom: 3em; }
 
+.l-headshot img {
+  margin: 0.5em 0 1em 0; }
+
 .single-ag_share .l-newsletter {
   background: #F9F9F9; }
 
