@@ -20,6 +20,17 @@ h2 {
 	text-align: center;
 }
 
+a.icon--sm {
+	color: $oil;
+}
+a.icon--sm:hover {
+	color: $ag-yellow;
+}
+
+.icon--large {
+	font-size: 2em;
+}
+
 .button {
 	@include text-base-caps;
 }
@@ -537,6 +548,11 @@ article.ag_team {
 	display: none;
 }
 
+.tile__label-inner h2 {
+	@include tile__label;
+	color: $ag-yellow;
+}
+
 .tile-single a:hover,
 .tile-single-wide a:hover {
 	.tile__label-caption {
@@ -545,6 +561,9 @@ article.ag_team {
 	.tile__label-title,
 	.tile__label-title-alt {
 		display: none;
+	}
+	.tile__label-inner h2 {
+		color: $oil;
 	}
 }
 

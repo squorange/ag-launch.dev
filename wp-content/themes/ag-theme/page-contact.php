@@ -19,7 +19,13 @@ Template Name: Contact
 				<p class="form__input">
 				<?php the_field('header_blurb'); ?>
 				</p>
-
+				
+				<p>
+				<a class="icon--sm" target="_blank" href="https://www.facebook.com/awakengroup"><i class="fi-social-facebook icon--large"></i></a> &nbsp;
+				<a class="icon--sm" target="_blank" href="https://twitter.com/awakengroup"><i class="fi-social-twitter  icon--large"></i></a> &nbsp;
+				<a class="icon--sm" target="_blank" href="https://www.linkedin.com/company/awaken-group"><i class="fi-social-linkedin  icon--large"></i></a>
+				</p>
+				
 				<div class="clearfix">
 				<address class="vcard"> 
 				<h2 class="text--bold org">Singapore</h2>

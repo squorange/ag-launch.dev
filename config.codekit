@@ -52457,6 +52457,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/wp-content\/themes\/ag-theme\/images\/tile-black.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2195,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/images\/tile-black.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/images\/tile-black.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/wp-content\/themes\/ag-theme\/images\/tile-blank.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -64998,6 +65009,17 @@
 		"initialSize": 6479,
 		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/01\/team-sm-jason.jpg",
 		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/01\/team-sm-jason.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/uploads\/2015\/01\/team-sm-jasonh.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7436,
+		"inputAbbreviatedPath": "\/wp-content\/uploads\/2015\/01\/team-sm-jasonh.jpg",
+		"outputAbbreviatedPath": "\/wp-content\/uploads\/2015\/01\/team-sm-jasonh.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

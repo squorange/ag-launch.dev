@@ -58,15 +58,12 @@ if ($queryObject->have_posts()) {
 		<div class="tile-single">
 			<a href="<?php echo home_url(); ?>/share/">
 				<div class="tile__image-wrap">
-					<img class="tile__image attachment--tile" src="<?php echo get_stylesheet_directory_uri() ; ?>/images/tile-blank.png" />
+					<img class="tile__image attachment--tile" src="<?php echo get_stylesheet_directory_uri() ; ?>/images/tile-black.png" />
 					<div class="tile__label-wrap">
 						<div class="tile__label-inner">
-							<div class="tile__label-title">
+							<h2>
 								Read More
-							</div>
-							<div class="tile__label-caption">
-								Explore more Transformation Design articles
-							</div>							
+							</h2>						
 						</div>
 					</div>
 				</div>
