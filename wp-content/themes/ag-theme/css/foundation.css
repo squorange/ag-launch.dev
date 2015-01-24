@@ -5975,14 +5975,27 @@ h2 {
 .text--center {
   text-align: center; }
 
+article a {
+  color: #000000;
+  border-bottom: 1px dotted #AAAAAA; }
+article a:hover {
+  color: #000000;
+  border: none;
+  background: #FDDB45; }
+
 a.icon--sm {
-  color: #333333; }
+  color: #333333;
+  border: none; }
+
+footer a.icon--sm {
+  color: #FFFFFF; }
 
 a.icon--sm:hover {
-  color: #FDDB45; }
+  color: #FDDB45;
+  background: none; }
 
 .icon--large {
-  font-size: 2em; }
+  font-size: 35px; }
 
 .button {
   font-size: 1rem;
@@ -6186,7 +6199,7 @@ footer {
 footer a, footer a:hover {
   color: #FFFFFF; }
 footer a:hover {
-  text-decoration: underline; }
+  color: #FDDB45; }
 
 .footer__contact-wrap {
   display: table;

@@ -30,9 +30,9 @@
 					<div class="footer__contact">
 						<a class="link--contact" href="mailto:contact@awakengroup.com">contact@awakengroup.com</a><br />
 						<br />
-						<a href="https://www.facebook.com/awakengroup">facebook</a> / 
-						<a href="https://twitter.com/awakengroup">twitter</a> / 
-						<a href="https://www.linkedin.com/company/awaken-group">linkedin</a>
+						<a class="icon--sm" target="_blank" href="https://www.facebook.com/awakengroup"><i class="fi-social-facebook icon--large"></i></a> &nbsp;&nbsp;&nbsp;
+						<a class="icon--sm" target="_blank" href="https://twitter.com/awakengroup"><i class="fi-social-twitter  icon--large"></i></a> &nbsp;&nbsp;&nbsp;
+						<a class="icon--sm" target="_blank" href="https://www.linkedin.com/company/awaken-group"><i class="fi-social-linkedin  icon--large"></i></a>
 					</div>
 				</div>
 			</div>			

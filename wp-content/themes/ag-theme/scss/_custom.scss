@@ -20,15 +20,32 @@ h2 {
 	text-align: center;
 }
 
+article {
+	a {
+		color: $black;
+		border-bottom: 1px dotted $base;
+	}
+	a:hover {
+		color: $black;
+		border: none;
+		background: $ag-yellow;
+	}
+}
+
 a.icon--sm {
 	color: $oil;
+	border: none;
+}
+footer a.icon--sm {
+	color: $white;
 }
 a.icon--sm:hover {
 	color: $ag-yellow;
+	background: none;	
 }
 
 .icon--large {
-	font-size: 2em;
+	font-size: 35px;
 }
 
 .button {
@@ -271,8 +288,8 @@ footer {
 		color: $white;		
 	}
 	a:hover {
-		text-decoration: underline;
-	};
+		color: $ag-yellow;
+	}
 }
 
 .footer__contact-wrap {
