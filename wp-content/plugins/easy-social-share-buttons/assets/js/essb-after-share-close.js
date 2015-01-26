@@ -9,6 +9,8 @@ function essbasc_popup_show() {
         }
     }); 
 	
+	var cookie_len = (typeof(essbasc_cookie_live) != "undefined") ? essbasc_cookie_live : 7;
+	if (parseInt(cookie_len) == 0) { cookie_len = 7; }
 	
 	var win_width = jQuery( window ).width();
 	var doc_height = jQuery('document').height();
@@ -26,9 +28,18 @@ function essbasc_popup_show() {
 	jQuery(".essbasc-popup").show();		
 	jQuery(".essbasc-popup-shadow").show();
 	
+	essbasc_setcookie('essb_aftershare', "yes", cookie_len);
+	
 }
 
 function essbasc_popup_close() {
 	jQuery(".essbasc-popup").css( { display: 'none'});		
 	jQuery(".essbasc-popup-shadow").css( { display: 'none'});
+}
+
+function essbasc_setcookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toGMTString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
 }

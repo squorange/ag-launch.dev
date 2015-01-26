@@ -4,7 +4,7 @@
  * Plugin Name: Easy Social Share Buttons for WordPress 
  * Description: Easy Social Share Buttons automatically adds share bar to your post or pages with support of Facebook, Twitter, Google+, LinkedIn, Pinterest, Digg, StumbleUpon, VKontakte, Tumblr, Reddit, Print, E-mail. Easy Social Share Buttons for WordPress is compatible with WooCommerce, bbPress and BuddyPress 
  * Plugin URI: http://codecanyon.net/item/easy-social-share-buttons-for-wordpress/6394476?ref=appscreo
- * Version: 2.0.2
+ * Version: 2.0.3
  * Author: CreoApps 
  * Author URI: http://codecanyon.net/user/appscreo/portfolio?ref=appscreo
  */
@@ -16,7 +16,7 @@ if (! defined ( 'WPINC' ))
 
 define ( 'ESSB_SELF_ENABLED', false );
 
-define ( 'ESSB_VERSION', '2.0.2' );
+define ( 'ESSB_VERSION', '2.0.3' );
 define ( 'ESSB_PLUGIN_ROOT', dirname ( __FILE__ ) . '/' );
 define ( 'ESSB_PLUGIN_URL', plugins_url () . '/' . basename ( dirname ( __FILE__ ) ) );
 define ( 'ESSB_PLUGIN_BASE_NAME', plugin_basename ( __FILE__ ) );

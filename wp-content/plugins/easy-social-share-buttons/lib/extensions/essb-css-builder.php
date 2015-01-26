@@ -166,6 +166,10 @@ class ESSB_CSS_Builder {
 				'text-transform: uppercase;'.
 				'margin-top: -5px; } ', 'essb_total_counter');
 		}
+		
+		$this->add_rule('.essb_totalcount_item_before, .essb_totalcount_item_after { display: block !important; }', 'essb_total_beforeafter');
+		$this->add_rule('.essb_totalcount_item_before .essb_totalcount, .essb_totalcount_item_after .essb_totalcount { border: 0px !important; }', 'essb_total_beforeafter2');
+		$this->add_rule('.essb_counter_insidebeforename { margin-right: 5px; font-weight: bold; }');
 	}
 	
 	public function generate_custom_css() {
@@ -297,6 +301,8 @@ class ESSB_CSS_Builder {
 			$customizer_totalfontsize = ESSBOptionsHelper::optionsValue($options, 'customizer_totalfontsize');
 			$customizer_totalfontsize_after = ESSBOptionsHelper::optionsValue($options, 'customizer_totalfontsize_after');
 			
+			$customizer_totalfontsize_beforeafter = ESSBOptionsHelper::optionsValue($options, 'customizer_totalfontsize_beforeafter');
+			
 			if ($customizer_totalbgcolor != '') {
 				$this->add_rule('.essb_totalcount { background: '.$customizer_totalbgcolor.' !important;} ');
 			}
@@ -313,6 +319,9 @@ class ESSB_CSS_Builder {
 				$this->add_rule('.essb_totalcount .essb_t_nb:after { font-size: '.$customizer_totalfontsize_after.'!important; }');
 			}
 				
+			if ($customizer_totalfontsize_beforeafter != '') {
+				$this->add_rule('.essb_totalcount_item_before .essb_t_before, .essb_totalcount_item_after .essb_t_before { font-size: '.$customizer_totalfontsize_beforeafter.'!important; }');
+			}
 				
 			if ($global_remove_bg_effects == "true") {
 				$this->add_rule('.essb_links a:hover, .essb_links a:focus { background: none !important; }');

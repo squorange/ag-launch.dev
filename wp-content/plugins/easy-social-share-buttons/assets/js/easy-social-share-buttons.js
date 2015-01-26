@@ -71,7 +71,7 @@ jQuery(document).ready(function($){
 			// 
 			var pinterest_url   = "https://api.pinterest.com/v1/urls/count.json?callback=?&url=" + url;
 			// 
-			var facebook_url	= "https://graph.facebook.com/fql?q=SELECT%20like_count,%20total_count,%20share_count,%20click_count,%20comment_count%20FROM%20link_stat%20WHERE%20url%20=%20%22"+url+"%22";
+			var facebook_url	= "https://graph.facebook.com/2.0/fql?q=SELECT%20like_count,%20total_count,%20share_count,%20click_count,%20comment_count%20FROM%20link_stat%20WHERE%20url%20=%20%22"+url+"%22";
 			// 
 			var google_url		= plugin_url+"/public/get-noapi-counts.php?nw=google&url=" + url;
 			var stumble_url		= plugin_url+"/public/get-noapi-counts.php?nw=stumble&url=" + url;
@@ -147,6 +147,9 @@ jQuery(document).ready(function($){
 				}
 				else if (counter_pos == "insidename") {
 					$element_inside.append('<span class="essb_counter_insidename" cnt="' + $cnt + '"'+$css_hidden_negative+'>' + shortenNumber($cnt) + '</span>');
+				}
+				else if (counter_pos == "insidebeforename") {
+					$element_inside.prepend('<span class="essb_counter_insidebeforename" cnt="' + $cnt + '"'+$css_hidden_negative+'>' + shortenNumber($cnt) + '</span>');
 				}
 				else if (counter_pos == "bottom") {
 					$element_inside.html('<span class="essb_counter_bottom" cnt="' + $cnt + '"'+$css_hidden_negative+'>' + shortenNumber($cnt) + '</span>');
@@ -375,6 +378,7 @@ jQuery(document).ready(function($){
 			var $total_count_item = $group.find('.essb_totalcount_item');
 			
 			var $total_counter_hidden = $total_count_item.attr('data-essb-hide-till') || "";
+			
 			var total_text = $total_count.attr('title');
 			var total_text_after = $total_count.attr('title_after');
 			if (typeof(total_text) == "undefined") { total_text = ""; }
@@ -447,6 +451,20 @@ jQuery(document).ready(function($){
 					});
 					
 				}				
+				else if (counter_pos == "insidebeforename") {
+					$group.find('.essb_counter_insidebeforename').each(function(){
+						total += parseInt($(this).attr('cnt'));		
+						
+						var value = parseInt($(this).attr('cnt'));
+						
+						if (!$total_count_nb) {
+						value = shortenNumber(value);
+						$(this).text(value);
+					}
+						//alert(shortenNumber(total));
+					});
+					
+				}				
 				else if (counter_pos == "hidden") {
 					$group.find('.essb_counter_hidden').each(function(){
 						total += parseInt($(this).attr('cnt'));		
@@ -478,6 +496,7 @@ jQuery(document).ready(function($){
 				
 				// show total counter when value is reached
 				if ($total_counter_hidden != '') {
+					//alert(parseInt($total_counter_hidden) + " - " + total);
 					if (parseInt($total_counter_hidden) <= total) {
 						$total_count_item.show();
 					}

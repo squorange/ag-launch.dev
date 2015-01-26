@@ -179,7 +179,7 @@ class EasySocialShareButtons {
 		
 		if ($apply_clean_buttons == "true") {
 			$apply_clean_buttons_method = ESSBOptionsHelper::optionsValue($option, 'apply_clean_buttons_method');
-			if ($apply_clean_buttons_method != 'action') {
+			if ($apply_clean_buttons_method == 'actionremove') {
 				add_filter( 'get_the_excerpt', array( $this, 'remove_buttons_excerpts_method2'), -999);
 			}
 			else {
@@ -320,6 +320,19 @@ class EasySocialShareButtons {
 		if ($woocommerce_share == "true") {
 			add_action ( 'woocommerce_share', array ($this, 'handle_woocommerce_share' ) );
 		}
+
+		$woocommece_beforeprod = isset ( $option ['woocommece_beforeprod'] ) ? $option ['woocommece_beforeprod'] : 'false';
+		
+		if ($woocommece_beforeprod == "true") {
+			add_action ( 'woocommerce_before_single_product', array ($this, 'handle_woocommerce_share' ) );
+		}
+		
+		$woocommece_afterprod = isset ( $option ['woocommece_afterprod'] ) ? $option ['woocommece_afterprod'] : 'false';
+		
+		if ($woocommece_afterprod == "true") {
+			add_action ( 'woocommerce_after_single_product', array ($this, 'handle_woocommerce_share' ) );
+		}
+		
 		
 		$wpec_before_desc = isset ( $option ['wpec_before_desc'] ) ? $option ['wpec_before_desc'] : 'false';
 		$wpec_after_desc = isset ( $option ['wpec_after_desc'] ) ? $option ['wpec_after_desc'] : 'false';
@@ -334,6 +347,30 @@ class EasySocialShareButtons {
 		
 		if ($wpec_theme_footer == "true") {
 			add_action ( 'wpsc_theme_footer', array ($this, 'handle_wpecommerce_share' ) );
+		}
+		
+		// @since 2.0.3 iThemes Exchange Integration
+		$ithemes_after_title = isset ( $option ['ithemes_after_title'] ) ? $option ['ithemes_after_title'] : 'false';
+		$ithemes_before_desc = isset ( $option ['ithemes_before_desc'] ) ? $option ['ithemes_before_desc'] : 'false';
+		$ithemes_after_desc = isset ( $option ['ithemes_after_desc'] ) ? $option ['ithemes_after_desc'] : 'false';
+		$ithemes_after_product = isset ( $option ['ithemes_after_product'] ) ? $option ['ithemes_after_product'] : 'false';
+		$ithemes_after_purchase = isset ( $option ['ithemes_after_purchase'] ) ? $option ['ithemes_after_purchase'] : 'false';
+		if ($ithemes_after_title == "true") {			
+			add_action ( 'it_exchange_content_product_before_wrap', array ($this, 'handle_ithemes_share' ) );
+		}
+		if ($ithemes_before_desc == "true") {
+			add_action ( 'it_exchange_content_product_before_description_element', array ($this, 'handle_ithemes_share' ) );
+		}
+		if ($ithemes_after_desc == "true") {
+			add_action ( 'it_exchange_content_product_after_description_element', array ($this, 'handle_ithemes_share' ) );
+		}
+		if ($ithemes_after_product == "true") {
+			add_action ( 'it_exchange_content_product_end_wrap', array ($this, 'handle_ithemes_share' ) );
+		}
+		if ($ithemes_after_purchase == "true") {
+			//it_exchange_content_confirmation_after_product_attibutes
+			//it_exchange_content_confirmation_after_product_title
+			add_action ( 'it_exchange_content_confirmation_after_product_title', array ($this, 'handle_ithemes_share_after_purchase' ) );
 		}
 		
 		// @since 1.3.9.8 JigoShop
@@ -609,7 +646,7 @@ class EasySocialShareButtons {
 		$activity_link = bp_get_activity_thread_permalink();
 		$activity_title = bp_get_activity_feed_item_title();
 		
-		echo '<div style="clear: both;\"></div>';
+		echo '<div style="clear: both;"></div>';
 		$options = $this->options;
 		
 		$essb_networks = $options['networks'];
@@ -625,7 +662,7 @@ class EasySocialShareButtons {
 		$need_counters = $options['show_counter'] ? 1 : 0;
 		$links = do_shortcode('[easy-share buttons="'.$buttons.'" counters=0 native="no" url="'.urlencode($activity_link).'" text="'.htmlspecialchars($activity_title).'" nostats="yes" hide_names="yes"]');
 		
-		echo $links .'<div style="clear: both;\"></div>';
+		echo $links .'<div style="clear: both;"></div>';
 	}
 	
 	function buddy_social_button_group_filter() {
@@ -651,7 +688,7 @@ class EasySocialShareButtons {
 		//$need_counters = 0;
 		$links = do_shortcode('[easy-share buttons="'.$buttons.'" counters='.$need_counters.' native="no"  nostats="yes"  url="'.$activity_link.'" text="'.$activity_title.'" '.$hidden_name_class.']');
 		
-		echo $links .'<div style="clear: both;\"></div>';
+		echo $links .'<div style="clear: both;"></div>';
 	}		
 	
 	function bbp_show_before_replies() {
@@ -662,7 +699,7 @@ class EasySocialShareButtons {
 		$options = $this->options;
 		$need_counters = $options['show_counter'] ? 1 : 0;
 		$links = $this->generate_share_snippet(array(), $need_counters);
-		echo $links .'<div style="clear: both;\"></div>';
+		echo $links .'<div style="clear: both;"></div>';
 	}
 	
 	function bbp_show_after_replies() {
@@ -673,7 +710,7 @@ class EasySocialShareButtons {
 		$need_counters = $options['show_counter'] ? 1 : 0;
 		$links = $this->generate_share_snippet(array(), $need_counters);
 	
-		echo $links .'<div style="clear: both;\"></div>';
+		echo $links .'<div style="clear: both;"></div>';
 	}
 	
 	function bbp_show_before_topics() {
@@ -682,7 +719,7 @@ class EasySocialShareButtons {
 		$need_counters = $options['show_counter'] ? 1 : 0;
 		$links = $this->generate_share_snippet(array(), $need_counters);
 	
-		echo $links .'<div style="clear: both;\"></div>';
+		echo $links .'<div style="clear: both;"></div>';
 	}
 	
 	function bbp_show_after_topics() {
@@ -691,7 +728,7 @@ class EasySocialShareButtons {
 		$need_counters = $options['show_counter'] ? 1 : 0;
 		$links = $this->generate_share_snippet(array(), $need_counters);
 	
-		echo $links .'<div style="clear: both;\"></div>';
+		echo $links .'<div style="clear: both;"></div>';
 	}
 	
 	public static function get_instance() {
@@ -726,7 +763,7 @@ class EasySocialShareButtons {
 	}
 	
 	public static function default_options() {
-		return array ('style' => 1, 'networks' => array ("facebook" => array (1, "Facebook" ), "twitter" => array (1, "Twitter" ), "google" => array (0, "Google+" ), "pinterest" => array (0, "Pinterest" ), "linkedin" => array (0, "LinkedIn" ), "digg" => array (0, "Digg" ), "stumbleupon" => array (0, "StumbleUpon" ), "vk" => array (0, "VKontakte" ), "tumblr" => array(0, "Tumblr"), "print" => array(0, "Print"), "mail" => array (1, "E-mail" ) ), 'show_counter' => 0, 'hide_social_name' => 0, 'target_link' => 1, 'twitter_user' => '', 'display_in_types' => array ('post' ), 'display_where' => 'bottom', 'mail_subject' => __ ( 'Visit this site %%siteurl%%', ESSB_TEXT_DOMAIN ), 'mail_body' => __ ( 'Hi, this may be intersting you: "%%title%%"! This is the link: %%permalink%%', ESSB_TEXT_DOMAIN ), 'colors' => array ("bg_color" => '', "txt_color" => '', 'facebook_like_button' => 'false' ) );
+		return array ('style' => 1, 'networks' => array ("facebook" => array (1, "Facebook" ), "twitter" => array (1, "Twitter" ), "google" => array (0, "Google+" ), "pinterest" => array (0, "Pinterest" ), "linkedin" => array (0, "LinkedIn" ), "digg" => array (0, "Digg" ), "stumbleupon" => array (0, "StumbleUpon" ), "vk" => array (0, "VKontakte" ), "tumblr" => array(0, "Tumblr"), "print" => array(0, "Print"), "mail" => array (1, "E-mail" ) ), 'show_counter' => 0, 'hide_social_name' => 0, 'target_link' => 1, 'twitter_user' => '', 'display_in_types' => array ('post' ), 'display_where' => 'bottom', 'mail_subject' => __ ( 'Visit this site %%siteurl%%', ESSB_TEXT_DOMAIN ), 'mail_body' => __ ( 'Hi, this may be interesting you: "%%title%%"! This is the link: %%permalink%%', ESSB_TEXT_DOMAIN ), 'colors' => array ("bg_color" => '', "txt_color" => '', 'facebook_like_button' => 'false' ) );
 	}
 		
 	public function register_front_assets() {
@@ -896,8 +933,17 @@ class EasySocialShareButtons {
 			
 			if ($display_where == "sidebar" || $display_where == "postfloat") {
 				wp_enqueue_style ( 'easy-social-share-buttons-sidebar', ESSB_PLUGIN_URL . '/assets/css/essb-sidebar'.($this->css_minifier ? ".min": "").'.css', false, $this->version, 'all' );
+				
+				if ($display_where == "postfloat") {
+					$postfloat_limitfooter = ESSBOptionsHelper::optionsBoolValue($this->options, 'postfloat_limitfooter');
+					
+					if ($postfloat_limitfooter) {
+						$this->essb_js_builder->include_postfloat_stick_script();
+					}	
+				}
 			}
-
+			
+			
 			if ($display_where == "popup") {
 				wp_enqueue_style ( 'easy-social-share-buttons-popup', ESSB_PLUGIN_URL . '/assets/css/essb-popup'.($this->css_minifier ? ".min": "").'.css', false, $this->version, 'all' );
 				
@@ -972,7 +1018,7 @@ class EasySocialShareButtons {
 			
 			$sidebar_sticky = isset($options['sidebar_sticky']) ? $options['sidebar_sticky'] : 'false';
 			if ($sidebar_sticky == 'true') {
-				if ($minifier_js) {
+				if ($this->js_minifier) {
 					wp_enqueue_script ( 'essb-sticky-sidebar', ESSB_PLUGIN_URL . '/assets/js/essb-sticky-sidebar.min.js', array ('jquery' ), $this->version, $load_footer );
 				}
 				else {
@@ -1180,8 +1226,10 @@ function essb_toggle_less() {
 			return;
 		}
 		
+		$deactivate_shorturl_cache = ESSBOptionsHelper::optionsBoolValue($options, 'deactivate_shorturl_cache');
+		
 		// since 1.3.9.9 - new object for post_handling_options
-		$postMetaOptions = ESSBOptionsHelper::getPostMetaOptions($post->ID);
+		$postMetaOptions = ESSBOptionsHelper::getPostMetaOptions($post->ID, $deactivate_shorturl_cache);
 		
 		//print $show_me;
 		$post_display_where = $postMetaOptions['essb_position'];
@@ -1297,6 +1345,7 @@ function essb_toggle_less() {
 			}
 			
 			// texts, URL and image to share
+			$orignal_post_title = $post->post_title;
 			$text = esc_attr(urlencode($post->post_title));
 			$url = $post ? get_permalink() : ESSBOptionsHelper::get_current_url( 'raw' );
 			if ($this->avoid_next_page) {
@@ -1318,12 +1367,25 @@ function essb_toggle_less() {
 			
 			$ga_tracking_url = $url;
 			
+			$ga_campaign_tracking_active = false;
+			
 			// @since 2.0 attaching Google Campaign Tracking
 			$activate_ga_campaign_tracking = isset($options['activate_ga_campaign_tracking']) ? $options['activate_ga_campaign_tracking'] : '';
+			//essb_activate_ga_campaign_tracking
+			$post_essb_activate_ga_campaign_tracking = $postMetaOptions['essb_activate_ga_campaign_tracking'];
+			if ($post_essb_activate_ga_campaign_tracking != "") {
+				$activate_ga_campaign_tracking = $post_essb_activate_ga_campaign_tracking;
+			}
 			if ($activate_ga_campaign_tracking != '') {
 				$url = ESSBOptionsHelper::attachGoogleCampaignTrackingCode($url, $activate_ga_campaign_tracking);
+				$ga_campaign_tracking_active = true;
 			}
 			
+			$always_use_http = isset($options['always_use_http']) ? $options['always_use_http'] : '';
+			if ($always_use_http == "true") {
+				$url = str_replace("https://", "http://", $url);
+			}
+				
 			// filter for the share permalink
 			$url = apply_filters('essb_the_shared_permalink', $url);
 			
@@ -1380,7 +1442,7 @@ function essb_toggle_less() {
 			
 			$css_hide_total_counter = "";
 			if ($total_counter_hidden_till != '') {
-				$css_hide_total_counter = ' style="display: none;" data-essb-hide-till="'.$total_counter_hidden_till.'"';
+				$css_hide_total_counter = ' style="display: none !important;" data-essb-hide-till="'.$total_counter_hidden_till.'"';
 			}
 			
 			if ($post_counter_pos != '') { $counter_pos = $post_counter_pos; }
@@ -1583,6 +1645,11 @@ function essb_toggle_less() {
 			$encode_url_nonlatin = isset($options['encode_url_nonlatin']) ? $options['encode_url_nonlatin'] : 'false';
 			
 			$mail_funcion = isset($options['mail_funcion']) ? $options['mail_funcion'] : '';
+			$mail_function_mobile = isset($options['mail_function_mobile']) ? $options['mail_function_mobile'] : '';
+			// @since 2.0.3
+			if ($this->isMobile() && $mail_function_mobile != '') {
+				$mail_funcion = $mail_function_mobile;
+			}
 			
 			if ($post_essb_twitter_username != '') {
 				$append_twitter_user_to_message = $post_essb_twitter_username;
@@ -1870,17 +1937,22 @@ function essb_toggle_less() {
 			}
 			
 			if ($this->options_by_bp_active) {
+								
 				$bp_settings = EasySocialShareButtons_Advanced_Display::get_options_by_bp($bp_display_where);
 
 				// @since 1.3.9.8 - separate mobile options included
 				if ($this->mobile_options_active && $this->isMobile() && !$is_shortcode) {
+					
 					$bp_settings = EasySocialShareButtons_Advanced_Display::get_options_by_mp('mobile');
 				}
 				
 				if ($bp_settings['active']) {
 					// @since 1.3.9.8 - loading different template based on button position
+					
 					if (isset($bp_settings['template'])) {
 						$bp_template = $bp_settings['template'];
+						
+						//print "using custom template = ".$bp_template;
 						
 						if ($bp_template != '' && $bp_template != $this->loaded_template_slug) {
 							if ($this->css_minifier) {
@@ -2093,6 +2165,13 @@ function essb_toggle_less() {
 				echo '<style type="text/css">#essb_displayed_'.$display_where.$salt.' .essb_icon { display: none !important; }</style>';
 			}
 			
+			// @since 1.3.0
+			$general_counters = (isset($options['show_counter']) && $options['show_counter']==1) ? 1 : 0;
+			if ($is_forced_hidden_networks) {
+				$general_counters = 0; $counters = 0;
+			}
+			
+			
 			$block_content .= "\n".'<'.$div.' class="essb_links '.$container_classes.$essb_css_modern_counter_class.' essb_displayed_'.$display_where.$custom_sidebar_pos.$like_share_display_position.$sidebar_bottom_align.' essb_template_'.$loaded_template.' essb_'.$salt.' print-no '.$fixed_width_class.'" id="essb_displayed_'.$display_where.$salt.'" '.$css_fullwidth_container.$is_hidden_content.'>';
 			//$block_content .= $hide_intro_phrase ? '' : "\n".'<'.$p.' class="screen-reader-text essb_maybe_hidden_text">'.$share_the_post_sentence.' "'.get_the_title().'"</'.$p.'>'."\n";
 			$block_content .= $before_the_list;
@@ -2103,12 +2182,6 @@ function essb_toggle_less() {
 				$block_content .= '<li class="essb_message_before">'.stripslashes($message_share_before_buttons).'</li>';
 			}
 			
-			// @since 1.3.0
-			$general_counters = (isset($options['show_counter']) && $options['show_counter']==1) ? 1 : 0;
-			if ($is_forced_hidden_networks) {
-				$general_counters = 0; $counters = 0;
-			}
-				
 			if (($general_counters==1 && intval($counters)==1) || ($general_counters==0 && intval($counters)==1)) {
 				if ($total_counter_pos == 'left' || $total_counter_pos == "leftbig") {
 					if ($total_counter_pos == "leftbig") {
@@ -2121,6 +2194,18 @@ function essb_toggle_less() {
 					
 			}
 				
+			if (($general_counters==1 && intval($counters)==1) || ($general_counters==0 && intval($counters)==1)) {
+				if ($total_counter_pos == "before") {
+					$userbased_text = ESSBOptionsHelper::optionsValue($options, 'total_counter_afterbefore_text');
+					if ($userbased_text == '') {
+						$userbased_text = '{TOTAL} shares';
+					}
+						
+					$userbased_text = str_replace('{TOTAL}', '<span class="essb_t_nb"></span>', $userbased_text);
+					$block_content .= '<li class="essb_item essb_totalcount_item essb_totalcount_item_before" '.($force_hide_total_count == 'true' ? 'style="display: none !important;"' : '').$css_hide_total_counter.' data-counter-pos="'.$counter_pos.'"><span class="essb_totalcount essb_t_before" title="">'.$userbased_text.'</span></li>';
+				}				
+			}
+			
 	
 			$active_fb = false;		
 			$active_pinsniff = false;		
@@ -2137,6 +2222,8 @@ function essb_toggle_less() {
 			$is_set_external_print = false;
 			$is_active_more_button = false;
 			
+			$cached_url = $url;
+			
 			// each links (come from options or manual array)
 			foreach($essb_networks as $k => $v) {
 				
@@ -2152,6 +2239,11 @@ function essb_toggle_less() {
 					if ($this->options_by_bp_active && count($bp_networks) > 0) {
 						$v[0] = (in_array($k, $bp_networks, true)) ? 1 : 0;
 					}
+				}
+				
+				if ($ga_campaign_tracking_active) {
+					$url = $cached_url;
+					$url = str_replace('{network}', $k, $url);
 				}
 				
 				if( $v[0] == 1 ) {
@@ -2586,7 +2678,12 @@ function essb_toggle_less() {
 										case 'love':
 											$api_link = "javascript:void(0);";
 											$api_text = apply_filters('essb_share_text_for_'.$k, __('Love This!',ESSB_TEXT_DOMAIN));
-																							
+											if ($user_network_messages != '') {
+												$custom_text = isset($user_network_messages[$k]) ? $user_network_messages[$k] : '';
+												if ($custom_text != "") {
+													$api_text = $custom_text;
+												}
+											}
 											break;										
 						case 'stumbleupon':
 							
@@ -2825,10 +2922,12 @@ function essb_toggle_less() {
 											$whatsapp_url = $short_whatsapp;
 										}
 										
-										$whatsapp_text = $text;
-										$whatsapp_text = rawurlencode($whatsapp_text);
-										$whatsapp_text = str_replace("+", "%20", $whatsapp_text);
-										$whatsapp_text = str_replace("%2B", "%20", $whatsapp_text);
+										$whatsapp_text = $orignal_post_title;
+										//$whatsapp_text = rawurlencode($whatsapp_text);
+										//$whatsapp_text = str_replace("+", "%20", $whatsapp_text);
+										//$whatsapp_text = str_replace("%2B", "%20", $whatsapp_text);
+										
+										$whatsapp_text = $this->essb_urlencode($whatsapp_text);
 										$api_link = "whatsapp://send?text=".$whatsapp_text.'%20'.rawurlencode($whatsapp_url);
 										$api_text = apply_filters('essb_share_text_for_'.$k, __('Share this article via WhatsApp',ESSB_TEXT_DOMAIN));
 									
@@ -2852,9 +2951,10 @@ function essb_toggle_less() {
 											if ($user_advanced_share_url_pass != '') {
 												//$api_link = "whatsapp://send?text=".rawurlencode($user_advanced_share_message_pass.' '.$user_advanced_share_url_pass);
 												$whatsapp_text = $user_advanced_share_message_pass;
-												$whatsapp_text = rawurlencode($whatsapp_text);
-												$whatsapp_text = str_replace("+", "%20", $whatsapp_text);
-												$whatsapp_text = str_replace("%2B", "%20", $whatsapp_text);
+												//$whatsapp_text = rawurlencode($whatsapp_text);
+												//$whatsapp_text = str_replace("+", "%20", $whatsapp_text);
+												//$whatsapp_text = str_replace("%2B", "%20", $whatsapp_text);
+												$whatsapp_text = $this->essb_urlencode($whatsapp_text);
 												$api_link = "whatsapp://send?text=".$whatsapp_text.'%20'.rawurlencode($user_advanced_share_url_pass);
 											}
 										}
@@ -2913,15 +3013,21 @@ function essb_toggle_less() {
 							
 						case 'mail' :
 							if (strpos($options['mail_body'], '%%') || strpos($options['mail_subject'], '%%') ) {
-								$api_link = esc_attr('mailto:?subject='.$options['mail_subject'].'&amp;body='.$options['mail_body']);
+								//$api_link = esc_attr('mailto:?subject='.$options['mail_subject'].'&amp;body='.$options['mail_body']);
+								$api_link = ('mailto:?subject='.$options['mail_subject'].'&amp;body='.$options['mail_body']);
+								$api_link = str_replace("'", "&apos;", $api_link);
+								$api_link = str_replace("\"", "&quot;", $api_link);
 								$api_link = preg_replace(array('#%%title%%#', '#%%siteurl%%#', '#%%permalink%%#', '#%%image%%#'), array(get_the_title(), get_site_url(), get_permalink(), $post_image), $api_link);
 
 								$message_subject = $options['mail_subject'];
 								$message_body = $options['mail_body'];
 								$message_subject = preg_replace(array('#%%title%%#', '#%%siteurl%%#', '#%%permalink%%#', '#%%image%%#', '#%%shorturl%%#'), array(get_the_title(), get_site_url(), get_permalink(), $post_image, $url), $message_subject);
 								$message_body = preg_replace(array('#%%title%%#', '#%%siteurl%%#', '#%%permalink%%#', '#%%image%%#', '#%%shorturl%%#'), array(get_the_title(), get_site_url(), get_permalink(), $post_image, $url), $message_body);
+								$message_body = stripslashes ( $message_body );
+								$message_subject = stripslashes ( $message_subject );
 								$message_subject =rawurlencode($message_subject);
 								$message_body =rawurlencode($message_body);
+								
 								$api_link = 'mailto:?subject='.$message_subject.'&amp;body='.$message_body;
 							}
 							else {
@@ -2935,7 +3041,7 @@ function essb_toggle_less() {
 							
 							if ($mail_funcion != 'link') {
 								//$api_link = "javascript:void(0);";
-								$api_link_click = 'essb_mailform_'.$salt.'();';
+								$api_link_click = 'essb_mailform_'.$salt.'(); return false;';
 								$api_link = "#";
 							}
 							
@@ -2980,7 +3086,7 @@ function essb_toggle_less() {
 					// @since 1.3.9.2 - fix problem with ' in share text
 					$api_link= str_replace("'", "\'", $api_link);
 					
-					if ($encode_url_nonlatin == "true" && $k != 'more' && $k != 'whatsapp') {
+					if ($encode_url_nonlatin == "true" && $k != 'more' && $k != 'whatsapp' && $k != 'mail') {
 						$api_link = essb_base64url_encode($api_link);
 					}
 					
@@ -3059,7 +3165,7 @@ function essb_toggle_less() {
 								$block_content .= '<' . $li . ' class="essb_item essb_link_' . $k . ' nolightbox'.($is_active_more_button ? ' essb_after_more':  '').'" '.$css_fullwidth_item.'><a href="' . $api_link . '" ' . $rel_nofollow . ' title="' . $api_text . '"' . $target_link . ' '.$css_fullwidth_item_link.' onclick="essb_pinterenst'.$salt.'(); return false;"'.($this->mycred_active ? ESSBOptionsHelper::generate_mycred_datatoken($this->mycred_group, $this->mycred_points) : '').'><span class="essb_icon"></span><span class="essb_network_name">' . $network_name . '</span></a></' . $li . '>';
 							}
 						} else {
-							$block_content .= '<' . $li . ' class="essb_item essb_link_' . $k . ' nolightbox'.($is_active_more_button ? ' essb_after_more':  '').'" '.$css_fullwidth_item.'><a id="essb-mailform'.$salt.'" href="' . $api_link . '" onclick="' . $api_link_click . ' return false;" ' . $rel_nofollow . ' title="' . $api_text . '" '.$css_fullwidth_item_link.' class="essb-mail-link"'.($this->mycred_active ? ESSBOptionsHelper::generate_mycred_datatoken($this->mycred_group, $this->mycred_points) : '').'><span class="essb_icon"></span><span class="essb_network_name">' . $network_name . '</span></a></' . $li . '>';
+							$block_content .= '<' . $li . ' class="essb_item essb_link_' . $k . ' nolightbox'.($is_active_more_button ? ' essb_after_more':  '').'" '.$css_fullwidth_item.'><a id="essb-mailform'.$salt.'" href="' . $api_link . '" onclick="' . $api_link_click . '" ' . $rel_nofollow . ' title="' . $api_text . '" '.$css_fullwidth_item_link.' class="essb-mail-link"'.($this->mycred_active ? ESSBOptionsHelper::generate_mycred_datatoken($this->mycred_group, $this->mycred_points) : '').'><span class="essb_icon"></span><span class="essb_network_name">' . $network_name . '</span></a></' . $li . '>';
 						}
 					}
 	
@@ -3175,6 +3281,18 @@ function essb_toggle_less() {
 			
 			}
 			
+			if (($general_counters==1 && intval($counters)==1) || ($general_counters==0 && intval($counters)==1)) {
+				if ($total_counter_pos == "after") {
+					$userbased_text = ESSBOptionsHelper::optionsValue($options, 'total_counter_afterbefore_text');
+					if ($userbased_text == '') {
+						$userbased_text = '{TOTAL} shares';
+					}
+			
+					$userbased_text = str_replace('{TOTAL}', '<span class="essb_t_nb"></span>', $userbased_text);
+					$block_content .= '<li class="essb_item essb_totalcount_item essb_totalcount_item_after" '.($force_hide_total_count == 'true' ? 'style="display: none !important;"' : '').$css_hide_total_counter.' data-counter-pos="'.$counter_pos.'"><span class="essb_totalcount essb_t_before" title="">'.$userbased_text.'</span></li>';
+				}
+			}
+			
 			// @since 1.3.9.6
 			if ($used_twitter_url == '') {
 				$used_twitter_url = $url;
@@ -3283,10 +3401,12 @@ function essb_toggle_less() {
 						
 						
 					if ($this->skinned_social) {
+						//$block_content .= '<div style="display: inline-block; width: 100%; padding-top: 3px !important;" class="essb_native_skinned">';						
 						$block_content .= '<div style="display: inline-block; width: 100%; padding-top: 3px !important;" class="essb_native_skinned">';						
 					}
 					else {
-						$block_content .= '<div style="display: inline-block; width: 100%; padding-top: 3px !important; overflow: hidden; padding-right: 10px;" class="essb_native">';
+						//$block_content .= '<div style="display: inline-block; width: 100%; padding-top: 3px !important; overflow: hidden; padding-right: 10px;" class="essb_native">';
+						$block_content .= '<div style="display: inline-block; width: 100%; padding-top: 3px !important; padding-right: 10px;" class="essb_native">';
 					}				
 				}
 				
@@ -3637,7 +3757,7 @@ function essb_toggle_less() {
 		$this->essb_js_builder->include_gplus_script();
 		}
 		else {
-			$output = $this->social_privacy->generate_button('pinterest', '');
+			$output = $this->social_privacy->generate_button('youtube', '');
 		}
 		return $output;
 	}
@@ -3806,11 +3926,13 @@ VK.Widgets.Like("vk_like' . $salt . '", {type: "button", height: 20});
 				if (trim($native_fb_width) == "") {
 					$native_fb_width = "30";
 				}
-				$code = '<div style="'.$this->print_fb_likebutton_css_fixer('display: inline-block; overflow: hidden; height: 24px; max-height: 24px; padding-right: 20px; width: '.$native_fb_width.'px !important; vertical-align: top;', $facebook_like_button_height, $facebook_like_button_margin_top).'"><div class="fb-like" data-href="'.$address.'" data-layout="button" data-action="like" data-show-faces="false" data-share="false" data-width="292"></div></div>';				
+				//$code = '<div style="'.$this->print_fb_likebutton_css_fixer('display: inline-block; overflow: hidden; height: 24px; max-height: 24px; padding-right: 20px; width: '.$native_fb_width.'px !important; vertical-align: top;', $facebook_like_button_height, $facebook_like_button_margin_top).'"><div class="fb-like" data-href="'.$address.'" data-layout="button" data-action="like" data-show-faces="false" data-share="false" data-width="292"></div></div>';				
+				$code = '<div style="'.$this->print_fb_likebutton_css_fixer('display: inline-block; height: 24px; max-height: 24px; padding-right: 20px; width: '.$native_fb_width.'px !important; vertical-align: top;', $facebook_like_button_height, $facebook_like_button_margin_top).'"><div class="fb-like" data-href="'.$address.'" data-layout="button" data-action="like" data-show-faces="false" data-share="false" data-width="292"></div></div>';				
 			}
 			else {
 				if (trim($native_fb_width) != '') {
-					$code = '<div style="'.$this->print_fb_likebutton_css_fixer('display: inline-block; overflow: hidden; height: 24px; max-height: 24px; padding-right: 20px; width: '.$native_fb_width.'px !important; vertical-align: top;', $facebook_like_button_height, $facebook_like_button_margin_top).'"><div class="fb-like" data-href="'.$address.'" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" data-width="292"></div></div>';
+					//$code = '<div style="'.$this->print_fb_likebutton_css_fixer('display: inline-block; overflow: hidden; height: 24px; max-height: 24px; padding-right: 20px; width: '.$native_fb_width.'px !important; vertical-align: top;', $facebook_like_button_height, $facebook_like_button_margin_top).'"><div class="fb-like" data-href="'.$address.'" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" data-width="292"></div></div>';
+					$code = '<div style="'.$this->print_fb_likebutton_css_fixer('display: inline-block; height: 24px; max-height: 24px; padding-right: 20px; width: '.$native_fb_width.'px !important; vertical-align: top;', $facebook_like_button_height, $facebook_like_button_margin_top).'"><div class="fb-like" data-href="'.$address.'" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" data-width="292"></div></div>';
 				}
 				else {
 					$code = '<div class="fb-like" data-href="'.$address.'" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" data-width="292"></div>';						
@@ -3823,14 +3945,16 @@ VK.Widgets.Like("vk_like' . $salt . '", {type: "button", height: 20});
 		
 			if ($native_counters == "false") {
 				if (trim($native_fb_width) == "") { $native_fb_width = "30"; }
-				$output = '<div style="'.$this->print_fb_likebutton_css_fixer('display: inline-block; overflow: hidden; height: 24px; max-height: 24px; padding-right: 20px; width: '.$native_fb_width.'px !important; vertical-align: top; margin-right: 5px;', $facebook_like_button_height, $facebook_like_button_margin_top).'" class="essb_fb_like"><div class="fb-like" data-href="'.$address.'" data-layout="button" data-action="like" data-show-faces="false" data-share="false" data-width="292"></div></div>';				
+				//$output = '<div style="'.$this->print_fb_likebutton_css_fixer('display: inline-block; overflow: hidden; height: 24px; max-height: 24px; padding-right: 20px; width: '.$native_fb_width.'px !important; vertical-align: top; margin-right: 5px;', $facebook_like_button_height, $facebook_like_button_margin_top).'" class="essb_fb_like"><div class="fb-like" data-href="'.$address.'" data-layout="button" data-action="like" data-show-faces="false" data-share="false" data-width="292"></div></div>';				
+				$output = '<div style="'.$this->print_fb_likebutton_css_fixer('display: inline-block; height: 24px; max-height: 24px; padding-right: 20px; width: '.$native_fb_width.'px !important; vertical-align: top; margin-right: 5px;', $facebook_like_button_height, $facebook_like_button_margin_top).'" class="essb_fb_like"><div class="fb-like" data-href="'.$address.'" data-layout="button" data-action="like" data-show-faces="false" data-share="false" data-width="292"></div></div>';				
 			}
 			else {
 				$fix_native_width = "";
 				if (trim($native_fb_width) != '') {
 					$fix_native_width = 'width:'.$native_fb_width.'px !important;';
 				}
-				$output = '<div style="'.$this->print_fb_likebutton_css_fixer('display: inline-block; overflow: hidden; height: 24px; max-height: 24px; margin-right: 5px; vertical-align: top;'.$fix_native_width.'', $facebook_like_button_height, $facebook_like_button_margin_top).'" class="essb_fb_like"><div class="fb-like" data-href="'.$address.'" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" data-width="292"></div></div>';
+				//$output = '<div style="'.$this->print_fb_likebutton_css_fixer('display: inline-block; overflow: hidden; height: 24px; max-height: 24px; margin-right: 5px; vertical-align: top;'.$fix_native_width.'', $facebook_like_button_height, $facebook_like_button_margin_top).'" class="essb_fb_like"><div class="fb-like" data-href="'.$address.'" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" data-width="292"></div></div>';
+				$output = '<div style="'.$this->print_fb_likebutton_css_fixer('display: inline-block; height: 24px; max-height: 24px; margin-right: 5px; vertical-align: top;'.$fix_native_width.'', $facebook_like_button_height, $facebook_like_button_margin_top).'" class="essb_fb_like"><div class="fb-like" data-href="'.$address.'" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" data-width="292"></div></div>';
 			}
 		}
 		
@@ -4004,6 +4128,7 @@ VK.Widgets.Like("vk_like' . $salt . '", {type: "button", height: 20});
 	
 		$text = str_replace("'", "&apos;", $text);
 		$title = str_replace("'", "&apos;", $title);
+		$site_title = str_replace("'", "&apos;", $site_title);
 	
 		$siteurl = ESSB_PLUGIN_URL. '/';
 		//$open = 'javascript:PopupContact_OpenForm("PopupContact_BoxContainer","PopupContact_BoxContainerBody","PopupContact_BoxContainerFooter");';
@@ -4437,7 +4562,7 @@ VK.Widgets.Like("vk_like' . $salt . '", {type: "button", height: 20});
 					$content = '<div class="essb_sidebar_start_scroll"></div>'.$content;
 				}
 				
-				if( 'top' == $display_where || 'both' == $display_where || 'float' == $display_where || 'likeshare' == $display_where || 'sharelike' == $display_where)
+				if( 'top' == $display_where || 'both' == $display_where || 'float' == $display_where || 'likeshare' == $display_where || 'sharelike' == $display_where )
 					$content = $links.$content;
 				if( 'bottom' == $display_where || 'both' == $display_where || 'popup' == $display_where || 'likeshare' == $display_where || 'sharelike' == $display_where || 'sidebar' == $display_where || 'postfloat' == $display_where || 'flyin' == $display_where) {
 					$this->print_links_position = "bottom";
@@ -4466,12 +4591,13 @@ VK.Widgets.Like("vk_like' . $salt . '", {type: "button", height: 20});
 				if ('postfloat' == $display_where && $postfloat_percent != '') {
 					$this->essb_js_builder->include_postfloat_scroll_script($postfloat_percent);
 				}
+				
  				
 				//$debug_lab = microtime(true);
 				//$execution_trance .= ' break2 '. ($debug_lab - $start) . ' | ';
 				
 				// @since 1.3.9.1
-				if ('sidebar' == $display_where) {
+				if ('sidebar' == $display_where || 'postfloat' == $display_where) {
 					$content .= '<div class="essb_sidebar_break_scroll"></div>';
 				}
 				
@@ -5191,7 +5317,8 @@ VK.Widgets.Like("vk_like' . $salt . '", {type: "button", height: 20});
 				'forceurl' => 'no',
 				'videoshare' => 'no',
 				'template' => '',
-				'hide_mobile' => 'no'
+				'hide_mobile' => 'no',
+				'only_mobile' => 'no'
 		), $atts); 
 			
 
@@ -5201,7 +5328,15 @@ VK.Widgets.Like("vk_like' . $salt . '", {type: "button", height: 20});
 		$hide_mobile = isset($atts['hide_mobile']) ? $atts['hide_mobile'] : '';
 		$hide_mobile = EasySocialShareButtons_ShortcodeHelper::unified_yes($hide_mobile);
 		
+		$only_mobile = isset($atts['only_mobile']) ? $atts['only_mobile'] : '';
+		$only_mobile = EasySocialShareButtons_ShortcodeHelper::unified_yes($only_mobile);
+		
+		
 		if ($hide_mobile == "yes" && $this->isMobile()) {
+			return "";
+		}
+		
+		if ($only_mobile == "yes" && !$this->isMobile()) {
 			return "";
 		}
 		
@@ -5454,7 +5589,56 @@ VK.Widgets.Like("vk_like' . $salt . '", {type: "button", height: 20});
 	
 		$links = $this->generate_share_snippet(array(), $need_counters);
 	
-		echo $links .'<div style="clear: both;\"></div>';
+		echo $links .'<div style="clear: both;"></div>';
+	}
+	
+	public function handle_ithemes_share() {
+		global $post;
+		$options = $this->options;
+	
+		if (isset($post)) {
+			$post_counters =  get_post_meta($post->ID,'essb_counter',true);
+				
+			if ($post_counters != '') {
+				$options ['show_counter'] = $post_counters;
+			}
+	
+		}
+		$need_counters = $options['show_counter'] ? 1 : 0;
+	
+		$need_counters = $options['show_counter'] ? 1 : 0;
+			
+	
+		$links = $this->generate_share_snippet(array(), $need_counters);
+	
+		echo $links .'<div style="clear: both;"></div>';
+	}
+
+	public function handle_ithemes_share_after_purchase() {
+		$activity_link = it_exchange( 'transaction', 'product-attribute', array( 'attribute' => 'product_id', 'return' => true ) );
+		$activity_title =  it_exchange( 'transaction', 'product-attribute', array( 'attribute' => 'title', 'return' => true ) );
+		//print "activity tile=".$activity_title;
+		$activity_link = get_permalink($activity_link);
+		//print "activity_link tile=".$activity_link;
+		$options = $this->options;
+		
+		$essb_networks = $options['networks'];
+		$buttons = "";
+		foreach($essb_networks as $k => $v) {
+			if( $v[0] == 1 ) {
+				if ($buttons != '') {
+					$buttons .= ",";
+				}
+				$buttons .= $k;
+			}
+			
+		}
+		$hidden_name_class = 'hide_names="force"';
+		$need_counters = 0;$options['show_counter'] ? 1 : 0;
+		//$need_counters = 0;
+		$links = do_shortcode('[easy-share buttons="'.$buttons.'" counters='.$need_counters.' native="no"  nostats="yes"  url="'.$activity_link.'" text="'.$activity_title.'" '.$hidden_name_class.']');
+		
+		echo $links .'<div style="clear: both;"></div>';
 	}
 	
 	public function handle_wpecommerce_share($product_id) {
@@ -5476,7 +5660,7 @@ VK.Widgets.Like("vk_like' . $salt . '", {type: "button", height: 20});
 		
 		$links = $this->generate_share_snippet(array(), $need_counters);
 		
-		echo $links .'<div style="clear: both;\"></div>';
+		echo $links .'<div style="clear: both;"></div>';
 	}
 	
 	public function handle_woocommerce_share() {
@@ -5489,7 +5673,7 @@ VK.Widgets.Like("vk_like' . $salt . '", {type: "button", height: 20});
 		
 				$links = $this->generate_share_snippet(array(), $need_counters);
 		
-		echo $links .'<div style="clear: both;\"></div>';		
+		echo $links .'<div style="clear: both;"></div>';		
 	}
 	
 	// @since 1.0.7 - disable network name popup on mobile devices
@@ -5664,6 +5848,7 @@ VK.Widgets.Like("vk_like' . $salt . '", {type: "button", height: 20});
 		$options = $this->options;
 		$admin_ajax_cache = isset($options['admin_ajax_cache']) ? $options['admin_ajax_cache'] : '';
 		$admin_ajax_cache = trim($admin_ajax_cache);
+				
 		
 		$is_cache_active = false;
 		if (intval($admin_ajax_cache) > 0) { $is_cache_active = true; }
@@ -5727,6 +5912,7 @@ VK.Widgets.Like("vk_like' . $salt . '", {type: "button", height: 20});
 						$json['count'] = $result->result->views;
 						
 						if ($is_cache_active) {
+							delete_transient($transient_key);
 							set_transient( $transient_key, $json['count'], $admin_ajax_cache );								
 						}
 					}					
@@ -5748,6 +5934,7 @@ VK.Widgets.Like("vk_like' . $salt . '", {type: "button", height: 20});
 				if (!$exist_in_cache) {
 					$json['count'] = $this->getGplusShares($url);
 					if ($is_cache_active) {
+						delete_transient($transient_key);
 						set_transient( $transient_key, $json['count'], $admin_ajax_cache );
 					}
 				}
@@ -5766,6 +5953,7 @@ VK.Widgets.Like("vk_like' . $salt . '", {type: "button", height: 20});
 				if (!$exist_in_cache) {
 					$json['count'] = $this->getRedditScore($url);
 					if ($is_cache_active) {
+						delete_transient($transient_key);
 						set_transient( $transient_key, $json['count'], $admin_ajax_cache );
 					}
 				}
@@ -5786,6 +5974,7 @@ VK.Widgets.Like("vk_like' . $salt . '", {type: "button", height: 20});
 					$json['count'] = $this->getLoveCount($url);
 					
 					if ($is_internal_cache_active) {
+						delete_transient($transient_key);
 						set_transient( $transient_key, $json['count'], $admin_ajax_cache_internal_time );
 					}
 				}
@@ -5806,6 +5995,7 @@ VK.Widgets.Like("vk_like' . $salt . '", {type: "button", height: 20});
 					$json['count'] = $this->getSelfPostCount($url, $network);
 						
 					if ($is_internal_cache_active) {
+						delete_transient($transient_key);
 						set_transient( $transient_key, $json['count'], $admin_ajax_cache_internal_time );
 					}
 				}
@@ -5825,6 +6015,7 @@ VK.Widgets.Like("vk_like' . $salt . '", {type: "button", height: 20});
 				if (!$exist_in_cache) {
 					$json['count'] = $this->get_counter_number_odnoklassniki($url);
 					if ($is_cache_active) {
+						delete_transient($transient_key);
 						set_transient( $transient_key, $json['count'], $admin_ajax_cache );
 					}
 				}
@@ -5843,6 +6034,7 @@ VK.Widgets.Like("vk_like' . $salt . '", {type: "button", height: 20});
 				if (!$exist_in_cache) {
 					$json['count'] = $this->get_counter_number__vk($url);
 					if ($is_cache_active) {
+						delete_transient($transient_key);
 						set_transient( $transient_key, $json['count'], $admin_ajax_cache );
 					}
 				}
@@ -5861,6 +6053,7 @@ VK.Widgets.Like("vk_like' . $salt . '", {type: "button", height: 20});
 				if (!$exist_in_cache) {
 					$json['count'] = $this->getManagedWPUpVote($url);
 					if ($is_cache_active) {
+						delete_transient($transient_key);
 						set_transient( $transient_key, $json['count'], $admin_ajax_cache );
 					}
 				}
@@ -5879,6 +6072,7 @@ VK.Widgets.Like("vk_like' . $salt . '", {type: "button", height: 20});
 				if (!$exist_in_cache) {
 					$json['count'] = $this->getXingCount($url);
 					if ($is_cache_active) {
+						delete_transient($transient_key);
 						set_transient( $transient_key, $json['count'], $admin_ajax_cache );
 					}
 				}
@@ -5897,6 +6091,7 @@ VK.Widgets.Like("vk_like' . $salt . '", {type: "button", height: 20});
 				if (!$exist_in_cache) {
 					$json['count'] = $this->getPocketCount($url);
 					if ($is_cache_active) {
+						delete_transient($transient_key);
 						set_transient( $transient_key, $json['count'], $admin_ajax_cache );
 					}
 				}
@@ -6396,6 +6591,28 @@ VK.Widgets.Like("vk_like' . $salt . '", {type: "button", height: 20});
 				//$this->async_js_list[] = ESSB_PLUGIN_URL . '/assets/js/essb-flyin.js';
 			}
 		}
+	}
+	
+	///
+	/// @since 2.0.3 
+	/// Add proper url encoding
+	function essb_urlencode($str) {
+		$str = str_replace(" ", "%20", $str);
+		$str = str_replace("'", "%27", $str);
+		$str = str_replace("\"", "%22", $str);
+		$str = str_replace("#", "%23", $str);
+		$str = str_replace("+", "%2B", $str);
+		$str = str_replace("$", "%24", $str);
+		$str = str_replace("&", "%26", $str);
+		$str = str_replace(",", "%2C", $str);
+		$str = str_replace("/", "%2F", $str);
+		$str = str_replace(":", "%3A", $str);
+		$str = str_replace(";", "%3B", $str);
+		$str = str_replace("=", "%3D", $str);
+		$str = str_replace("?", "%3F", $str);
+		$str = str_replace("@", "%40", $str);
+		
+		return $str;
 	}
 }
 

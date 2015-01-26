@@ -61,6 +61,18 @@ function essb_customizer_create_icon_field($field) {
 	}	
 }
 
+function essb_customizer_create_text_field($field) {
+
+	$options = get_option ( EasySocialShareButtons::$plugin_settings_name );
+	if (is_array ( $options )) {
+		$exist = isset ( $options [$field] ) ? $options [$field] : '';
+		$exist = stripslashes ( $exist );
+
+		echo '<input id="'.$field.'" type="text" name="general_options['.$field.']" value="' . $exist . '" class="input-element" />';
+
+	}
+}
+
 function essb_customizer_create_css_field() {
 	global $color_fields;
 
@@ -158,7 +170,7 @@ function essb_customizer_for_networks() {
 			<span class="label" style="font-weight: 400;">For Retina temaplates for best performance you need to provide images with resolution 42px x 42px and in this field you need to set 21px 21px
 			</span></td>';
 			echo '<td class="essb_options_general">';
-			essb_customizer_create_icon_field('customizer_'.$k.'_iconbgsize');
+			essb_customizer_create_text_field('customizer_'.$k.'_iconbgsize');
 			echo '</td>';
 			echo '</tr>';
 
@@ -176,7 +188,7 @@ function essb_customizer_for_networks() {
 			<span class="label" style="font-weight: 400;">For Retina temaplates for best performance you need to provide images with resolution 42px x 42px and in this field you need to set 21px 21px
 			</span></td>';
 			echo '<td class="essb_options_general">';
-			essb_customizer_create_icon_field('customizer_'.$k.'_hovericonbgsize');
+			essb_customizer_create_text_field('customizer_'.$k.'_hovericonbgsize');
 			echo '</td>';
 			echo '</tr>';
 		}
@@ -231,7 +243,7 @@ function essb_customizer_remove_bg_hover_effects() {
 						href="http://codecanyon.net/item/easy-social-share-buttons-for-wordpress/6394476?ref=appscreo"
 						target="_blank" style="text-decoration: none;">Easy Social Share Buttons for WordPress version <?php echo ESSB_VERSION; ?></a></span>
 				</div>		
-		<?php echo '<a href="http://support.creoworx.com" target="_blank" text="' . __ ( 'Need Help? Click here to visit our support center', ESSB_TEXT_DOMAIN ) . '" class="button">' . __ ( 'Support Center', ESSB_TEXT_DOMAIN ) . '</a>'; ?>				
+		<?php echo '<a href="http://support.creoworx.com/knowledgebase/style-settings/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button" target="_blank" text="' . __ ( 'Need Help? Click here to visit our support center', ESSB_TEXT_DOMAIN ) . '" class="button">' . __ ( 'Need Help?', ESSB_TEXT_DOMAIN ) . '</a>'; ?>				
 		<?php echo '<input type="Submit" name="Submit" value="' . __ ( 'Update Settings', ESSB_TEXT_DOMAIN ) . '" class="button-primary" />'; ?>
 	</div>
 			<div class="essb-options-sidebar">
@@ -266,7 +278,7 @@ function essb_customizer_remove_bg_hover_effects() {
 						</tr>
 						<tr class="even table-border-bottom">
 							<td valign="top" class="bold"><?php _e('Background color:', ESSB_TEXT_DOMAIN); ?><br />
-								<span class="label" style="font-weight: 400;">Replace total color background color
+								<span class="label" style="font-weight: 400;">Replace counter color background color
 							</span></td>
 							<td class="essb_general_options"><?php essb_customizer_create_color_field('customizer_totalbgcolor');?></td>
 						</tr>
@@ -276,23 +288,29 @@ function essb_customizer_remove_bg_hover_effects() {
 							</span></td>
 							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawCheckboxField('customizer_totalnobgcolor');?></td>
 						</tr>
-						<tr class="odd table-border-bottom">
+						<tr class="even table-border-bottom">
 							<td valign="top" class="bold"><?php _e('Text color:', ESSB_TEXT_DOMAIN); ?><br />
-								<span class="label" style="font-weight: 400;">Replace total color text color
+								<span class="label" style="font-weight: 400;">Replace total counter text color
 							</span></td>
 							<td class="essb_general_options"><?php essb_customizer_create_color_field('customizer_totalcolor');?></td>
 						</tr>
-						<tr class="even table-border-bottom">
+						<tr class="odd table-border-bottom">
 							<td valign="top" class="bold"><?php _e('Total counter big style font-size:', ESSB_TEXT_DOMAIN); ?><br />
 								<span class="label" style="font-weight: 400;">Enter value in px (ex: 21px) to change the total counter font-size
 							</span></td>
 							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawInputField('customizer_totalfontsize');?></td>
 						</tr>
-						<tr class="odd table-border-bottom">
+						<tr class="even table-border-bottom">
 							<td valign="top" class="bold"><?php _e('Total counter big style shares text font-size:', ESSB_TEXT_DOMAIN); ?><br />
 								<span class="label" style="font-weight: 400;">Enter value in px (ex: 10px) to change the total counter shares text font-size
 							</span></td>
 							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawInputField('customizer_totalfontsize_after');?></td>
+						</tr>
+						<tr class="even table-border-bottom">
+							<td valign="top" class="bold"><?php _e('Total counter before/after share buttons text font-size:', ESSB_TEXT_DOMAIN); ?><br />
+								<span class="label" style="font-weight: 400;">Enter value in px (ex: 14px) to change the total counter text font-size
+							</span></td>
+							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawInputField('customizer_totalfontsize_beforeafter');?></td>
 						</tr>
 						
 						<tr class="table-border-bottom">

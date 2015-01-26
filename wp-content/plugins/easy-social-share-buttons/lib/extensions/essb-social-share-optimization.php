@@ -193,7 +193,9 @@ class EasySocialShareButtons_SocialShareOptimization {
 				if ($this->twitter_image == "") {
 					$this->twitter_image = $this->fb_image;
 				}
-				
+				if ($this->twitter_image == "") {
+					$this->twitter_image = $this->post_image;
+				}				
 				
 				if ($this->twitter_description == "") {
 					$this->twitter_description = $this->post_description;
@@ -219,6 +221,9 @@ class EasySocialShareButtons_SocialShareOptimization {
 				}
 				if ($this->google_image == "") {
 					$this->google_image = $this->fb_image;
+				}
+				if ($this->google_image == "") {
+					$this->google_image = $this->post_image;
 				}
 				
 				
@@ -345,6 +350,9 @@ class EasySocialShareButtons_SocialShareOptimization {
 	private function buildTwitterMeta() {
 		if ($this->card_type == "") {
 			$this->card_type = "summary";
+		}
+		else if ($this->card_type == "summaryimage") {
+			$this->card_type = "summary_large_image";
 		}
 		
 		$this->twitterMetaTagBuilder('card', $this->card_type);

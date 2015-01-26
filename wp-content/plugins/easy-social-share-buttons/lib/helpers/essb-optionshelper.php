@@ -2,7 +2,7 @@
 
 class ESSBOptionsHelper {
 	
-	public static function getPostMetaOptions($post_id) {
+	public static function getPostMetaOptions($post_id, $deactivate_shorturl_cache) {
 		
 		// getting post meta
 		$metaboxContainer = get_post_custom ( $post_id );
@@ -49,6 +49,14 @@ class ESSBOptionsHelper {
 
 			$optionsFromPost ['essb_shorturl_bitly'] = ESSBOptionsHelper::metaboxValue ( $metaboxContainer, 'essb_shorturl_bitly' );
 			$optionsFromPost ['essb_shorturl_googl'] = ESSBOptionsHelper::metaboxValue ( $metaboxContainer, 'essb_shorturl_googl' );
+			
+			// since 2.0.3 - on post/page custom ga campaign tracking
+			$optionsFromPost ['essb_activate_ga_campaign_tracking'] = ESSBOptionsHelper::metaboxValue ( $metaboxContainer, 'essb_activate_ga_campaign_tracking' );
+			
+			if ($deactivate_shorturl_cache) {
+				$optionsFromPost ['essb_shorturl_bitly'] = '';
+				$optionsFromPost ['essb_shorturl_googl'] = '';
+			}
 				
 		//print_r($optionsFromPost);
 		return $optionsFromPost;

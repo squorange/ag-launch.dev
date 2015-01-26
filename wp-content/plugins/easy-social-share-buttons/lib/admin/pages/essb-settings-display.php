@@ -514,6 +514,18 @@ if ($cmd == "update") {
 	$current_options ['display_position_home'] = ESSBOptionsHelper::optionsValue($options, 'display_position_home');
 	$current_options ['popup_user_notshow_onclose_all'] = ESSBOptionsHelper::optionsBoolValueAsText($options, 'popup_user_notshow_onclose_all');
 	$current_options ['float_onsingle_only'] = ESSBOptionsHelper::optionsBoolValueAsText($options, 'float_onsingle_only');
+
+	$current_options ['ithemes_after_title'] = ESSBOptionsHelper::optionsBoolValueAsText($options, 'ithemes_after_title');
+	$current_options ['ithemes_before_desc'] = ESSBOptionsHelper::optionsBoolValueAsText($options, 'ithemes_before_desc');
+	$current_options ['ithemes_after_desc'] = ESSBOptionsHelper::optionsBoolValueAsText($options, 'ithemes_after_desc');
+	$current_options ['ithemes_after_product'] = ESSBOptionsHelper::optionsBoolValueAsText($options, 'ithemes_after_product');
+	$current_options ['ithemes_after_purchase'] = ESSBOptionsHelper::optionsBoolValueAsText($options, 'ithemes_after_purchase');
+	$current_options ['total_counter_afterbefore_text'] = ESSBOptionsHelper::optionsValue($options, 'total_counter_afterbefore_text');
+	$current_options ['mail_function_mobile'] = ESSBOptionsHelper::optionsValue($options, 'mail_function_mobile');
+	$current_options ['postfloat_limitfooter'] = ESSBOptionsHelper::optionsBoolValueAsText($options, 'postfloat_limitfooter');
+	
+	$current_options ['woocommece_beforeprod'] = ESSBOptionsHelper::optionsBoolValueAsText($options, 'woocommece_beforeprod');
+	$current_options ['woocommece_afterprod'] = ESSBOptionsHelper::optionsBoolValueAsText($options, 'woocommece_afterprod');
 	
 	$current_options ['network_message'] = $mm;
 	
@@ -585,7 +597,7 @@ function essb_select_content_type() {
 		}
 	}
 	echo '<input type="checkbox" name="general_options[display_in_types][]" id="all_lists" value="all_lists" ' . $all_lists_selected . '> <label for="all_lists">' . "" . ' ' . sprintf ( __ ( 'Lists of articles <br />%s<span class="label">(blog, archives, search results, etc.)</span>%s', ESSB_TEXT_DOMAIN ), '<em>', '</em>' ) . '</label><br/><br/>';
-	echo '<input type="checkbox" name="general_options[woocommece_share]" id="woocommece_share" value="true" ' . $is_woocommerce_selected . '> <label for="woocommece_share">' . "" . ' ' . sprintf ( __ ( 'WooCommence Products <br />%s<span class="label">(Activate share buttons for WooCommerce Products)</span>%s', ESSB_TEXT_DOMAIN ), '<em>', '</em>' ) . '</label><br/><br/>';
+	//echo '<input type="checkbox" name="general_options[woocommece_share]" id="woocommece_share" value="true" ' . $is_woocommerce_selected . '> <label for="woocommece_share">' . "" . ' ' . sprintf ( __ ( 'WooCommence Products <br />%s<span class="label">(Activate share buttons for WooCommerce Products)</span>%s', ESSB_TEXT_DOMAIN ), '<em>', '</em>' ) . '</label><br/><br/>';
 }
 
 function essb_setting_radio_where() {
@@ -1026,6 +1038,7 @@ function essb_custom_counter_pos() {
 		<option value="right" ' . ($exist == 'right' ? ' selected="selected"' : '') . '>Right</option>
 		<option value="inside" ' . ($exist == 'inside' ? ' selected="selected"' : '') . '>Inside Buttons</option>
 		<option value="insidename" ' . ($exist == 'insidename' ? ' selected="selected"' : '') . '>Inside Buttons with Network Names</option>
+		<option value="insidebeforename" ' . ($exist == 'insidebeforename' ? ' selected="selected"' : '') . '>Inside Buttons before Network Names</option>
 		<option value="hidden" ' . ($exist == 'hidden' ? ' selected="selected"' : '') . '>Hidden</option>
 		<option value="leftm" ' . ($exist == 'leftm' ? ' selected="selected"' : '') . '>Left Modern</option>
 		<option value="rightm" ' . ($exist == 'rightm' ? ' selected="selected"' : '') . '>Right Modern</option>
@@ -1049,6 +1062,8 @@ function essb_custom_total_counter_pos() {
 		<option value="left" ' . ($exist == 'left' ? ' selected="selected"' : '') . '>Left</option>
 		<option value="rightbig" ' . ($exist == 'rightbig' ? ' selected="selected"' : '') . '>Right Big Numbers Only</option>
 		<option value="leftbig" ' . ($exist == 'leftbig' ? ' selected="selected"' : '') . '>Left Big Numbers Only</option>
+		<option value="before" ' . ($exist == 'before' ? ' selected="selected"' : '') . '>Before social share buttons</option>
+		<option value="after" ' . ($exist == 'after' ? ' selected="selected"' : '') . '>After social share buttons</option>
 		</select>
 		</p>';
 	
@@ -1296,6 +1311,7 @@ function essb_advanced_display_on_single_posttype($selectedPt, $textOfHeading, $
 	$counters_pos ['right'] = "Right";
 	$counters_pos ['inside'] = "Inside button";
 	$counters_pos ['insidename'] = "Inside button with Network Names";
+	$counters_pos ['insidebeforename'] = "Inside button before Network Names";
 	$counters_pos ['hidden'] = "Hidden";
 	$counters_pos ['leftm'] = "Left Modern";
 	$counters_pos ['rightm'] = "Right Modern";
@@ -1316,6 +1332,8 @@ function essb_advanced_display_on_single_posttype($selectedPt, $textOfHeading, $
 	$total_counters_pos ['right'] = "Right";
 	$total_counters_pos ['leftbig'] = "Left Big Number";
 	$total_counters_pos ['rightbig'] = "Right Big Number";
+	$total_counters_pos ['before'] = "Before social share buttons";
+	$total_counters_pos ['after'] = "After social share buttons";
 	$total_counters_pos ['hidden'] = "Hidden";
 	
 	echo '<tr class="odd table-border-bottom">';
@@ -1515,6 +1533,7 @@ function essb_advanced_display_on_single_buttonposition($selectedPt, $textOfHead
 	$counters_pos ['right'] = "Right";
 	$counters_pos ['inside'] = "Inside button";
 	$counters_pos ['insidename'] = "Inside button with Network Names";
+	$counters_pos ['insidebeforename'] = "Inside button before Network Names";
 	$counters_pos ['hidden'] = "Hidden";
 	$counters_pos ['leftm'] = "Left Modern";
 	$counters_pos ['rightm'] = "Right Modern";
@@ -1535,6 +1554,8 @@ function essb_advanced_display_on_single_buttonposition($selectedPt, $textOfHead
 	$total_counters_pos ['right'] = "Right";
 	$total_counters_pos ['leftbig'] = "Left Big Number";
 	$total_counters_pos ['rightbig'] = "Right Big Number";
+	$total_counters_pos ['before'] = "Before social share buttons";
+	$total_counters_pos ['after'] = "After social share buttons";
 	$total_counters_pos ['hidden'] = "Hidden";
 	
 	echo '<tr class="even table-border-bottom">';
@@ -1683,6 +1704,7 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 	$counters_pos ['right'] = "Right";
 	$counters_pos ['inside'] = "Inside button";
 	$counters_pos ['insidename'] = "Inside button with Network Names";
+	$counters_pos ['insidebeforename'] = "Inside button before Network Names";
 	$counters_pos ['hidden'] = "Hidden";
 	$counters_pos ['leftm'] = "Left Modern";
 	$counters_pos ['rightm'] = "Right Modern";
@@ -1703,6 +1725,8 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 	$total_counters_pos ['right'] = "Right";
 	$total_counters_pos ['leftbig'] = "Left Big Number";
 	$total_counters_pos ['rightbig'] = "Right Big Number";
+	$total_counters_pos ['before'] = "Before social share buttons";
+	$total_counters_pos ['after'] = "After social share buttons";
 	$total_counters_pos ['hidden'] = "Hidden";
 	
 	echo '<tr class="even table-border-bottom" data-group="' . $selectedPt . '">';
@@ -1781,6 +1805,8 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 							Settings</a></li>
 					<li id="essb-menu-1-1" class="essb-submenu-item"><a href="#"
 						onclick="essb_submenu_execute('1-1'); return false;">Post Types</a></li>
+					<li id="essb-menu-1-7" class="essb-submenu-item"><a href="#"
+						onclick="essb_submenu_execute('1-7'); return false;">WooCommerce</a></li>
 					<li id="essb-menu-1-2" class="essb-submenu-item"><a href="#"
 						onclick="essb_submenu_execute('1-2'); return false;">bbPress
 							Display</a></li>
@@ -1791,7 +1817,9 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 						onclick="essb_submenu_execute('1-4'); return false;">WP e-Commerce</a></li>
 					<li id="essb-menu-1-5" class="essb-submenu-item"><a href="#"
 						onclick="essb_submenu_execute('1-5'); return false;">JigoShop</a></li>
-
+					<li id="essb-menu-1-6" class="essb-submenu-item"><a href="#"
+						onclick="essb_submenu_execute('1-6'); return false;">iThemes Exchange</a></li>
+						
 					<li id="essb-menu-2" class="essb-menu-item"><a href="#"
 						onclick="essb_option_activate('2'); return false;">Button Position</a></li>
 					<li id="essb-menu-2-1" class="essb-submenu-item"><a href="#"
@@ -1802,7 +1830,7 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 					<li class="essb-title"><a href="#" onclick="return false;">Names &
 							Counters</a></li>
 					<li id="essb-menu-15" class="essb-menu-item"><a href="#"
-						onclick="essb_option_activate('15'); return false;">Button Style</a></li>
+						onclick="essb_option_activate('15'); return false;">Quick Set</a></li>
 
 					<li id="essb-menu-7" class="essb-menu-item"><a href="#"
 						onclick="essb_option_activate('7'); return false;">Network Names</a></li>
@@ -1878,7 +1906,7 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 							<td colspan="2" class="sub"><?php _e('Display Settings', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/display-settings/"
+										href="http://support.creoworx.com/knowledgebase/display-settings/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>
@@ -1945,6 +1973,21 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 						
 						
 						</tr>
+						<tr class="table-border-bottom" id="essb-submenu-1-7">
+							<td colspan="2" class="sub2">WooCommerce</td>
+						</tr>
+						<tr class="even table-border-bottom">
+							<td valign="top" class="bold">Display buttons after product price:</td>
+							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawCheckboxField('woocommece_share'); ?></td>
+						</tr>
+						<tr class="odd table-border-bottom">
+							<td valign="top" class="bold">Display buttons on top of product (before product):</td>
+							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawCheckboxField('woocommece_beforeprod'); ?></td>
+						</tr>
+						<tr class="even table-border-bottom">
+							<td valign="top" class="bold">Display buttons at the bottom of product (after product):</td>
+							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawCheckboxField('woocommece_afterprod'); ?></td>
+						</tr>
 						<tr class="table-border-bottom"
 							<?php if ($active_easy_mode) { echo ' style="display:none;"';} ?>
 							id="essb-submenu-1-2">
@@ -2009,7 +2052,30 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 							<td valign="top" class="bold">JigoShop After Product:</td>
 							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawCheckboxField('jigoshop_bottom'); ?></td>
 						</tr>
-
+						<tr class="table-border-bottom" id="essb-submenu-1-6">
+							<td colspan="2" class="sub2">iThemes Exchange</td>
+						</tr>
+						<tr class="even table-border-bottom">
+							<td valign="top" class="bold">Display after product title:</td>
+							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawCheckboxField('ithemes_after_title'); ?></td>
+						</tr>
+						<tr class="odd table-border-bottom">
+							<td valign="top" class="bold">Display before product description:</td>
+							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawCheckboxField('ithemes_before_desc'); ?></td>
+						</tr>
+						<tr class="even table-border-bottom">
+							<td valign="top" class="bold">Display after product description:</td>
+							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawCheckboxField('ithemes_after_desc'); ?></td>
+						</tr>
+						<tr class="odd table-border-bottom">
+							<td valign="top" class="bold">Display after product advanced content (after product information):</td>
+							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawCheckboxField('ithemes_after_product'); ?></td>
+						</tr>
+						<tr class="even table-border-bottom">
+							<td valign="top" class="bold">Display share buttons for each product after successful purchase (when shopping cart is used):<br/><span class="label">This will display share buttons below each product on success order confirmation page.</span></td>
+							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawCheckboxField('ithemes_after_purchase'); ?></td>
+						</tr>
+						
 					</table>
 				</div>
 				<div id="essb-container-2" class="essb-data-container">
@@ -2020,7 +2086,7 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 							<td colspan="2" class="sub"><?php _e('Button Position', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/button-position/"
+										href="http://support.creoworx.com/knowledgebase/button-position/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>
@@ -2120,7 +2186,7 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 							<td colspan="2" class="sub"><?php _e('Float From Top Settings', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/float-from-top-settings/"
+										href="http://support.creoworx.com/knowledgebase/float-from-top-settings/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>
@@ -2160,8 +2226,7 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 
 						<tr class="even table-border-bottom">
 							<td class="bold">Float with javascript:<br /> <span class="label"
-								style="font-weight: 400;">Set this option to avoid Google Chrome
-									issue with fixed elements.</span></td>
+								style="font-weight: 400;">Activate this option only if you issue with the float bar that appears under Google Chrome. In all other situations we recommend that option not to be activated.</span></td>
 							<td class="essb_general_options"><?php essb_custom_float_from_top_js(); ?></td>
 						</tr>
 						<tr class="odd table-border-bottom">
@@ -2178,7 +2243,7 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 							<td colspan="2" class="sub"><?php _e('Sidebar Settings', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/sidebar-settings/"
+										href="http://support.creoworx.com/knowledgebase/sidebar-settings/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>
@@ -2288,7 +2353,7 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 							<td colspan="2" class="sub"><?php _e('Popup Window Settings', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/popup-window-settings/"
+										href="http://support.creoworx.com/knowledgebase/popup-window-settings/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>
@@ -2357,7 +2422,7 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 								it again on all page/post for him:<br /> <span class="label"
 								style="font-weight: 400;">Activating this option will set cookie
 									that will not show again popup message for next 7 days for user
-									on all post/page</span>
+									on all posts/pages</span>
 							</td>
 							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawCheckboxField('popup_user_notshow_onclose_all');?></td>
 						</tr>
@@ -2382,7 +2447,7 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 						</tr>
 						<tr class="even table-border-bottom">
 							<td class="bold" valign="top">Window will automatically close in
-								message customize::<br /> <span class="label"
+								message customize:<br /> <span class="label"
 								style="font-weight: 400;">Set custom text for Window will
 									automatically close in</span>
 							</td>
@@ -2398,7 +2463,7 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 							<td colspan="2" class="sub"><?php _e('Flyin Settings', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/popup-window-settings/"
+										href="http://support.creoworx.com/knowledgebase/flyin-settings/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>
@@ -2483,7 +2548,7 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 						</tr>
 						<tr class="even table-border-bottom">
 							<td class="bold" valign="top">Flyin will automatically close in
-								message customize::<br /> <span class="label"
+								message customize:<br /> <span class="label"
 								style="font-weight: 400;">Set custom text for Flyin will
 									automatically close in</span>
 							</td>
@@ -2499,7 +2564,7 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 							<td colspan="2" class="sub"><?php _e('Post Vertical Float Sidebar Settings', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/post-vertical-float-sidebar-settings/"
+										href="http://support.creoworx.com/knowledgebase/post-vertical-float-sidebar-settings/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>
@@ -2534,6 +2599,14 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 							</td>
 							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawInputField('postfloat_percent'); ?></td>
 						</tr>
+						<tr class="odd table-border-bottom">
+							<td class="bold">Limit post vertical float to enter footer area:
+								<div class="essb-new">
+									<span></span>
+								</div> <br /> <span class="label" style="font-weight: 400;">Activate this option to limit vetical float bar to enter the footer of site. When footer is reached buttons will disappear and appear again when you scroll up.</span>
+							</td>
+							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawCheckboxField('postfloat_limitfooter'); ?></td>
+						</tr>
 					</table>
 				</div>
 				<div id="essb-container-6" class="essb-data-container">
@@ -2544,7 +2617,7 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 							<td colspan="2" class="sub"><?php _e('Counters', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/network-names-and-counters/"
+										href="http://support.creoworx.com/knowledgebase/counters/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>
@@ -2618,10 +2691,10 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 						<tr class="odd table-border-bottom">
 							<td class="bold" valign="top">Display button counter after this
 								value of shares is reached:<br /> <span class="label"
-								style="font-weight: 400">You can hide your total counter until
+								style="font-weight: 400">You can hide your button counter until
 									amount of shares is reached. This option is active only when
-									you enter value in this field - if blank total counter is
-									always displayed.</span>
+									you enter value in this field - if blank button counter is
+									always displayed. (Example: 10 - this will make button counter appear when at least 10 shares are made)</span>
 							</td>
 							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawInputField('button_counter_hidden_till'); ?></td>
 						</tr>
@@ -2657,6 +2730,11 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 								src="<?php echo ESSB_PLUGIN_URL; ?>/assets/images/admin_help_images-06.png" /></td>
 						</tr>
 						<tr class="odd table-border-bottom">
+							<td class="bold" valign="top">Before/after social share buttons counter text:<br /> <span
+								class="label">Customize the text that is displayed in before/ater share buttons display method. To display the total share number use the string {TOTAL} in text. Example: {TOTAL} users share us</span></td>
+							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawTextareaField('total_counter_afterbefore_text'); ?><br />
+						</tr>
+						<tr class="odd table-border-bottom">
 							<td class="bold" valign="top">Display total counter after this
 								value of shares is reached:<br /> <span class="label"
 								style="font-weight: 400">You can hide your total counter until
@@ -2679,16 +2757,16 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 						<col width="25%" />
 						<col width="75%" />
 						<tr>
-							<td colspan="2" class="sub">Button Style
+							<td colspan="2" class="sub">Quick Set
 								<div class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/network-names-and-counters/"
+										href="http://support.creoworx.com/knowledgebase/button-style/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div>
 							</td>
 						</tr>
 						<tr class="table-border-bottom">
-							<td colspan="2">Quick button style screen is created to load predefined settings based on selected button style. For additional personalizations please use the <b>Counter</b> and <b>Network Names</b> menus.</td>
+							<td colspan="2">In this section you can set the network names and the counters easier and faster. The idea of this quick set mode for names and counters is to choose what result you are looking for. All the settings necessary the buttons to display that way will be made automatically. This will save you to wonder what combination of options you have to activate to get the finale outlook you wish to reach. Also using Easy set you will prevent activating options that are with opposite action which may cause troubles in proper button's work.</td>
 						</tr>
 						<tr class="even table-border-bottom">
 							<td valign="top" class="bold"><?php _e('Quick settings apply for button style:', ESSB_TEXT_DOMAIN); ?><br />
@@ -2779,7 +2857,7 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 							<td colspan="2" class="sub">Network Names
 								<div class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/network-names-and-counters/"
+										href="http://support.creoworx.com/knowledgebase/network-names/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div>
 							</td>
@@ -2843,7 +2921,7 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 							<td colspan="2" class="sub"><?php _e('Message above buttons', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/message-above-buttons/"
+										href="http://support.creoworx.com/knowledgebase/message-above-buttons/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>
@@ -2915,7 +2993,7 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 							<td colspan="2" class="sub">Localization Settings
 								<div class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/localization-settings/"
+										href="http://support.creoworx.com/knowledgebase/localization-settings/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div>
 							</td>
@@ -2945,7 +3023,7 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 							<td colspan="2" class="sub"><?php _e('Advanced Display Settings by Post Type', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/advanced-display-settings-by-post-type/"
+										href="http://support.creoworx.com/knowledgebase/advanced-display-settings-by-post-type/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>
@@ -2967,7 +3045,7 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 							<td colspan="2" class="sub"><?php _e('Advanced Display Settings by Button Position', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/advanced-display-settings-by-button-position/"
+										href="http://support.creoworx.com/knowledgebase/advanced-display-settings-by-button-position/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>
@@ -2992,7 +3070,7 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 							<td colspan="2" class="sub" id="essb-submenu-14-1"><?php _e('Mobile Display Options', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/post-vertical-float-sidebar-settings/"
+										href="http://support.creoworx.com/knowledgebase/mobile-display-options/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>
@@ -3062,6 +3140,19 @@ function essb_advanced_display_on_single_mobileposition($selectedPt, $textOfHead
 									avoid mobile rules for settings for tablet devices.</span>
 							</td>
 							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawCheckboxField('mobile_exclude_tablet');?></td>
+						</tr>
+						<tr>
+						 	<td colspan="2" class="sub2">Email button function for mobile devices</td>
+						</tr>
+						<tr class="even table-border-bottom">
+							<td valign="top" class="bold"><?php _e('Send to mail button function on mobile:', ESSB_TEXT_DOMAIN); ?><br />
+								<span class="label" style="font-weight: normal;">Choose different mail button function for mobile devices only.</span></td>
+							<td><?php
+							
+							$listOfOptions = array ("" => "Use default function", "form" => "Send mail using popup form", "link" => "Send mail using mailto link and user mail client" );
+							ESSB_Settings_Helper::drawSelectField ( 'mail_function_mobile', $listOfOptions );
+							
+							?></td>
 						</tr>
 						<tr>
 							<td colspan="2" class="sub" style="padding-top: 20px;"

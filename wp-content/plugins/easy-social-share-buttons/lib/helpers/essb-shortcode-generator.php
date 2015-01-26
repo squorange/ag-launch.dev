@@ -41,6 +41,7 @@ class ESSBShortcodeGenerator {
 		$this->counterPositions['right'] = "Right";
 		$this->counterPositions['inside'] = "Inside button";
 		$this->counterPositions['insidename'] = "Inside button with Network Names";
+		$this->counterPositions['insidebeforename'] = "Inside button before Network Names";		
 		$this->counterPositions['hidden'] = "Hidden";
 		$this->counterPositions['leftm'] = "Left Modern";
 		$this->counterPositions['rightm'] = "Right Modern";
@@ -54,6 +55,9 @@ class ESSBShortcodeGenerator {
 		$this->totalCounterPosition['right'] = "Right";
 		$this->totalCounterPosition['leftbig'] = "Left Big Number";
 		$this->totalCounterPosition['rightbig'] = "Right Big Number";
+		$this->totalCounterPosition['before'] = "Before social share buttons";
+		$this->totalCounterPosition['after'] = "After social share buttons";
+		
 		$this->totalCounterPosition['none'] = "Hidden";
 	}
 	
@@ -111,6 +115,9 @@ class ESSBShortcodeGenerator {
 					$this->renderSection($param, $settings, $sectionCount);
 					$sectionCount++;
 					break;
+				case "subsection":
+					$this->renderSubSection($param, $settings);
+					break;
 				case "textbox" :
 					$this->renderTextbox($param, $settings, $cnt);
 					break;
@@ -140,8 +147,18 @@ class ESSBShortcodeGenerator {
 		
 		echo '<tr class="table-border-bottom">';
 		
-		echo '<td class="sub3" colspan="2" id="essb-submenu-'.$cnt.'">'.$text.'</td>';
+		echo '<td class="sub2" colspan="2" id="essb-submenu-'.$cnt.'">'.$text.'</td>';
 		
+		echo '</tr>';
+	}
+	
+	function renderSubSection($param, $settings) {
+		$text = isset($settings['text']) ? $settings['text'] : '';
+	
+		echo '<tr class="table-border-bottom">';
+	
+		echo '<td class="sub3" colspan="2">'.$text.'</td>';
+	
 		echo '</tr>';
 	}
 	
@@ -383,8 +400,8 @@ jQuery(document).ready(function(){
 	}
 	
 	private function includeOptionsForTotalShares() {
-		$this->shortcode = 'easy-total-share';
-		$this->shortcodeTitle = '[easy-total-share] Shortcode';
+		$this->shortcode = 'easy-total-shares';
+		$this->shortcodeTitle = '[easy-total-shares] Shortcode';
 		
 		$this->register("message", array("type" => "textbox", "text" => "Message before the total counter:", "comment" => "Custom message before the share counter", "value" => "", "fullwidth" => "true"));
 		$this->register("url", array("type" => "textbox", "text" => "Custom URL to extract total counter for:", "comment" => "Provide only if you wish get counter for different page then the shortcode is used", "value" => "", "fullwidth" => "true"));
@@ -412,29 +429,31 @@ jQuery(document).ready(function(){
 		
 		$this->register('section2', array("type" => "section", "text" => "Button Style"));
 		$this->register("hide_names", array("type" => "dropdown", "text"=> "Hide network names", "comment" => "", "sourceOptions" => array(""=>"", "no" => "Do not hide network names", "yes" => "Hide network names and display them on hover", "force" => "Always hide network names")));
-		
-		$this->register("fullwidth", array("type" => "checkbox", "text" => "Full width share buttons:", "comment" => "Activate display of full width share buttons", "value" => "yes"));
-		$this->register("fullwidth_fix", array("type" => "textbox", "text" => "Full width share buttons single element width correction:", "comment" => "Correct width of single share button (between 0 and 100)", "value" => ""));
-		
-		$this->register("fixedwidth", array("type" => "checkbox", "text" => "Fixed width share buttons:", "comment" => "Activate display of fixed width share buttons", "value" => "yes"));
-		$this->register("fixedwidth_px", array("type" => "textbox", "text" => "Fixed width button width:", "comment" => "Provide width of element in px without the px mark (example 120)", "value" => ""));
-		$this->register("fixedwidth_align", array("type" => "dropdown", "text" => "Choose alignment of network name when fixed width is used:", "comment" => "Provide different alignment of network name (counter when position inside or inside name) when fixed button width is activated. Default value is center.", "sourceOptions" => array (""=>"Center", "left" => "Left", "right" => "Right" )));
-		
 		$this->register("message", array("type" => "checkbox", "text" => "Display message above buttons:", "comment" => "This will display the message that you provide in options", "value" => "yes"));
 		$this->register("template", array("type" => "dropdown", "text"=> "Template", "comment" => "Choose different template for buttons in shortcode", "sourceOptions" => $this->templates));
-
+		
+		$this->register('subsection1', array("type" => "subsection", "text" => "Full width share buttons"));
+		$this->register("fullwidth", array("type" => "checkbox", "text" => "Activate full width share buttons:", "comment" => "Activate display of full width share buttons", "value" => "yes"));
+		$this->register("fullwidth_fix", array("type" => "textbox", "text" => "Single element width correction:", "comment" => "Correct width of single share button (between 0 and 100)", "value" => ""));
+		
+		$this->register('subsection2', array("type" => "subsection", "text" => "Fixed width share buttons"));
+		$this->register("fixedwidth", array("type" => "checkbox", "text" => "Activate fixed width share buttons:", "comment" => "Activate display of fixed width share buttons", "value" => "yes"));
+		$this->register("fixedwidth_px", array("type" => "textbox", "text" => "Single button width:", "comment" => "Provide width of element in px without the px mark (example 120)", "value" => ""));
+		$this->register("fixedwidth_align", array("type" => "dropdown", "text" => "Choose alignment of network name when fixed width is used:", "comment" => "Provide different alignment of network name (counter when position inside or inside name) when fixed button width is activated. Default value is center.", "sourceOptions" => array (""=>"Center", "left" => "Left", "right" => "Right" )));
+		
 		$this->register('section3', array("type" => "section", "text" => "Customize shared message"));
-		$this->register("url", array("type" => "textbox", "text" => "Share URL:", "comment" => "Provide custom share url. If nothid is filled the page/post address where buttons are displayed will be used", "value" => "", "fullwidth" => "true"));
+		$this->register("url", array("type" => "textbox", "text" => "Share URL:", "comment" => "Provide custom share url. If nothing is filled the page/post address where buttons are displayed will be used", "value" => "", "fullwidth" => "true"));
 		$this->register("text", array("type" => "textbox", "text" => "Share Message:", "comment" => "Provide custom share message. If nothid is filled the page/post title where buttons are displayed will be used", "value" => "", "fullwidth" => "true"));
 
 		$this->register('section4', array("type" => "section", "text" => "Additional display options"));
 		$this->register("sidebar", array("type" => "checkbox", "text" => "Display social buttons as sidebar:", "comment" => "", "value" => "yes"));
-		$this->register("sidebar_pos", array("type" => "dropdown", "text"=> "Choose sidebar poistion", "comment" => "", "sourceOptions" => array(""=>"", "left" => "Left", "right" => "Right", "top" => "Top", "bottm" => "Bottom")));
+		$this->register("sidebar_pos", array("type" => "dropdown", "text"=> "Choose sidebar position", "comment" => "", "sourceOptions" => array(""=>"", "left" => "Left", "right" => "Right", "top" => "Top", "bottm" => "Bottom")));
 		$this->register("popup", array("type" => "checkbox", "text" => "Display social buttons as popup:", "comment" => "", "value" => "yes"));
 		$this->register("popafter", array("type" => "textbox", "text" => "Display popup window after about of seconds:", "comment" => "If you wish popup to be displayed after amount of time fill the value here", "value" => ""));
 		$this->register("float", array("type" => "checkbox", "text" => "Display social buttons as float from top:", "comment" => "", "value" => "yes"));
-		$this->register("post_float", array("type" => "checkbox", "text" => "Display social buttons as post vetical float:", "comment" => "", "value" => "yes"));
+		$this->register("post_float", array("type" => "checkbox", "text" => "Display social buttons as post vertical float:", "comment" => "", "value" => "yes"));
 		$this->register("hide_mobile", array("type" => "checkbox", "text" => "Hide this shortcode display on mobile devices:", "comment" => "", "value" => "yes"));
+		$this->register("only_mobile", array("type" => "checkbox", "text" => "Display shortcode only on mobile devices:", "comment" => "", "value" => "yes"));
 		
 		$this->register('section6', array("type" => "section", "text" => "Social Share Button Texts"));
 		$this->register('network_names', array("type" => "network_names", "text" => "Social Network Names:", "comment" => "Provide custom network names instead of default. For example instead of Facebook you can use Share on Facebook"));
@@ -483,8 +502,8 @@ jQuery(document).ready(function(){
 		$this->register("google_follow_skinned_text", array("type" => "textbox", "text" => "Skinned button text overlay:", "comment" => "", "value" => "", "fullwidth" => "true"));
 		$this->register("google_follow_skinned_width", array("type" => "textbox", "text" => "Skinned button width:", "comment" => "", "value" => ""));
 
-		$this->register('section7', array("type" => "section", "text" => "Youtube Channel Subsribe"));
-		$this->register("youtube", array("type" => "checkbox", "text" => "Include Youtube Chanell Subscribe Button:", "comment" => "", "value" => "true"));
+		$this->register('section7', array("type" => "section", "text" => "YouTube Channel Subsribe"));
+		$this->register("youtube", array("type" => "checkbox", "text" => "Include Youtube Channel Subscribe Button:", "comment" => "", "value" => "true"));
 		$this->register("youtube_chanel", array("type" => "textbox", "text" => "Youtube Channel ID:", "comment" => "", "value" => "", "fullwidth" => "true"));
 		$this->register("youtube_skinned_text", array("type" => "textbox", "text" => "Skinned button text overlay:", "comment" => "", "value" => "", "fullwidth" => "true"));
 		$this->register("youtube_skinned_width", array("type" => "textbox", "text" => "Skinned button width:", "comment" => "", "value" => ""));

@@ -556,6 +556,13 @@ class EasySocialShareButtons_Admin {
 			else
 				delete_post_meta ( $post_id, 'essb_animation' );
 		}
+
+		if (isset ( $_POST ['essb_activate_ga_campaign_tracking'] )) {
+			if ($_POST ['essb_activate_ga_campaign_tracking'] != '')
+				update_post_meta ( $post_id, 'essb_activate_ga_campaign_tracking', $_POST ['essb_activate_ga_campaign_tracking'] );
+			else
+				delete_post_meta ( $post_id, 'essb_activate_ga_campaign_tracking' );
+		}
 		
 		// @since 2.0 cache
 		if (defined('ESSB_CACHE_ACTIVE')) {

@@ -56,6 +56,9 @@ $message_body = preg_replace(array('#%%title%%#', '#%%siteurl%%#', '#%%permalink
 if ($sub != '') { $message_subject = $sub; }
 if ($message != '') { $message_body = $message; }
 
+// fixing the quotes issue
+$message_body = stripslashes ( $message_body );
+
 $copy_address = isset($options['mail_copyaddress']) ?  $options['mail_copyaddress'] : '';
 $use_wpmandrill = isset($options['use_wpmandrill']) ? $options['use_wpmandrill'] : 'false';
 

@@ -236,46 +236,68 @@ class EasySocialShareButtons_Advanced_Display {
 	
 	public static function get_template_slug($loaded_template_id) {
 		$loaded_template_id = intval ( $loaded_template_id );
-		$loaded_template = "default";
+		$folder = "default";
 		
 		if ($loaded_template_id == 1) {
-			$loaded_template = "default";
+			$folder = "default";
 		}
 		if ($loaded_template_id == 2) {
-			$loaded_template = "metro";
+			$folder = "metro";
 		}
 		if ($loaded_template_id == 3) {
-			$loaded_template = "modern";
+			$folder = "modern";
 		}
 		if ($loaded_template_id == 4) {
-			$loaded_template = "round";
+			$folder = "round";
 		}
 		if ($loaded_template_id == 5) {
-			$loaded_template = "big";
+			$folder = "big";
 		}
 		if ($loaded_template_id == 6) {
-			$loaded_template = "metro-retina";
+			$folder = "metro-retina";
 		}
 		if ($loaded_template_id == 7) {
-			$loaded_template = "big-retina";
+			$folder = "big-retina";
 		}
 		if ($loaded_template_id == 8) {
-			$loaded_template = "light-retina";
+			$folder = "light-retina";
 		}
 		if ($loaded_template_id == 9) {
-			$loaded_template = "flat-retina";
+			$folder = "flat-retina";
 		}
 		if ($loaded_template_id == 10) {
-			$loaded_template = "tiny-retina";
+			$folder = "tiny-retina";
 		}
 		if ($loaded_template_id == 11) {
-			$loaded_template = "round-retina";
+			$folder = "round-retina";
 		}
 		if ($loaded_template_id == 12) {
-			$loaded_template = "modern-retina";
+			$folder = "modern-retina";
+		}
+		if ($loaded_template_id == 13) {
+			$folder = "circles-retina";
+		}
+		if ($loaded_template_id == 14) {
+			$folder = "blocks-retina";
+		}
+		if ($loaded_template_id == 15) {
+			$folder = "dark-retina";
+		}
+		if ($loaded_template_id == 16) {
+			$folder = "grey-circles-retina";
+		}
+		if ($loaded_template_id == 17) {
+			$folder = "grey-blocks-retina";
+		}
+		if ($loaded_template_id == 18) {
+			$folder = "clear-retina";
+		}
+		if ($loaded_template_id == 19) {
+			$folder = "copy-retina";
 		}
 		
-		return $loaded_template;
+		
+		return $folder;
 	}
 	
 	public static function get_options_by_mp($selectedPt) {

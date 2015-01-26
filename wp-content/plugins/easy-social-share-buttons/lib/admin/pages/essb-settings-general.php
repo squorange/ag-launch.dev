@@ -1115,8 +1115,12 @@ if ($cmd == "update") {
 	$current_options ['deactivate_fa'] = ESSBOptionsHelper::optionsBoolValueAsText($options, 'deactivate_fa');
 	
 	$current_options ['whatsapp_shareshort'] = ESSBOptionsHelper::optionsBoolValueAsText($options, 'whatsapp_shareshort');
-	$current_options ['whatsapp_shareshort_service'] = ESSBOptionsHelper::optionsBoolValue($options, 'whatsapp_shareshort_service');
+	$current_options ['whatsapp_shareshort_service'] = ESSBOptionsHelper::optionsValue($options, 'whatsapp_shareshort_service');
 	$current_options ['fixed_width_align'] = ESSBOptionsHelper::optionsValue($options, 'fixed_width_align');
+	$current_options ['afterclose_deactive_mobile'] = ESSBOptionsHelper::optionsBoolValueAsText($options, 'afterclose_deactive_mobile');
+	$current_options ['afterclose_singledisplay'] = ESSBOptionsHelper::optionsBoolValueAsText($options, 'afterclose_singledisplay');
+	$current_options ['afterclose_singledisplay_days'] = ESSBOptionsHelper::optionsValue($options, 'afterclose_singledisplay_days');
+	$current_options ['deactivate_shorturl_cache'] = ESSBOptionsHelper::optionsBoolValueAsText($options, 'deactivate_shorturl_cache');
 	//essb_cache_static_js
 	
 	$current_options ['advanced_share'] = $as;
@@ -2324,7 +2328,7 @@ function essb_esml_select_content_type() {
 						<tr>
 							<td colspan="2" class="sub"><?php _e('Template', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
-									<a href="http://support.creoworx.com/knowledgebase/581/"
+									<a href="http://support.creoworx.com/knowledgebase/4376/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>
@@ -2391,7 +2395,7 @@ function essb_esml_select_content_type() {
 							<td colspan="2" class="sub"><?php _e('Social Share Buttons', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/social-share-buttons/"
+										href="http://support.creoworx.com/knowledgebase/social-share-buttons/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>
@@ -2662,7 +2666,7 @@ function essb_esml_select_content_type() {
 							<td colspan="2" class="sub">myCred Integration
 								<div class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/social-share-optimization-sso/"
+										href="http://support.creoworx.com/knowledgebase/mycred-integration/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div>
 							</td>
@@ -2672,7 +2676,7 @@ function essb_esml_select_content_type() {
 							<td class="bold" valign="top">Activate myCred integration:<br />
 								<span class="label" style="font-size: 400;">In order to work the
 									<b>myCred</b> integration you need to have myCred Points for
-									click on links hook activated.
+									click on links hook activated (if you use custom points group you need to activated inside custom points group settings).
 							</span></td>
 							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawCheckboxField('mycred_activate'); ?></td>
 						</tr>
@@ -2684,6 +2688,11 @@ function essb_esml_select_content_type() {
 							</td>
 							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawInputField('mycred_points'); ?></td>
 						</tr>
+						<tr class="even table-border-bottom">
+							<td class="bold" valign="top">myCred custom point type:<br /> <span class="label" style="font-size: 400;">Provide custom meta key for the points that will user get to share link. To create your own please visit this tutorail: <a href="http://codex.mycred.me/get-started/multiple-point-types/" target="_blank">http://codex.mycred.me/get-started/multiple-point-types/</a><br/>Leave blank to use the default (mycred_default)</span>
+							</td>
+							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawInputField('mycred_group'); ?></td>
+						</tr>
 					</table>
 				</div>
 				<div id="essb-container-15" class="essb-data-container">
@@ -2694,7 +2703,7 @@ function essb_esml_select_content_type() {
 							<td colspan="2" class="sub">Social Image Share
 								<div class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/social-share-optimization-sso/"
+										href="http://support.creoworx.com/knowledgebase/social-image-share/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div>
 							</td>
@@ -2772,7 +2781,7 @@ function essb_esml_select_content_type() {
 							<td colspan="2" class="sub">Social Share Analytics
 								<div class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/social-share-optimization-sso/"
+										href="http://support.creoworx.com/knowledgebase/social-share-analytics/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div>
 							</td>
@@ -2819,15 +2828,18 @@ function essb_esml_select_content_type() {
 									automatically added to shared addresses on social networks.
 									Please note as social networks count shares via URL as unique
 									key this option is not compatible with active social share
-									counters as it will make the start from zero. <br />You can
-									visit <a
-									href="https://support.google.com/analytics/answer/1033867?hl=en"
-									target="_blank">this page</a> for more information on how to
-									use and generate these parameters
+									counters as it will make the start from zero. 
 							</span>
 							</td>
 							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawInputField('activate_ga_campaign_tracking', true); ?></td>
 						</tr>
+						<tr class="even table-border-bottom">
+					<td colspan="2">You can
+									visit <a
+									href="https://support.google.com/analytics/answer/1033867?hl=en"
+									target="_blank">this page</a> for more information on how to
+									use and generate these parameters.<br/>To include the social network into parameters use the following code <b>{network}</b>. When that code is reached it will be replaced with the network name (example: facebook). An example campaign trakcing code include network will look like this utm_source=essb_settings&utm_medium=needhelp&utm_campaign={network} - in this configuration when you press Facebook button {network} will be replaced with facebook, if you press Twitter button it will be replaced with twitter.</td>
+				</tr>
 					</table>
 				</div>
 				<div id="essb-container-9" class="essb-data-container">
@@ -2839,7 +2851,7 @@ function essb_esml_select_content_type() {
 							<td colspan="2" class="sub">Social Share Optimization (SSO)
 								<div class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/social-share-optimization-sso/"
+										href="http://support.creoworx.com/knowledgebase/social-share-optimization-sso/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div>
 							</td>
@@ -2994,7 +3006,7 @@ function essb_esml_select_content_type() {
 							<td colspan="2" class="sub"><?php _e('Social Like, Follow and Subscribe Buttons', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/social-like-and-subscribe-buttons/"
+										href="http://support.creoworx.com/knowledgebase/social-like-follow-and-subscribe-buttons/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>
@@ -3447,7 +3459,7 @@ function essb_esml_select_content_type() {
 							<td colspan="2" class="sub"><?php _e('URL Shortener', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/url-shortener/"
+										href="http://support.creoworx.com/knowledgebase/url-shortener/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>
@@ -3512,7 +3524,7 @@ function essb_esml_select_content_type() {
 							<td colspan="2" class="sub"><?php  _e('Custom Share Message', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/custom-share-message/"
+										href="http://support.creoworx.com/knowledgebase/custom-share-message/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>
@@ -3563,7 +3575,7 @@ function essb_esml_select_content_type() {
 							<td colspan="2" class="sub"><?php _e('Customize E-mail Message', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/customize-e-mail-message/"
+										href="http://support.creoworx.com/knowledgebase/customize-e-mail-message/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>
@@ -3662,7 +3674,12 @@ function essb_esml_select_content_type() {
 						<col width="25%" />
 						<col width="75%" />
 						<tr class="table-border-bottom" id="essb-submenu-7-2">
-							<td colspan="2" class="sub" style="padding-top: 10px;"><?php _e('Optimization Options', ESSB_TEXT_DOMAIN); ?></td>
+							<td colspan="2" class="sub" style="padding-top: 10px;"><?php _e('Optimization Options', ESSB_TEXT_DOMAIN); ?><div
+									class="essb-help">
+									<a
+										href="http://support.creoworx.com/knowledgebase/optimization-options/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
+										target="_blank" class="button essb-popup-help">Need help?</a>
+								</div></td>
 						</tr>
 						<tr class="even table-border-bottom">
 							<td class="bold" valign="top">Load plugin javascript files
@@ -3728,7 +3745,7 @@ function essb_esml_select_content_type() {
 									cache only dynamic resources (CSS and Javascript).</span>
 							</td>
 							<td><?php
-							$cache_mode = array ("full" => "Cache button render and dynamic resources", "resource" => "Cache only dynamic resources" );
+							$cache_mode = array ("full" => "Cache button render and dynamic resources", "resource" => "Cache only dynamic resources", "buttons" => "Cache only buttons render" );
 							
 							ESSB_Settings_Helper::drawSelectField ( 'essb_cache_mode', $cache_mode );
 							?></td>
@@ -3773,7 +3790,7 @@ function essb_esml_select_content_type() {
 							<td colspan="2" class="sub" style="padding-top: 10px;"><?php _e('After Social Share Actions', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/administrative-options/"
+										href="http://support.creoworx.com/knowledgebase/after-social-share-actions/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>
@@ -3794,6 +3811,14 @@ function essb_esml_select_content_type() {
 							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawCheckboxField('afterclose_active'); ?> </td>
 						</tr>
 						<tr class="odd table-border-bottom">
+							<td class="bold" valign="top">Do not display after social share action for mobile devices:
+								<div class="essb-new">
+									<span></span>
+								</div>
+							</td>
+							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawCheckboxField('afterclose_deactive_mobile'); ?> </td>
+						</tr>
+						<tr class="even table-border-bottom">
 							<td class="bold" valign="top">After close action type:<br />
 							<span class="label">Choose your after close action.</span></td>
 							<td class="essb_general_options"><?php
@@ -3803,10 +3828,20 @@ function essb_esml_select_content_type() {
 							ESSB_Settings_Helper::drawSelectField ( 'afterclose_type', $action_types );
 							?> </td>
 						</tr>
-						<tr class="even table-border-bottom">
+						<tr class="odd table-border-bottom">
 							<td class="bold" valign="top">Popup message width:<br />
 							<span class="label">Provide custom width in pixels for popup window (number value with px in it. Example: 400). Default popup width is 400.</span></td>
 							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawInputField('afterclose_popup_width', false); ?></td>
+						</tr>
+						<tr class="even table-border-bottom">
+						<td class="bold" valign="top">Display popup message once for selected time:<br />
+							<span class="label">Activate this option to prevent popup window display on every page load. This option will make it display once for selected period of days.</span></td>
+							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawCheckboxField('afterclose_singledisplay'); ?></td>
+						</tr>
+						<tr class="odd table-border-bottom">
+							<td class="bold" valign="top">Days between popup message display:<br />
+							<span class="label">Provide the value of days when popup message will apear again. Leave blank for default value of 7 days.</span></td>
+							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawInputField('afterclose_singledisplay_days', false); ?></td>
 						</tr>
 						<tr class="table-border-bottom">
 							<td colspan="2" class="sub3">Like/Follow Box Options</td>
@@ -3829,7 +3864,7 @@ function essb_esml_select_content_type() {
 						</tr>
 						<tr class="even table-border-bottom">
 							<td class="bold" valign="top">Display type:<br />
-							<span class="label">Choose the number of columns that social profiles will appear. Please not that using greater value may require increase the popup window width..</span></td>
+							<span class="label">Choose the number of columns that social profiles will appear. Please note that using greater value may require increase the popup window width.</span></td>
 							<td class="essb_general_options"><?php 
 
 							$col_values = array("onecol" => "1 Column", "twocols" => "2 Columns", "threecols" => "3 Columns");
@@ -3926,7 +3961,7 @@ function essb_esml_select_content_type() {
 							<td colspan="2" class="sub" style="padding-top: 10px;"><?php _e('Administrative Options', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/administrative-options/"
+										href="http://support.creoworx.com/knowledgebase/administrative-options/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>
@@ -3974,7 +4009,7 @@ function essb_esml_select_content_type() {
 									your method of cleaning.</span>
 							</td>
 							<td><?php
-							$methods = array ("default" => "Clean network texts", "action" => "Remove entire action" );
+							$methods = array ("default" => "Clean network texts", "actionremove" => "Remove entire action" );
 							ESSB_Settings_Helper::drawSelectField ( 'apply_clean_buttons_method', $methods );
 							?></td>
 						</tr>
@@ -4022,6 +4057,14 @@ function essb_esml_select_content_type() {
 							<td class="bold">Do not load FontAwsome<br/><span class="label">Activate this option if you site already uses FontAwsome font</span></td>
 							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawCheckboxField('deactivate_fa');  ?></td>
 						</tr>
+						<tr class="odd table-border-bottom">
+							<td class="bold">Deactivate short url cache:<br/><span class="label">Activate this option to avoid cache of short url</span></td>
+							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawCheckboxField('deactivate_shorturl_cache');  ?></td>
+						</tr>
+						<tr class="even table-border-bottom">
+							<td class="bold">Make plugin share always http version of page:<br/><span class="label">When you migrate from http to https all social share counters will go down to zero (0) because social networks count shares by the unique address of post/page. Making this will allow plugin always to use post/page http version of address</span></td>
+							<td class="essb_general_options"><?php ESSB_Settings_Helper::drawCheckboxField('always_use_http');  ?></td>
+						</tr>
 						<tr class="table-border-bottom">
 							<td colspan="2" class="sub2"><?php _e('Turn off build in modules', ESSB_TEXT_DOMAIN); ?></td>
 						</tr>
@@ -4049,7 +4092,7 @@ function essb_esml_select_content_type() {
 								class="button">I want to reset configuration to default plugin
 									values</a><br /> <br /> <span class="label">Warning! Pressing
 									this button will restore initial plugin configuration values
-									and all setttings that you apply after plugin activation will
+									and all settings that you apply after plugin activation will
 									be removed.</span>
 						
 						</tr>
@@ -4064,7 +4107,7 @@ function essb_esml_select_content_type() {
 							<td colspan="2" class="sub"><?php _e('Advanced Custom Share', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/advanced-custom-share/"
+										href="http://support.creoworx.com/knowledgebase/advanced-custom-share/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>
@@ -4073,7 +4116,7 @@ function essb_esml_select_content_type() {
 								class="label">&nbsp; Advanced Custom Share is option which
 									allows you set different share address for each social network.
 									Please note that not all networks support full customization of
-									messages. Setting parameters for social netwrok will have
+									messages. Setting parameters for social network will have
 									highest priority for custom sharing and will overwrite settings
 									from custom share message option.</span></td>
 						</tr>
@@ -4093,7 +4136,7 @@ function essb_esml_select_content_type() {
 							<td colspan="2" class="sub"><?php _e('Social Fans Counter', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/social-fans-counter/"
+										href="http://support.creoworx.com/knowledgebase/social-fans-counter/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>
@@ -4934,7 +4977,7 @@ function essb_esml_select_content_type() {
 							<td colspan="2" class="sub"><?php _e('Easy Social Metrics Lite', ESSB_TEXT_DOMAIN); ?><div
 									class="essb-help">
 									<a
-										href="http://support.creoworx.com/knowledgebase/easy-social-metrics-lite/"
+										href="http://support.creoworx.com/knowledgebase/easy-social-metrics-lite/?utm_source=essb_settings&utm_medium=needhelp&utm_campaign=button"
 										target="_blank" class="button essb-popup-help">Need help?</a>
 								</div></td>
 						</tr>

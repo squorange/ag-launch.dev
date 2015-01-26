@@ -472,7 +472,7 @@ class EasySocialShareButtons_Stats_Admin {
 		
 		$toDate = date ( "Y-m-d", strtotime ( date ( "Y-m-d", strtotime ( $toDate ) ) . "+1 day" ) );
 	
-		$table_name = $wpdb->prefix . ESMP_DATABASE_TABLE;
+		$table_name = $wpdb->prefix . ESSB_TABLE_STATS;
 		$query_date_stats = 'SELECT DATE_FORMAT(essb_date, "%Y-%m-%d") AS essb_date, COUNT( essb_post_id ) AS cnt FROM '.ESSB_TABLE_STATS.' WHERE essb_date BETWEEN "'.$fromDate.'" AND "'.$toDate.'" GROUP BY DATE_FORMAT(essb_date, "%Y-%m-%d") ORDER BY essb_date DESC';
 
 		return $wpdb->get_results($query_date_stats);			

@@ -40,6 +40,9 @@ class EasySocialMetricsUpdater {
 
 		global $post;
 
+		if (!isset($post)) {
+			return false;
+		}
 		// If no post ID specified, use current page
 		if ($post_id <= 0) $post_id = $post->ID;
 

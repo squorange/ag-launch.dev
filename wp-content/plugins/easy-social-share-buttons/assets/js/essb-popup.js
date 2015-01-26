@@ -110,10 +110,13 @@ function essb_popup_show() {
 	content = '<div class="essb_popup"><h3>'+ win_title+ '</h3><div class="essb_popup_content">'+win_message+'<div class="essb_links essb_popup_counters essb_template_'+win_template+'">' + content + '</div><div class="essb_popup_button_close"><button onclick="essb_popup_close(); return false;">'+close_button_text+'</button></div><div class="essb_popup_counter"><div class="essb_popup_counter_text"></div></div></div></div><div class="essb_popup_shadow"></div>';
 	jQuery("body").append(content);
 	
+	jQuery(".essb_popup_shadow").click(function() {
+		essb_popup_close();
+	});
+	
 	jQuery(".essb_popup").css( { width: base_width+'px'});
 	jQuery(".essb_popup").center();
-	
-	
+		
 	if (win_close != "") {
 	
 		if (Number(win_close)) {

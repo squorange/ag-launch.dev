@@ -9,12 +9,25 @@ class ESSBAfterCloseShare {
 	
 	protected  $essb_js_builder;
 	protected $load_js_async = false;
+	protected $mobile_detect;
+	
+	protected $single_display_mode = false;
+	protected $single_display_cookie_length = 7;
 	
 	function __construct() {
 		$essb_options = EasySocialShareButtons_Options::get_instance();
 		$this->options = $essb_options->options;
 		
 		$is_active = ESSBOptionsHelper::optionsBoolValue($this->options, 'afterclose_active');
+		$is_deactive_mobile = ESSBOptionsHelper::optionsBoolValue($this->options, 'afterclose_deactive_mobile');
+		
+		$is_active_singledisplay = ESSBOptionsHelper::optionsBoolValueAsText($this->options, 'afterclose_singledisplay');
+		$single_display_cookie_length = ESSBOptionsHelper::optionsValue($this->options, 'afterclose_singledisplay_days');
+				
+		$this->single_display_mode = $is_active_singledisplay;
+		$this->single_display_cookie_length = intval($single_display_cookie_length);
+		if ($this->single_display_cookie_length == 0) { $this->single_display_cookie_length = 7; }
+		
 		$is_active_option = "";
 		if (ESSB_DEMO_MODE) {
 			$is_active_option = isset($_REQUEST['aftershare']) ? $_REQUEST['aftershare'] : '';
@@ -23,6 +36,22 @@ class ESSBAfterCloseShare {
 			}
 		}
 		
+		// @since 2.0.3 - deactivate on mobile
+		if ($is_active && $is_deactive_mobile && $this->isMobile()) {
+			$is_active = false;
+		}
+		
+		// @since 2.0.3
+		//print "state of singledisplay = ".$this->single_display_mode.'|'.$is_active_singledisplay;
+		if ($this->single_display_mode == 'true') {
+			//print "deactivated!";
+			$cookie_aftershare = isset($_COOKIE['essb_aftershare']) ? true : false;
+			//print "cookie state = ".$cookie_aftershare;
+			if ($cookie_aftershare) {
+				$is_active = false;
+			}
+		}
+		//print "is active after share = ".$is_active;
 		if ($is_active) {
 			$this->load_js_async = ESSBOptionsHelper::optionsBoolValue($this->options, 'load_js_async');
 			$this->load($is_active_option);
@@ -37,6 +66,23 @@ class ESSBAfterCloseShare {
 		return self::$instance;	
 	}
 	
+	public function isMobile() {
+	
+		$exclude_tablet = isset($this->options['mobile_exclude_tablet']) ? $this->options['mobile_exclude_tablet'] : 'false';
+	
+		if (!isset($this->mobile_detect)) {
+			$this->mobile_detect = new ESSB_Mobile_Detect();
+		}
+	
+		//print "mobile = ".$this->mobile_detect->isMobile();;
+		$isMobile = $this->mobile_detect->isMobile();
+	
+		if ($exclude_tablet == 'true' && $this->mobile_detect->isTablet()) {
+			$isMobile = false;
+		}
+		return $isMobile;
+	}
+	
 	private function load($demo_mode = '') {
 		$this->essb_js_builder = ESSB_JS_Buider::get_instance();
 		$acs_type = ESSBOptionsHelper::optionsValue($this->options, 'afterclose_type');
@@ -48,11 +94,11 @@ class ESSBAfterCloseShare {
 		switch ($acs_type) {
 			case "follow":
 				add_action ( 'wp_enqueue_scripts', array ($this, 'register_asc_assets' ), 999 );
-				add_action ( 'wp_footer', array ($this, 'generateFollowWindow' ), 999 );
+				add_action ( 'wp_footer', array ($this, 'generateFollowWindow' ), 99 );
 				break;				
 			case "message":
 				add_action ( 'wp_enqueue_scripts', array ($this, 'register_asc_assets' ), 999 );
-				add_action ( 'wp_footer', array ($this, 'generateMessageText' ), 999 );
+				add_action ( 'wp_footer', array ($this, 'generateMessageText' ), 99 );
 				break;
 			case "code":
 				$this->generateMessageCode();
@@ -111,6 +157,8 @@ class ESSBAfterCloseShare {
 		$afterclose_like_cols = ESSBOptionsHelper::optionsValue($this->options, 'afterclose_like_cols', 'onecol');
 				
 		// Facebook Follow Button
+		
+		$afterclose_like_text = stripslashes($afterclose_like_text);
 		
 		$widget = "";
 		
@@ -192,6 +240,9 @@ class ESSBAfterCloseShare {
 		echo '<a href="#" class="essbasc-popup-close" onclick="essbasc_popup_close(); return false;"></a>';
 		echo '</div>';
 		echo '<div class="essbasc-popup-shadow"></div>';
+		echo '<script type="text/javascript">';
+		echo 'var essbasc_cookie_live = '.$this->single_display_cookie_length.';';
+		echo '</script>';
 	}
 }
 

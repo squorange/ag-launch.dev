@@ -4,10 +4,14 @@ class ESSBCache {
 	
 	public static $cacheFolder = "";
 	public static $cacheURL = "";
-	public static $cacheTime = 3600;
+	public static $cacheTime = 2592000;//3600; // @ since 2.0.3 cache is made to 1 month expiration
 	public static $isActive = false;
 	
 	public static function activate($cache_mode) {
+		
+		if (ESSBCache::isMobile()) {
+			return;
+		}
 		
 		$upload_dir = wp_upload_dir ();
 		
@@ -27,15 +31,34 @@ class ESSBCache {
 		}
 		self::$cacheFolder = $base_path;
 		self::$cacheURL = $base_url;
-		if ($cache_mode != 'resource') {
+		if ($cache_mode == "buttons" ) {
 			define('ESSB_CACHE_ACTIVE', true);
+		}
+		else if ($cache_mode == 'resource') {
 			define('ESSB_CACHE_ACTIVE_RESOURCE', true);
 		}
 		else {
+			define('ESSB_CACHE_ACTIVE', true);
 			define('ESSB_CACHE_ACTIVE_RESOURCE', true);
 		}
 		self::$isActive = true;
 		return true;
+	}
+	
+	public static function isMobile() {
+		$essb_options = EasySocialShareButtons_Options::get_instance();
+		$options = $essb_options->options;
+		$exclude_tablet = isset($options['mobile_exclude_tablet']) ? $options['mobile_exclude_tablet'] : 'false';
+		
+		$mobile = new ESSB_Mobile_Detect();		
+	
+		//print "mobile = ".$this->mobile_detect->isMobile();;
+		$isMobile = $mobile->isMobile();
+	
+		if ($exclude_tablet == 'true' && $mobile->isTablet()) {
+			$isMobile = false;
+		}
+		return $isMobile;
 	}
 	
 	public static function put($id = '', $data = '') {

@@ -51,6 +51,7 @@ if ( function_exists('vc_map')) {
 												__("Hidden", ESSB_TEXT_DOMAIN) => "none",
 												__("Inside", ESSB_TEXT_DOMAIN) => "inside",
 												__("Inside With Network Names", ESSB_TEXT_DOMAIN) => "insidename",
+												__("Inside Buttons before Network Names", ESSB_TEXT_DOMAIN) => "insidebeforename",
 												__("Left Modern", ESSB_TEXT_DOMAIN) => "leftm",
 												__("Right Modern", ESSB_TEXT_DOMAIN) => "rightm",
 												__("Top", ESSB_TEXT_DOMAIN) => "top",
@@ -67,6 +68,8 @@ if ( function_exists('vc_map')) {
 												__("Right", ESSB_TEXT_DOMAIN) => "right",
 												__("Right Big Numbers", ESSB_TEXT_DOMAIN) => "rightbig",
 												__("Left Big Numbers", ESSB_TEXT_DOMAIN) => "leftbig",
+												__("Before social share buttons", ESSB_TEXT_DOMAIN) => "before",
+												__("After social share buttons", ESSB_TEXT_DOMAIN) => "after",
 												__("Hidden", ESSB_TEXT_DOMAIN) => "none",
 										)
 								),
@@ -189,6 +192,13 @@ if ( function_exists('vc_map')) {
 								__("Tiny (Retina)", ESSB_TEXT_DOMAIN) => "tiny-retina",
 								__("Round (Retina)", ESSB_TEXT_DOMAIN) => "round-retina",
 								__("Modern (Retina)", ESSB_TEXT_DOMAIN) => "modern-retina",
+								__("Circles (Retina)", ESSB_TEXT_DOMAIN) => "circles-retina",
+								__("Blocks (Retina)", ESSB_TEXT_DOMAIN) => "blocks-retina",
+								__("Dark (Retina)", ESSB_TEXT_DOMAIN) => "dark-retina",
+								__("Grey Circles (Retina)", ESSB_TEXT_DOMAIN) => "grey-circles-retina",
+								__("Grey Blocks (Retina)", ESSB_TEXT_DOMAIN) => "grey-blocks-retina",
+								__("Clear (Retina)", ESSB_TEXT_DOMAIN) => "clear-retina",
+								__("Copy (Retina)", ESSB_TEXT_DOMAIN) => "copy-retina",
 						)
 				),
 				

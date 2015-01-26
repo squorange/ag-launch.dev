@@ -441,8 +441,20 @@ class EasySocialFansCounter {
 	function update_total_count() {
 		$total = 0;
 		foreach ( $this->essb_supported_items as $network ) {
-			if (isset($this->options['data'][$network])) {
-				$total += intval($this->options['data'][$network]);
+			
+			/*if ($network != 'users' && $network != 'posts' && $network != 'comments' && $network != 'love') {			
+				if (isset($this->options['data'][$network])) {
+					$total += intval($this->options['data'][$network]);
+				}
+			}
+			else {
+				
+			}*/
+			
+			if (!empty ( $this->options ['social'] [$network] ['id'])) {
+				if (isset($this->options['data'][$network])) {
+					$total += intval($this->options['data'][$network]);
+				}
 			}
 		}
 		
@@ -467,6 +479,7 @@ class EasySocialFansCounter {
 				}
 			}
 			
+			delete_transient($this->transient_text);
 			set_transient ( $this->transient_text, $this->transient, $cache * 60 * 60 );
 			// set_transient ( $this->transient_text, $this->transient, $cache
 			// *60);
@@ -559,7 +572,7 @@ class EasySocialFansCounter {
 		$requestMethod = 'GET';
 		$twitter = new TwitterAPIExchange ( $settings );
 		$data = $twitter->setGetfield ( $getfield )->buildOauth ( $apiURL, $requestMethod )->performRequest ();
-		
+		//print_r($data);
 		if (! empty ( $data )) {
 			$jsonData = json_decode ( $data, true );
 			if (! empty ( $jsonData [0] ['user'] ['followers_count'] )) {

@@ -166,7 +166,7 @@ class ESSBCacheStaticResources {
 			);
 
 		// Cache this set of scripts for 24 hours
-		set_transient( 'essb_cache_static-' . $cache_ver, $status, 24 * 60 * 60 );
+		set_transient( 'essb_cache_static-' . $cache_ver, $status, WEEK_IN_SECONDS );
 
 		$this->set_done( $cache_ver );
 
@@ -512,12 +512,36 @@ function purge_essb_cache_static_cache() {
 
 	// Use this as a global cache version number
 	update_option( 'essb_cache_static_cache_ver', time() );
+	
+	purge_essb_cache_static_transients();
 
 	add_action( 'admin_notices', 'essb_cache_static_cache_purged_success' );
 
 	// Allow other plugins to know that we purged
 	do_action( 'essb_cache_static-cache-purged' );
 
+}
+
+// @since 2.0.3 Clearing transients
+function purge_essb_cache_static_transients() {
+	global $wpdb;
+	
+	$time_now = time();
+	$expired  = $wpdb->get_col( "SELECT option_name FROM $wpdb->options where (option_name LIKE '_transient_timeout_essb_cache_static-%') OR (option_name LIKE '_transient_essb_cache_static-%')" );
+	//print_r($expired);
+	if( empty( $expired ) ) {
+		return false;
+	}
+	
+	foreach( $expired as $transient ) {
+	
+		$name = str_replace( '_transient_timeout_', '', $transient );
+		$name = str_replace( '_transient_', '', $transient );
+		delete_transient( $name );
+	
+	}
+	
+	return true;
 }
 
 

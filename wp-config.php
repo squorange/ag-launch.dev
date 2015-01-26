@@ -20,15 +20,15 @@ define('WP_SITEURL','http://ag-launch.dev');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'aglaunchDB8exb5');
+define('DB_NAME', 'aglaunchDB4ztci');
 
 
 /** MySQL database username */
-define('DB_USER', 'aglaunchDB8exb5');
+define('DB_USER', 'aglaunchDB4ztci');
 
 
 /** MySQL database password */
-define('DB_PASSWORD', 'Z9KzAfroR');
+define('DB_PASSWORD', 'RMaAlLaAl');
 
 
 /** MySQL hostname */

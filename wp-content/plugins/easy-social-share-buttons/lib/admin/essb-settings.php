@@ -97,8 +97,7 @@ if ($current_tab != 'wizard' && $current_tab != 'wizard2') {
 				href="http://codecanyon.net/item/easy-social-share-buttons-for-wordpress/6394476?ref=appscreo"
 				target="_blank">Easy Social Share Buttons plugin homepage</a></strong>
 		</p>
-	</div>
-
+</div>
 	<div class="essb-tabs">
 
 		<ul>
@@ -420,6 +419,23 @@ if ($current_tab != 'wizard' && $current_tab != 'wizard2') {
 							ready made configurations (Upworthy style, Mashable Style,
 							Default Plugin Demo, AddThis, CopyBlogger or Your own backup of settings)</a>
 					</p>
+					<p>
+					<div  style="display: inline-block; margin-right: 15px;">
+					<a href="https://twitter.com/appscreo" class="twitter-follow-button" data-show-count="false">Follow @appscreo</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+</div>
+<div style="display: inline-block; margin-right: 15px;">
+<!-- Place this tag where you want the widget to render. -->
+<div class="g-follow" data-annotation="none" data-height="20" data-href="//plus.google.com/u/0/109019914678622828725" data-rel="author"></div>
+	</div>			
+	
+	<div style="display: inline-block;">
+	<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fappscreo&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=24" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px; width: 120px;" allowTransparency="true"></iframe>
+	
+	</div>
+		</p>
 				</div>
 				<div class="welcome-panel-column">
 					<h4>More Actions</h4>

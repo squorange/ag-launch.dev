@@ -244,6 +244,8 @@ function essb_register_advanced_metabox() {
 		
 		$essb_opt_by_bp = isset ( $custom ['essb_opt_by_bp'] ) ? $custom ['essb_opt_by_bp'] [0] : "";
 		$essb_animation = isset ( $custom ['essb_animation'] ) ? $custom ['essb_animation'] [0] : "";
+		
+		$essb_activate_ga_campaign_tracking = isset($custom['essb_activate_ga_campaign_tracking']) ? $custom['essb_activate_ga_campaign_tracking'][0] : "";
 	}
 	
 	?>
@@ -260,7 +262,9 @@ function essb_register_advanced_metabox() {
 					Message</a></li>
 			<li id="essb-menu-8" class="essb-menu-item"><a href="#"
 				onclick="essb_option_activate('8'); return false;">Validation Tools</a></li>
-			<li class="essb-title"><a href="#" onclick="return false;">Visual</a></li>
+			<li id="essb-menu-9" class="essb-menu-item"><a href="#"
+				onclick="essb_option_activate('9'); return false;">Social Share Analytics</a></li>
+				<li class="essb-title"><a href="#" onclick="return false;">Visual</a></li>
 			<li id="essb-menu-1" class="essb-menu-item"><a href="#"
 				onclick="essb_option_activate('1'); return false;">Visual Settings</a></li>
 			<li id="essb-menu-2" class="essb-menu-item"><a href="#"
@@ -278,7 +282,7 @@ function essb_register_advanced_metabox() {
 					Share</a></li>
 		</ul>
 	</div>
-	<div class="essb-options-container" style="min-height: 440px;">
+	<div class="essb-options-container" style="min-height: 460px;">
 		<div id="essb-container-1" class="essb-data-container"
 			style="display: none;">
 			<table border="0" cellpadding="3" cellspacing="0" width="100%">
@@ -420,7 +424,10 @@ function essb_register_advanced_metabox() {
 							<option value="insidename"
 								<?php echo (($essb_counter_pos == "insidename") ? " selected=\"selected\"": ""); ?>>Inside
 								with Network Names</option>
-							<option value="hidden"
+							<option value="insidebeforename"
+								<?php echo (($essb_counter_pos == "insidebeforename") ? " selected=\"selected\"": ""); ?>>Inside
+								before Network Names</option>
+								<option value="hidden"
 								<?php echo (($essb_counter_pos == "hidden") ? " selected=\"selected\"": ""); ?>>Hidden</option>
 							<option value="leftm"
 								<?php echo (($essb_counter_pos == "leftm") ? " selected=\"selected\"": ""); ?>>Left
@@ -454,6 +461,10 @@ function essb_register_advanced_metabox() {
 							<option value="rightbig"
 								<?php echo (($essb_total_counter_pos == "rightbig") ? " selected=\"selected\"": ""); ?>>Right
 								Big</option>
+							<option value="after"
+								<?php echo (($essb_total_counter_pos == "after") ? " selected=\"selected\"": ""); ?>>After social share buttons</option>
+							<option value="before"
+								<?php echo (($essb_total_counter_pos == "before") ? " selected=\"selected\"": ""); ?>>Before social share buttons</option>
 							<option value="hidden"
 								<?php echo (($essb_total_counter_pos == "hidden") ? " selected=\"selected\"": ""); ?>>Hidden</option>
 
@@ -893,6 +904,37 @@ function essb_register_advanced_metabox() {
 					<td class="sub" colspan="2">Advanced Custom Share</td>
 				</tr>
 				<?php essb_metabox_advanced_network_share(); ?>
+				</table>
+		</div>
+		<div id="essb-container-9" class="essb-data-container"
+			style="display: none;">
+			<table border="0" cellpadding="3" cellspacing="0" width="100%">
+				<col width="30%" />
+				<col width="70%" />
+				<tr>
+					<td class="sub" colspan="2">Social Share Analytics</td>
+				</tr>
+				<tr class="even table-border-bottom">
+					<td valign="top" class="bold">Add Custom Google Analytics Campaign parameters to
+								your URLs:<br /> <span class="label" style="font-size: 400;">Paste your
+									custom campaign parameters in this field and they will be
+									automatically added to shared addresses on social networks.
+									Please note as social networks count shares via URL as unique
+									key this option is not compatible with active social share
+									counters as it will make the start from zero.
+							</span></td>
+					<td class="essb_general_options"><input type="text"
+						class="input-element stretched" id="essb_activate_ga_campaign_tracking"
+						name="essb_activate_ga_campaign_tracking"
+						value="<?php echo $essb_activate_ga_campaign_tracking; ?>" /></td>
+				</tr>
+				<tr class="odd table-border-bottom">
+					<td colspan="2">You can
+									visit <a
+									href="https://support.google.com/analytics/answer/1033867?hl=en"
+									target="_blank">this page</a> for more information on how to
+									use and generate these parameters.<br/>To include the social network into parameters use the following code <b>{network}</b>. When that code is reached it will be replaced with the network name (example: facebook). An example campaign trakcing code include network will look like this utm_source=essb_settings&utm_medium=needhelp&utm_campaign={network} - in this configuration when you press Facebook button {network} will be replaced with facebook, if you press Twitter button it will be replaced with twitter.</td>
+				</tr>
 				</table>
 		</div>
 		<div id="essb-container-8" class="essb-data-container meta-validator"
