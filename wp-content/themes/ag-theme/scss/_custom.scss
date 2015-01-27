@@ -21,7 +21,7 @@ h2 {
 }
 
 .button {
-	@include text-base-caps;
+	@include text-base-caps; 
 }
 .button:hover {
 	color: $oil;

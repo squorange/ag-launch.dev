@@ -101,6 +101,9 @@ Template Name: Advise
 		<div class="row large-collapse l-clients">		
 			<br />
 			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-atlas.png" />
+			</div>			
+			<div class="large-2 medium-3 small-4 columns">
 				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-borouge.png" />
 			</div>
 			<div class="large-2 medium-3 small-4 columns">
@@ -134,8 +137,17 @@ Template Name: Advise
 				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-imd.png" />
 			</div>
 			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-kj.png" />
+			</div>			
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-mitju.png" />
+			</div>			
+			<div class="large-2 medium-3 small-4 columns">
 				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-mnd.png" />
-			</div>		
+			</div>
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-moe.png" />
+			</div>			
 			<div class="large-2 medium-3 small-4 columns">
 				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-mothercare.png" />
 			</div>
@@ -151,6 +163,9 @@ Template Name: Advise
 			<div class="large-2 medium-3 small-4 columns">
 				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-pub.png" />
 			</div>
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-recruit.png" />
+			</div>			
 			<div class="large-2 medium-3 small-4 columns">
 				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-sas.png" />
 			</div>		
