@@ -20,6 +20,39 @@ h2 {
 	text-align: center;
 }
 
+.text--small {
+	@include text-small-caps;
+}
+
+article {
+	a, a:visited, a:active {
+		color: $black;
+		border-bottom: 1px solid $ag-yellow;
+	}
+	a:hover {
+		color: $black;
+		background: $ag-yellow;
+	}
+}
+.essb_item a:hover {
+	background: none;
+}
+a.icon--sm {
+	color: $oil;
+	border: none;
+}
+footer a.icon--sm {
+	color: $white;
+}
+a.icon--sm:hover {
+	color: $ag-yellow;
+	background: none;	
+}
+
+.icon--large {
+	font-size: 35px;
+}
+
 .button {
 	@include text-base-caps; 
 }
@@ -41,6 +74,50 @@ figure {
 	border: none;
 	font-style: normal;	
 }
+
+.l-testimonials em {
+	display: block;
+	@include text-small-caps;
+	font-style: normal;
+	margin-bottom: 3em;
+}
+
+.l-headshot img {
+	margin: 0.5em 0 2em 0;
+}
+
+.menu__item a,
+.header__image-wrap > img,
+.tile-single a .attachment--tile,
+.tile-single-wide a .attachment--tile,
+.header__image-wrap .icon--play,
+article a,
+footer a,
+button {
+	-webkit-transition: all 0.2s; /* For Safari 3.1 to 6.0 */
+  transition: all 0.2s;
+}
+
+
+
+/***** LAYOUT BLOCKS *****/
+
+@media #{$small-up} { 
+	.radius-left {
+	  border-radius: 3px !important;
+	}
+	.radius-right {
+	  border-radius: 3px !important;  
+	}
+}
+@media #{$medium-up} {
+	.radius-left {
+	  border-radius: 3px 0 0 3px !important;
+	}
+	.radius-right {
+	  border-radius: 0 3px 3px 0 !important;  
+	}
+}	
 
 // A fix for pre and postfix radius not working in Foundation. 
 .prePostfix-radius--fix-left {
@@ -128,6 +205,12 @@ figure {
 		margin-top: 10em;
 	}	
 }
+
+@media #{$large-up} {
+	.l-clients > div {
+		margin-bottom: 1em;
+	}
+}	
 
 .section--airtight {
 	margin-top: 0;
@@ -228,12 +311,12 @@ footer {
 }
 
 footer {
-	a, a:hover {
+	a, a:active, a:visited {
 		color: $white;		
 	}
 	a:hover {
-		text-decoration: underline;
-	};
+		color: $ag-yellow;
+	}
 }
 
 .footer__contact-wrap {
@@ -441,13 +524,6 @@ article.ag_team {
   opacity: 1;
   filter: alpha(opacity=100); /* For IE8 and earlier */	
 }
-.header__image-wrap > img,
-.tile-single a .attachment--tile,
-.tile-single-wide a .attachment--tile,
-.header__image-wrap .icon--play {
-	-webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
-  transition: all 0.3s;
-}
 
 .tile__label-wrap,
 .header__label-wrap {
@@ -568,7 +644,7 @@ article.ag_team {
 		max-width: none;
 	}
 	@media #{$small-up} { 
-	  height:400px;
+	  height:350px;
 	}
 	@media #{$medium-up} {
 	  height:550px;
