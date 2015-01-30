@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<!-- Begin single-ag_share -->
+	<!-- Begin single-ag_speak -->
 	<?php do_action('foundationPress_before_content'); ?>
 
 	<?php while (have_posts()) : the_post(); ?>
@@ -15,6 +15,10 @@
 					</div>
 				</div>	
 			</section>
+			
+			<header class="l-header-single-post">
+				<img src="<?php the_field('header_image'); ?>" />
+			</header>
 						
 			<?php do_action('foundationPress_post_before_entry_content'); ?>
 			
@@ -24,13 +28,23 @@
 						<div class="post__title">
 							<h1><?php the_title(); ?></h1>
 							<div class="post__summary">
-								<?php the_time('F Y') ?><br />
-								<?php echo __('Written by ', 'FoundationPress') . get_the_author(); ?>
+								<?php the_field('engagement_event'); ?><br />
+								<?php the_field('engagement_location'); ?><br />
+								<?php the_field('engagement_date'); ?><br />
+								Speaker: <?php the_field('engagement_speaker'); ?>
 							</div>			
 						</div>		
 						<?php the_content(); ?>
 					</div>
 				</div>				
+			</section>
+			
+			<section class="clearfix <?php the_field('testimonial_present'); ?> l-testimonials">
+				<div class="row">
+					<div class="small-12 medium-8 medium-offset-2 columns text--center">
+						<p><?php the_field('project_testimonials'); ?></p>
+					</div>
+				</div>
 			</section>
 
 		</article>
@@ -38,6 +52,6 @@
 
 	<?php do_action('foundationPress_after_content'); ?>
 
-	<?php get_template_part('parts/newsletter-signup'); ?>
+	<?php get_template_part('parts/speaking'); ?>
 
 <?php get_footer(); ?>

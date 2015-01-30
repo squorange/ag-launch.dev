@@ -212,6 +212,14 @@ button {
 	}
 }	
 
+.l-listings ul {
+	list-style-type: none;
+	margin: 0 0 1em 0;
+}
+.l-listings li > ul li {
+	@include text-small-caps;
+}
+
 .section--airtight {
 	margin-top: 0;
 	margin-bottom: 0;
@@ -625,7 +633,8 @@ article.ag_team {
 
 /***** NINJA FORMS *****/
 
-.ninja-forms-field {
+.ninja-forms-field,
+.newsletter__input {
 	margin-bottom: 1em !important;
 }
 

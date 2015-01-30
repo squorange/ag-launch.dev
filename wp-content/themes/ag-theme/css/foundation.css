@@ -5753,6 +5753,15 @@ button {
 @media only screen and (min-width: 64.063em) {
   .l-clients > div {
     margin-bottom: 1em; } }
+.l-listings ul {
+  list-style-type: none;
+  margin: 0 0 1em 0; }
+
+.l-listings li > ul li {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem; }
+
 .section--airtight {
   margin-top: 0;
   margin-bottom: 0; }
@@ -6120,7 +6129,8 @@ button.filter:hover {
   display: none; }
 
 /***** NINJA FORMS *****/
-.ninja-forms-field {
+.ninja-forms-field,
+.newsletter__input {
   margin-bottom: 1em !important; }
 
 .ninja-forms-required-items {
