@@ -54190,7 +54190,7 @@
 		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/css\/foundation.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
+		"outputStyle": 3,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 0
