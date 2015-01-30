@@ -46,7 +46,8 @@ Template Name: Speak
 										<?php the_title(); ?>
 									</div>
 									<div class="tile__label-caption">
-										<?php echo get_the_excerpt(); ?>
+									<?php the_field('engagement_event'); ?>:<br />
+									<?php the_field('engagement_location'); ?>
 									</div>
 								</div><!-- end .tile__label-inner -->
 							</div><!-- end .tile__label-wrap -->
@@ -69,6 +70,7 @@ Template Name: Speak
 	<section class="l-gray-light clearfix"> <!-- BEGIN EVENTS LIST -->
 		<div class="row">
 			<div class="small-12 medium-8 medium-offset-2 columns text--center l-listings">
+				<h2 class="post__title text--bold">Our Past Events</h2>
 				<?php the_content(); ?>
 			</div>
 		</div>
