@@ -11,7 +11,7 @@ Template Name: Share
 
 	<header class="clearfix l-yellow-short">
 	  <div class="row row--header row--first">
-	    <div class="large-12 columns header__text-title">
+	    <div class="large-10 large-offset-1 columns header__text-title">
 				<h1><?php the_field('header_statement'); ?></h1>
 			</div>
 		</div>

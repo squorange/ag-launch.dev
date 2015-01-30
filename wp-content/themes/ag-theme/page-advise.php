@@ -16,7 +16,7 @@ Template Name: Advise
 			</div>
 		</div>
 		<div class="row">
-			<div class="large-6 large-offset-3 columns header__text-blurb">
+			<div class="large-8 large-offset-2 columns header__text-blurb">
 				<?php the_field('header_blurb'); ?>
 			</div>
 		</div>	

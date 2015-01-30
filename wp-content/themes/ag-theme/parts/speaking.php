@@ -3,7 +3,7 @@
 	<div class="row row--header">
     <div class="large-10 large-offset-1 columns">
 			<h1>
-			Please let us know if you'd like us to speak at your next event.
+			Please let us know if you'd like us to speak at your next event
 			</h1>
 		</div>
 	</div>
