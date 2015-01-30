@@ -14,7 +14,7 @@
 	</div>
 	<div class="row row--last">
 		<div class="large-4 large-offset-4 medium-6 medium-offset-3 columns">
-			<a href="mailto:contact@awakengroup.com" class="button expand">contact@awakengroup.com</a>
+			<a href="mailto:speaking@awakengroup.com" class="button expand">speaking@awakengroup.com</a>
 		</div>
 	</div>	
 
