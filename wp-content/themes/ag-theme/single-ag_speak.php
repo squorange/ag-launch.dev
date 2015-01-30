@@ -28,8 +28,7 @@
 						<div class="post__title">
 							<h1><?php the_title(); ?></h1>
 							<div class="post__summary">
-								<?php the_field('engagement_event'); ?><br />
-								<?php the_field('engagement_location'); ?><br />
+								<?php the_field('engagement_event'); ?>: <?php the_field('engagement_location'); ?><br />
 								<?php the_field('engagement_date'); ?><br />
 								Speaker: <?php the_field('engagement_speaker'); ?>
 							</div>			

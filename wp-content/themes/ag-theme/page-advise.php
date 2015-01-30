@@ -29,7 +29,7 @@ Template Name: Advise
 	<button class="filter" data-filter=".advise__branding-experience">Branding / Experience Design</button>
 	<button class="filter" data-filter=".advise__leadership">Leadership Development</button>
 	<button class="filter" data-filter=".advise__capability">Capability Building</button>	
-	<button class="filter" data-filter=".advise__speaking-facilitation">Speaking / Facilitation</button>	
+	<button class="filter" data-filter=".advise__speaking-facilitation">Facilitation</button>	
 <!--
 	<button class="sort" data-sort="default">Default</button>
 	<button class="sort" data-sort="myorder:asc">Ascending</button>
