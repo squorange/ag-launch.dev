@@ -80,6 +80,16 @@ figure {
 	@include text-small-caps;
 	font-style: normal;
 	margin-bottom: 3em;
+	color: $aluminum;
+}
+
+.l-listings ul {
+	list-style-type: none;
+	margin: 0 0 1em 0;
+}
+.l-listings li > ul li {
+	@include text-small-caps;
+	color: $aluminum;
 }
 
 .l-headshot img {
@@ -211,14 +221,6 @@ button {
 		margin-bottom: 1em;
 	}
 }	
-
-.l-listings ul {
-	list-style-type: none;
-	margin: 0 0 1em 0;
-}
-.l-listings li > ul li {
-	@include text-small-caps;
-}
 
 .section--airtight {
 	margin-top: 0;
@@ -593,6 +595,11 @@ article.ag_team {
 	display: none;
 }
 
+.tile__label-inner h2 {
+	@include tile__label;
+	color: $ag-yellow;
+}
+
 .tile-single a:hover,
 .tile-single-wide a:hover {
 	.tile__label-caption {
@@ -601,6 +608,9 @@ article.ag_team {
 	.tile__label-title,
 	.tile__label-title-alt {
 		display: none;
+	}
+	.tile__label-inner h2 {
+		color: $oil;
 	}
 }
 

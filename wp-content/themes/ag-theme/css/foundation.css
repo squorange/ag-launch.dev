@@ -5653,7 +5653,18 @@ figure {
   text-transform: uppercase;
   letter-spacing: 0.05rem;
   font-style: normal;
-  margin-bottom: 3em; }
+  margin-bottom: 3em;
+  color: #999999; }
+
+.l-listings ul {
+  list-style-type: none;
+  margin: 0 0 1em 0; }
+
+.l-listings li > ul li {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  color: #999999; }
 
 .l-headshot img {
   margin: 0.5em 0 2em 0; }
@@ -5753,15 +5764,6 @@ button {
 @media only screen and (min-width: 64.063em) {
   .l-clients > div {
     margin-bottom: 1em; } }
-.l-listings ul {
-  list-style-type: none;
-  margin: 0 0 1em 0; }
-
-.l-listings li > ul li {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem; }
-
 .section--airtight {
   margin-top: 0;
   margin-bottom: 0; }
@@ -6094,6 +6096,13 @@ article.ag_team {
   color: #333333;
   display: none; }
 
+.tile__label-inner h2 {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0 20px;
+  color: #FDDB45; }
+
 .tile-single a:hover .tile__label-caption,
 .tile-single-wide a:hover .tile__label-caption {
   display: table-cell !important; }
@@ -6103,6 +6112,9 @@ article.ag_team {
 .tile-single-wide a:hover .tile__label-name,
 .tile-single-wide a:hover .tile__label-title-alt {
   display: none; }
+.tile-single a:hover .tile__label-inner h2,
+.tile-single-wide a:hover .tile__label-inner h2 {
+  color: #333333; }
 
 .l-filters {
   background: #555555;
@@ -6188,3 +6200,5 @@ button.filter:hover {
   left: 0;
   width: 100%;
   height: 100%; }
+
+/*# sourceMappingURL=foundation.css.map */
