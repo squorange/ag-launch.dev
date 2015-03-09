@@ -64,9 +64,7 @@ Template Name: Speak
 
 		</div>
 	</section> <!-- END TILES -->
-	
-	<?php get_template_part('parts/speaking'); ?>
-	
+		
 	<section class="l-gray-light clearfix"> <!-- BEGIN EVENTS LIST -->
 		<div class="row">
 			<div class="small-12 medium-8 medium-offset-2 columns text--center l-listings">
@@ -77,6 +75,8 @@ Template Name: Speak
 	</section>
 	
 	<?php endwhile; // end of the loop. ?>	
+	
+	<?php get_template_part('parts/speaking'); ?>
 
 	<?php do_action('foundationPress_after_content'); ?>
 
