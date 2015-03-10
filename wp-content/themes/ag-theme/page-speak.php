@@ -66,6 +66,13 @@ Template Name: Speak
 	</section> <!-- END TILES -->
 		
 	<section class="l-gray-light clearfix"> <!-- BEGIN EVENTS LIST -->
+		<div class="row <?php the_field('upcoming_events_available'); ?>">
+			<div class="small-12 medium-8 medium-offset-2 columns text--center l-listings">
+				<h2 class="post__title text--bold">Upcoming Events</h2>
+				<?php the_field('upcoming_events'); ?>
+				<br /><br />
+			</div>
+		</div>
 		<div class="row">
 			<div class="small-12 medium-8 medium-offset-2 columns text--center l-listings">
 				<h2 class="post__title text--bold">Our Past Events</h2>
