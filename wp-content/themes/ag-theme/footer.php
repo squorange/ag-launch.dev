@@ -9,7 +9,7 @@
 						Singapore 187969<br />
 						<br />
 						<span class="text--bold">USA</span><br />
-						445 S Figueroa St #2600<br />
+						445 S Figueroa St #3100<br />
 						Los Angeles CA 90071<br />
 					</div>
 				</div>

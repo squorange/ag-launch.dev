@@ -38,7 +38,7 @@ Template Name: Contact
 				<div class="clearfix">
 				<address class="vcard"> 
 				<h2 class="text--bold org">USA</h2>
-				<div class="adr"><span class="street-address">445 S Figueroa #2600</span><br />
+				<div class="adr"><span class="street-address">445 S Figueroa #3100</span><br />
 				<span class="locality">Los Angeles</span> <abbr class="region" title="California">CA</abbr> <span class="postal-code">90071</span></div>
 				<div class="tel">+1 310 265 9029</div>
 				</address>
