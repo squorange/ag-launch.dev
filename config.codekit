@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "18493",
+"creatorBuild": "19022",
 "files": {
 	"\/400.shtml": {
 		"fileType": 8192,
@@ -7227,16 +7227,25 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/backup-1421792307-wp-includes\/js\/tinymce\/skins\/lightgray\/fonts\/readme.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/backup-1421792307-wp-includes\/js\/tinymce\/skins\/lightgray\/fonts\/readme.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/backup-1421792307-wp-includes\/js\/tinymce\/skins\/lightgray\/fonts\/readme.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/backup-1421792307-wp-includes\/js\/tinymce\/skins\/lightgray\/skin.ie7.min.css": {
 		"fileType": 16,
@@ -8699,6 +8708,17 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/MOJOWordpressInstaller-I0ftxn40MA.state.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/MOJOWordpressInstaller-I0ftxn40MA.state.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/MOJOWordpressInstaller-I0ftxn40MA.state-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/readme.html": {
 		"fileType": 8192,
@@ -12963,16 +12983,25 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/wp-content\/backup-1421792307-plugins\/jetpack\/_inc\/genericons\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/backup-1421792307-plugins\/jetpack\/_inc\/genericons\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/backup-1421792307-plugins\/jetpack\/_inc\/genericons\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/backup-1421792307-plugins\/jetpack\/_inc\/header.php": {
 		"fileType": 8192,
@@ -13157,16 +13186,25 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/wp-content\/backup-1421792307-plugins\/jetpack\/_inc\/lib\/markdown\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/backup-1421792307-plugins\/jetpack\/_inc\/lib\/markdown\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/backup-1421792307-plugins\/jetpack\/_inc\/lib\/markdown\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/backup-1421792307-plugins\/jetpack\/_inc\/lib\/markdown\/test.php": {
 		"fileType": 8192,
@@ -13450,6 +13488,17 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/wp-content\/backup-1421792307-plugins\/jetpack\/composer.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/backup-1421792307-plugins\/jetpack\/composer.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/backup-1421792307-plugins\/jetpack\/composer-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/wp-content\/backup-1421792307-plugins\/jetpack\/css\/jetpack-admin-rtl.css": {
 		"fileType": 16,
@@ -20138,16 +20187,25 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/wp-content\/backup-1421792307-themes\/twentyfifteen\/genericons\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/backup-1421792307-themes\/twentyfifteen\/genericons\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/backup-1421792307-themes\/twentyfifteen\/genericons\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/backup-1421792307-themes\/twentyfifteen\/header.php": {
 		"fileType": 8192,
@@ -22440,16 +22498,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/wp-content\/plugins\/advanced-custom-fields\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/plugins\/advanced-custom-fields\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/plugins\/advanced-custom-fields\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/plugins\/advanced-custom-fields\/screenshot-1.png": {
 		"fileType": 32768,
@@ -36958,6 +37025,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/wp-content\/plugins\/easy-social-share-buttons\/assets\/fonts\/fanscounter-source\/config.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/plugins\/easy-social-share-buttons\/assets\/fonts\/fanscounter-source\/config.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/plugins\/easy-social-share-buttons\/assets\/fonts\/fanscounter-source\/config-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/wp-content\/plugins\/easy-social-share-buttons\/assets\/fonts\/fanscounter-source\/css\/animation.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -38669,16 +38747,25 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/wp-content\/plugins\/easy-social-share-buttons\/lib\/external\/autoupdate\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/plugins\/easy-social-share-buttons\/lib\/external\/autoupdate\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/plugins\/easy-social-share-buttons\/lib\/external\/autoupdate\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/plugins\/easy-social-share-buttons\/lib\/external\/linkedin\/linkedin.php": {
 		"fileType": 8192,
@@ -39216,16 +39303,25 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/wp-content\/plugins\/enable-media-replace\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/plugins\/enable-media-replace\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/plugins\/enable-media-replace\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/plugins\/enable-media-replace\/upload.php": {
 		"fileType": 8192,
@@ -39847,16 +39943,25 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/wp-content\/plugins\/ninja-forms\/CONTRIBUTING.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/plugins\/ninja-forms\/CONTRIBUTING.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/plugins\/ninja-forms\/CONTRIBUTING.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/plugins\/ninja-forms\/css\/fonts.css": {
 		"fileType": 16,
@@ -41896,16 +42001,25 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/wp-content\/plugins\/ninja-forms\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/plugins\/ninja-forms\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/plugins\/ninja-forms\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/plugins\/post-types-order\/css\/cpt.css": {
 		"fileType": 16,
@@ -42676,16 +42790,25 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/CHANGES.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/CHANGES.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/CHANGES.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/ckeditor.js": {
 		"fileType": 64,
@@ -42763,16 +42886,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/LICENSE.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/LICENSE.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/LICENSE.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/plugins\/a11yhelp\/dialogs\/a11yhelp.js": {
 		"fileType": 64,
@@ -43587,28 +43719,46 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/plugins\/scayt\/LICENSE.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/plugins\/scayt\/LICENSE.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/plugins\/scayt\/LICENSE.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/plugins\/scayt\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/plugins\/scayt\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/plugins\/scayt\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/plugins\/specialchar\/dialogs\/lang\/ar.js": {
 		"fileType": 64,
@@ -44197,40 +44347,67 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/plugins\/wsc\/LICENSE.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/plugins\/wsc\/LICENSE.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/plugins\/wsc\/LICENSE.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/plugins\/wsc\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/plugins\/wsc\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/plugins\/wsc\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/skins\/moono\/dialog.css": {
 		"fileType": 16,
@@ -44462,16 +44639,25 @@
 		"processed": 0
 		},
 	"\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/skins\/moono\/readme.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/skins\/moono\/readme.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/skins\/moono\/readme.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/plugins\/wck-custom-fields-and-custom-post-types-creator\/wordpress-creation-kit-api\/assets\/js\/ckeditor\/styles.js": {
 		"fileType": 64,
@@ -44650,16 +44836,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/wp-content\/plugins\/wp-tevko-responsive-images-master\/readme.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/plugins\/wp-tevko-responsive-images-master\/readme.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/plugins\/wp-tevko-responsive-images-master\/readme.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/plugins\/wp-tevko-responsive-images-master\/wp-tevko-responsive-images.php": {
 		"fileType": 8192,
@@ -44750,6 +44945,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/wp-content\/themes\/ag-foundationpress\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-foundationpress\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-foundationpress\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/wp-content\/themes\/ag-foundationpress\/bower_components\/fastclick\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-foundationpress\/bower_components\/fastclick\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-foundationpress\/bower_components\/fastclick\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/wp-content\/themes\/ag-foundationpress\/bower_components\/fastclick\/lib\/fastclick.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -44762,16 +44979,36 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/wp-content\/themes\/ag-foundationpress\/bower_components\/fastclick\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-foundationpress\/bower_components\/fastclick\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-foundationpress\/bower_components\/fastclick\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
+	"\/wp-content\/themes\/ag-foundationpress\/bower_components\/foundation\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-foundationpress\/bower_components\/foundation\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-foundationpress\/bower_components\/foundation\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/wp-content\/themes\/ag-foundationpress\/bower_components\/foundation\/css\/foundation.css": {
 		"fileType": 16,
@@ -45743,6 +45980,17 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/wp-content\/themes\/ag-foundationpress\/bower_components\/jquery-placeholder\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-foundationpress\/bower_components\/jquery-placeholder\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-foundationpress\/bower_components\/jquery-placeholder\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/wp-content\/themes\/ag-foundationpress\/bower_components\/jquery-placeholder\/demo.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -45764,16 +46012,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/wp-content\/themes\/ag-foundationpress\/bower_components\/jquery-placeholder\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-foundationpress\/bower_components\/jquery-placeholder\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-foundationpress\/bower_components\/jquery-placeholder\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/themes\/ag-foundationpress\/bower_components\/jquery-placeholder\/tests\/index.html": {
 		"fileType": 8192,
@@ -45805,6 +46062,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/wp-content\/themes\/ag-foundationpress\/bower_components\/jquery\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-foundationpress\/bower_components\/jquery\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-foundationpress\/bower_components\/jquery\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/wp-content\/themes\/ag-foundationpress\/bower_components\/jquery\/dist\/jquery.js": {
 		"fileType": 64,
@@ -46729,6 +46997,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/wp-content\/themes\/ag-foundationpress\/bower_components\/lodash\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-foundationpress\/bower_components\/lodash\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-foundationpress\/bower_components\/lodash\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/wp-content\/themes\/ag-foundationpress\/bower_components\/lodash\/dist\/lodash.compat.js": {
 		"fileType": 64,
@@ -47963,16 +48242,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/wp-content\/themes\/ag-foundationpress\/bower_components\/modernizr\/readme.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-foundationpress\/bower_components\/modernizr\/readme.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-foundationpress\/bower_components\/modernizr\/readme.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/themes\/ag-foundationpress\/bower_components\/modernizr\/test\/basic.html": {
 		"fileType": 8192,
@@ -48854,6 +49142,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/wp-content\/themes\/ag-foundationpress\/package.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-foundationpress\/package.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-foundationpress\/package-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/wp-content\/themes\/ag-foundationpress\/page-full.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -48900,16 +49199,25 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/wp-content\/themes\/ag-foundationpress\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-foundationpress\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-foundationpress\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/themes\/ag-foundationpress\/screenshot.png": {
 		"fileType": 32768,
@@ -49618,6 +49926,28 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/wp-content\/themes\/ag-theme\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/wp-content\/themes\/ag-theme\/bower_components\/fastclick\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/bower_components\/fastclick\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/bower_components\/fastclick\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/wp-content\/themes\/ag-theme\/bower_components\/fastclick\/lib\/fastclick.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -49630,16 +49960,36 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/wp-content\/themes\/ag-theme\/bower_components\/fastclick\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/bower_components\/fastclick\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/bower_components\/fastclick\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
+	"\/wp-content\/themes\/ag-theme\/bower_components\/foundation\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/bower_components\/foundation\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/bower_components\/foundation\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/wp-content\/themes\/ag-theme\/bower_components\/foundation\/css\/foundation.css": {
 		"fileType": 16,
@@ -50611,6 +50961,17 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/wp-content\/themes\/ag-theme\/bower_components\/jquery-placeholder\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/bower_components\/jquery-placeholder\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/bower_components\/jquery-placeholder\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/wp-content\/themes\/ag-theme\/bower_components\/jquery-placeholder\/demo.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -50632,16 +50993,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/wp-content\/themes\/ag-theme\/bower_components\/jquery-placeholder\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/bower_components\/jquery-placeholder\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/bower_components\/jquery-placeholder\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/themes\/ag-theme\/bower_components\/jquery-placeholder\/tests\/index.html": {
 		"fileType": 8192,
@@ -50673,6 +51043,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/wp-content\/themes\/ag-theme\/bower_components\/jquery\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/bower_components\/jquery\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/bower_components\/jquery\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/wp-content\/themes\/ag-theme\/bower_components\/jquery\/dist\/jquery.js": {
 		"fileType": 64,
@@ -51597,6 +51978,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/wp-content\/themes\/ag-theme\/bower_components\/lodash\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/bower_components\/lodash\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/bower_components\/lodash\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/wp-content\/themes\/ag-theme\/bower_components\/lodash\/dist\/lodash.compat.js": {
 		"fileType": 64,
@@ -52831,16 +53223,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/wp-content\/themes\/ag-theme\/bower_components\/modernizr\/readme.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/bower_components\/modernizr\/readme.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/bower_components\/modernizr\/readme.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/themes\/ag-theme\/bower_components\/modernizr\/test\/basic.html": {
 		"fileType": 8192,
@@ -53823,6 +54224,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/wp-content\/themes\/ag-theme\/package.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/package.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/package-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/wp-content\/themes\/ag-theme\/page-about.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -54013,16 +54425,25 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/wp-content\/themes\/ag-theme\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/themes\/ag-theme\/screenshot.png": {
 		"fileType": 32768,
@@ -54320,16 +54741,25 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/wp-content\/themes\/bones\/CHANGELOG.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/bones\/CHANGELOG.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/themes\/bones\/CHANGELOG.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/themes\/bones\/comments.php": {
 		"fileType": 8192,
@@ -54869,16 +55299,25 @@
 		"useLibsass": 0
 		},
 	"\/wp-content\/themes\/bones\/library\/translation\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/bones\/library\/translation\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/themes\/bones\/library\/translation\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/themes\/bones\/page-custom.php": {
 		"fileType": 8192,
@@ -54989,16 +55428,25 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/wp-content\/themes\/bones\/readme.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/bones\/readme.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/themes\/bones\/readme.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/themes\/bones\/screenshot.png": {
 		"fileType": 32768,
@@ -55136,6 +55584,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/wp-content\/themes\/foundationpress\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/foundationpress\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/themes\/foundationpress\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/wp-content\/themes\/foundationpress\/bower_components\/fastclick\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/foundationpress\/bower_components\/fastclick\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/themes\/foundationpress\/bower_components\/fastclick\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/wp-content\/themes\/foundationpress\/bower_components\/fastclick\/lib\/fastclick.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -55148,16 +55618,36 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/wp-content\/themes\/foundationpress\/bower_components\/fastclick\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/foundationpress\/bower_components\/fastclick\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/themes\/foundationpress\/bower_components\/fastclick\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
+	"\/wp-content\/themes\/foundationpress\/bower_components\/foundation\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/foundationpress\/bower_components\/foundation\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/themes\/foundationpress\/bower_components\/foundation\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/wp-content\/themes\/foundationpress\/bower_components\/foundation\/css\/foundation.css": {
 		"fileType": 16,
@@ -56129,6 +56619,17 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/wp-content\/themes\/foundationpress\/bower_components\/jquery-placeholder\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/foundationpress\/bower_components\/jquery-placeholder\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/themes\/foundationpress\/bower_components\/jquery-placeholder\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/wp-content\/themes\/foundationpress\/bower_components\/jquery-placeholder\/demo.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -56150,16 +56651,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/wp-content\/themes\/foundationpress\/bower_components\/jquery-placeholder\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/foundationpress\/bower_components\/jquery-placeholder\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/themes\/foundationpress\/bower_components\/jquery-placeholder\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/themes\/foundationpress\/bower_components\/jquery-placeholder\/tests\/index.html": {
 		"fileType": 8192,
@@ -56191,6 +56701,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/wp-content\/themes\/foundationpress\/bower_components\/jquery\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/foundationpress\/bower_components\/jquery\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/themes\/foundationpress\/bower_components\/jquery\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/wp-content\/themes\/foundationpress\/bower_components\/jquery\/dist\/jquery.js": {
 		"fileType": 64,
@@ -57115,6 +57636,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/wp-content\/themes\/foundationpress\/bower_components\/lodash\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/foundationpress\/bower_components\/lodash\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/themes\/foundationpress\/bower_components\/lodash\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/wp-content\/themes\/foundationpress\/bower_components\/lodash\/dist\/lodash.compat.js": {
 		"fileType": 64,
@@ -58349,16 +58881,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/wp-content\/themes\/foundationpress\/bower_components\/modernizr\/readme.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/foundationpress\/bower_components\/modernizr\/readme.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/themes\/foundationpress\/bower_components\/modernizr\/readme.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/themes\/foundationpress\/bower_components\/modernizr\/test\/basic.html": {
 		"fileType": 8192,
@@ -59240,6 +59781,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/wp-content\/themes\/foundationpress\/package.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/foundationpress\/package.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/wp-content\/themes\/foundationpress\/package-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/wp-content\/themes\/foundationpress\/page-full.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -59286,16 +59838,25 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/wp-content\/themes\/foundationpress\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/foundationpress\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/themes\/foundationpress\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/themes\/foundationpress\/screenshot.png": {
 		"fileType": 32768,
@@ -59605,16 +60166,25 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/wp-content\/themes\/twentyfifteen\/genericons\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/twentyfifteen\/genericons\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-content\/themes\/twentyfifteen\/genericons\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-content\/themes\/twentyfifteen\/header.php": {
 		"fileType": 8192,
@@ -71830,16 +72400,25 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/wp-includes\/js\/tinymce\/skins\/lightgray\/fonts\/readme.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-includes\/js\/tinymce\/skins\/lightgray\/fonts\/readme.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/wp-includes\/js\/tinymce\/skins\/lightgray\/fonts\/readme.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/wp-includes\/js\/tinymce\/skins\/lightgray\/skin.ie7.min.css": {
 		"fileType": 16,
@@ -73656,6 +74235,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"futurehostile": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"globalstrict": {
 			"active": 0,
 			"flagValue": -1
@@ -73742,6 +74325,10 @@
 			},
 		"noarg": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"nocomma": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"node": {
@@ -73842,6 +74429,10 @@
 			},
 		"unused": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"varstmt": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"withstmt": {
@@ -73967,6 +74558,14 @@
 			"flagValue": -1
 			}
 		},
+	"jsonAutoOutputPathEnabled": 0,
+	"jsonAutoOutputPathFilenamePattern": "*-min.json",
+	"jsonAutoOutputPathRelativePath": "",
+	"jsonAutoOutputPathReplace1": "",
+	"jsonAutoOutputPathReplace2": "",
+	"jsonAutoOutputPathStyle": 0,
+	"jsonOrderOutput": 0,
+	"jsonOutputStyle": 1,
 	"kitAutoOutputPathEnabled": 1,
 	"kitAutoOutputPathFilenamePattern": "*.html",
 	"kitAutoOutputPathRelativePath": "",
@@ -73994,9 +74593,18 @@
 	"markdownAutoOutputPathReplace1": "",
 	"markdownAutoOutputPathReplace2": "",
 	"markdownAutoOutputPathStyle": 0,
+	"markdownCriticStyle": 0,
 	"markdownEnableFootnotes": 0,
-	"markdownEnableSmartyPants": 1,
-	"markdownExpandTabs": 1,
+	"markdownEnableLabels": 1,
+	"markdownEnableSmartQuotes": 1,
+	"markdownEscapeLineBreaks": 0,
+	"markdownMaskEmailAddresses": 1,
+	"markdownOutputFormat": 0,
+	"markdownOutputStyle": 0,
+	"markdownParseMetadata": 1,
+	"markdownProcessHTML": 0,
+	"markdownRandomFootnoteNumbers": 0,
+	"markdownUseCompatibilityMode": 0,
 	"reloadFileURLs": 0,
 	"sassAutoOutputPathEnabled": 1,
 	"sassAutoOutputPathFilenamePattern": "*.css",
@@ -74052,6 +74660,10 @@
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
 		"ascii-only": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"bare-returns": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -74132,6 +74744,10 @@
 			"flagValue": -1
 			},
 		"keep_fargs": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"keep_fnames": {
 			"active": 0,
 			"flagValue": -1
 			},

@@ -20,6 +20,10 @@ h2 {
 	text-align: center;
 }
 
+.text--gray {
+	color: $base;
+}
+
 .text--small {
 	@include text-small-caps;
 }
