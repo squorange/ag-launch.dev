@@ -9,8 +9,8 @@
 						Singapore 187969<br />
 						<br />
 						<span class="text--bold">USA</span><br />
-						445 S Figueroa St #3100<br />
-						Los Angeles CA 90071<br />
+						5875 Green Valley Circle #200<br />
+						Culver City, CA 90230<br />
 					</div>
 				</div>
 				<div class="small-6 large-3 columns">
