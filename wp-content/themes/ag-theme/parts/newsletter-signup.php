@@ -6,58 +6,41 @@
 			Keep up-to-date on the latest in <span class="text--bold">Transformation Design</span>&mdash;Leadership, Culture, Design &amp; Innovation
 			</h1>
 		</div>
-	</div>
+	</div>	
+	
 	<div class="row">
-		<form method="post" action="https://app.icontact.com/icp/signup.php" name="icpsignup" id="icpsignup3221" accept-charset="UTF-8" onsubmit="return verifyRequired3221();" >
-			<input type="hidden" name="redirect" value="http://www.icontact.com/www/signup/thanks.html">
-			<input type="hidden" name="errorredirect" value="http://www.icontact.com/www/signup/error.html">
-	    <input type="hidden" name="listid" value="38749">
-	    <input type="hidden" name="specialid:38749" value="YT64">
-	    <input type="hidden" name="clientid" value="584675">
-	    <input type="hidden" name="formid" value="3221">
-	    <input type="hidden" name="reallistid" value="1">
-	    <input type="hidden" name="doubleopt" value="0">
+		<!-- Begin MailChimp Signup Form -->
+		<div id="mc_embed_signup">
+		<form action="//merlinkwan.us11.list-manage.com/subscribe/post?u=1b98522e46a8fa172844387f8&amp;id=40bdfab854" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 		
 			<div class="medium-6 medium-offset-3 columns">
 	      <div class="row medium-collapse">			
 	        <div class="medium-6 columns">
-						<input type="text" class="newsletter__input" name="fields_fname" placeholder="First name">
+						<input type="text" class="newsletter__input" name="FNAME" id="mce-FNAME" placeholder="First name">
 					</div>
 	        <div class="medium-6 columns">
-						<input type="text" class="newsletter__input" name="fields_lname" placeholder="Last name">
+						<input type="text" class="newsletter__input" name="LNAME" id="mce-LNAME" placeholder="Last name">
 					</div>
 				</div>
 				<div class="row small-uncollapse medium-collapse">
 					<div class="medium-12 columns">
-	          <input type="text" class="newsletter__input" name="fields_email" placeholder="What is your email?">
+	          <input type="email" class="newsletter__input required email" name="EMAIL" id="mce-EMAIL" placeholder="What is your email?">
 	        </div>
 				</div>
+				<div id="mce-responses" class="clear">
+					<div class="response" id="mce-error-response" style="display:none"></div>
+					<div class="response" id="mce-success-response" style="display:none"></div>
+				</div>
+				<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+		    <div style="position: absolute; left: -5000px;"><input type="text" name="b_1b98522e46a8fa172844387f8_40bdfab854" tabindex="-1" value=""></div>
 				<div class="row">
 	        <div class="medium-8 medium-offset-2 large-6 large-offset-3 columns">
-	          <a href="javascript:{}" class="button xradius expand" onclick="document.getElementById('icpsignup3221').submit(); return false;">Get Newsletter</a>
+						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button expand">						
 	        </div>				
 	      </div>
-			</div>
-		</form>
-		<script type="text/javascript">
-
-		var icpForm3221 = document.getElementById('icpsignup3221');
-
-		if (document.location.protocol === "https:")
-
-			icpForm3221.action = "https://app.icontact.com/icp/signup.php";
-		function verifyRequired3221() {
-		  if (icpForm3221["fields_email"].value == "") {
-		    icpForm3221["fields_email"].focus();
-		    alert("The Email field is required.");
-		    return false;
-		  }
-
-
-		return true;
-		}
-		</script>
-		
+			</form>
+			</div>			
+		<!--End mc_embed_signup-->
 	</div>
 
 </section> <!-- END NEWSLETTER SIGN-UP -->
