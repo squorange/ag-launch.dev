@@ -18,6 +18,7 @@
 						<a href="<?php echo home_url(); ?>/about/">About Us</a><br />
 						<a href="<?php echo home_url(); ?>/contact/">Contact Us</a><br />
 						<a href="<?php echo home_url(); ?>/funding/">Government Funding</a><br />
+						<a href="<?php echo home_url(); ?>/terms-and-conditions/">Terms &amp; Conditions</a><br />						
 						<br />
 <!--						
 						<a href="<?php echo home_url(); ?>/terms/">Terms of Use</a><br />
