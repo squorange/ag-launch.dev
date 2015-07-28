@@ -31,7 +31,7 @@ Template Name: Contact
 				<h2 class="text--bold org">Singapore</h2>
 				<div class="adr"><span class="street-address">51 Waterloo St #03-06</span><br />
 				<span class="locality">Singapore</span> <span class="postal-code">187969</span></div>
-				<div class="tel">+65 6337 6642</div>
+				<div class="tel">+65 6100 3018</div>
 				</address>
 				</div>
 				<br />
