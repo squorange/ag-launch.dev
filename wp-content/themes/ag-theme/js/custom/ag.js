@@ -379,7 +379,7 @@ $( document ).ready(function() {
 				var mapElement = document.getElementById('ag_map');
 				        var map = new google.maps.Map(mapElement, mapOptions);
 				        var locations = [
-				['Awaken Group', '51 Waterloo St. #03-06<br />Singapore 187969<br />', '+65 6337 6642', '', 'undefined', 1.2980448153109914, 103.85142729881136, 'http://ag-launch.dev/resources/icon-map-pin.png'],['NTUC Carpark', 'Enter from Queen St.', 'undefined', 'undefined', 'undefined', 1.2968434912953895, 103.8514464318771, 'http://ag-launch.dev/resources/icon-map-p.png']
+				['Awaken Group', '51 Waterloo St. #03-06<br />Singapore 187969<br />', '+65 6100 3018', '', 'undefined', 1.2980448153109914, 103.85142729881136, 'http://ag-launch.dev/resources/icon-map-pin.png'],['NTUC Carpark', 'Enter from Queen St.', 'undefined', 'undefined', 'undefined', 1.2968434912953895, 103.8514464318771, 'http://ag-launch.dev/resources/icon-map-p.png']
 				        ];
 				        for (i = 0; i < locations.length; i++) {
 							if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
