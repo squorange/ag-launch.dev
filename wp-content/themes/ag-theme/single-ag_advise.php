@@ -18,7 +18,7 @@
 						<div class="post__title">
 							<h1><?php the_title(); ?></h1>
 						</div>
-						<?php the_content(); ?>					
+						<?php the_content(); ?>
 					</div>
 				</div>
 
@@ -62,6 +62,7 @@
 					<div class="small-12 medium-8 medium-offset-2 columns">
 						<h2 class="post__subtitle">Impact</h2>
 						<?php the_field('project_impact'); ?>
+						<?php echo do_shortcode('[easy-social-share buttons="facebook,twitter,linkedin,mail" counters=0]'); ?>						
 					</div>
 				</div>
 				
