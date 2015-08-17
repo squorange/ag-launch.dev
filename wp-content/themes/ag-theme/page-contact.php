@@ -29,8 +29,11 @@ Template Name: Contact
 				<div class="clearfix">
 				<address class="vcard"> 
 				<h2 class="text--bold org">Singapore</h2>
-				<div class="adr"><span class="street-address">62 Cecil Street #05-00 TPI Building</span><br />
-				<span class="locality">Singapore</span> <span class="postal-code">049710</span></div>
+				<div class="adr">
+					<span class="street-address">62 Cecil Street #05-00</span><br />
+					TPI Building<br />
+					<span class="locality">Singapore</span> <span class="postal-code">049710</span>
+				</div>
 				<div class="tel">+65 6100 3018</div>
 				</address>
 				</div>
@@ -50,7 +53,8 @@ Template Name: Contact
 			</div>
 		</div>
 	</section>
-	
+
+<!--	
 	<section class="clearfix l-map">
 		<div class="tile-panel">
 			<div id='ag_map'></div>
@@ -71,6 +75,7 @@ Template Name: Contact
  			</div>
 		</div>		
 	</section>
+-->	
 			
 	<?php endwhile; // end of the loop. ?>		
 
