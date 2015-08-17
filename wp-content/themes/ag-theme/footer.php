@@ -5,8 +5,9 @@
 				<div class="small-6 large-3 columns">
 					<div class="footer__locations">
 						<span class="text--bold">Singapore</span><br />
-						51 Waterloo St #03-06<br />
-						Singapore 187969<br />
+						62 Cecil Street #05-00<br />
+						TPI Building<br />
+						Singapore 049710<br />
 						<br />
 						<span class="text--bold">USA</span><br />
 						5875 Green Valley Circle #200<br />

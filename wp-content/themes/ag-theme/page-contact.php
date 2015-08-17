@@ -29,8 +29,8 @@ Template Name: Contact
 				<div class="clearfix">
 				<address class="vcard"> 
 				<h2 class="text--bold org">Singapore</h2>
-				<div class="adr"><span class="street-address">51 Waterloo St #03-06</span><br />
-				<span class="locality">Singapore</span> <span class="postal-code">187969</span></div>
+				<div class="adr"><span class="street-address">62 Cecil Street #05-00 TPI Building</span><br />
+				<span class="locality">Singapore</span> <span class="postal-code">049710</span></div>
 				<div class="tel">+65 6100 3018</div>
 				</address>
 				</div>
