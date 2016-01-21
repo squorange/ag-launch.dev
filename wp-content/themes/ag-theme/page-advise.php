@@ -138,7 +138,10 @@ Template Name: Advise
 			</div>
 			<div class="large-2 medium-3 small-4 columns">
 				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-kj.png" />
-			</div>			
+			</div>
+			<div class="large-2 medium-3 small-4 columns">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-mandiri.png" />
+			</div>		
 			<div class="large-2 medium-3 small-4 columns">
 				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-mitju.png" />
 			</div>			
@@ -181,8 +184,11 @@ Template Name: Advise
 			<div class="large-2 medium-3 small-4 columns">
 				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-singtel.png" />
 			</div>
-			<div class="large-2 medium-3 small-4 columns end">
+			<div class="large-2 medium-3 small-4 columns">
 				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-spring.png" />
+			</div>
+			<div class="large-2 medium-3 small-4 columns end">
+				<img src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/images/logo-unilever.png" />
 			</div>
 																					
 		</div>

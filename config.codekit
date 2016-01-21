@@ -8729,6 +8729,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/resources\/ag-map.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 162853,
+		"inputAbbreviatedPath": "\/resources\/ag-map.png",
+		"outputAbbreviatedPath": "\/resources\/ag-map.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/resources\/icon-map-p.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -49781,6 +49792,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/wp-content\/themes\/ag-theme\/assets\/img\/images\/logo-mandiri.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6210,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/assets\/img\/images\/logo-mandiri.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/assets\/img\/images\/logo-mandiri.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/wp-content\/themes\/ag-theme\/assets\/img\/images\/logo-mitju.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -49942,6 +49964,17 @@
 		"initialSize": 13284,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/assets\/img\/images\/logo-spring.png",
 		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/assets\/img\/images\/logo-spring.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/themes\/ag-theme\/assets\/img\/images\/logo-unilever.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 13988,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/assets\/img\/images\/logo-unilever.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/ag-theme\/assets\/img\/images\/logo-unilever.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

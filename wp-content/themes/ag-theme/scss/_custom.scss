@@ -662,49 +662,20 @@ article.ag_team {
 
 /***** GOOGLE MAPS *****/
 
-#ag_map {
-  width:100%;
-	img {
-		max-width: none;
-	}
-	@media #{$small-up} { 
-	  height:350px;
-	}
-	@media #{$medium-up} {
-	  height:550px;
-	}	
- }
-.gm-style-iw * {
-    display: block;
-    width: 100%;
-}
-.gm-style-iw h4, .gm-style-iw p {
-    margin: 0;
-    padding: 0;
-}
-.gm-style-iw a {
-    color: #4272db;
+.googlemap {
+  position: relative;
+  padding-bottom: 75%; /* 4:3 ratio*/
+  height: 0;
+  overflow: hidden;
 }
 
-.icon--map {
-	width: 25px;
-	height: auto;
-}	
-
-.l-map {
-	background: $smoke;
-	@media #{$small-up} { 
-		.l-gray-light {
-			padding: 2em 0;
-		}
-	}
-	@media #{$large-up} {
-		.l-gray-light {
-			padding: 4em 0;	
-		}
-	}	
+.googlemap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
-
 
 
 

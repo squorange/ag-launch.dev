@@ -24,9 +24,17 @@ Template Name: Contact
 				<a class="icon--sm" target="_blank" href="https://www.facebook.com/awakengroup"><i class="fi-social-facebook icon--large"></i></a> &nbsp;&nbsp;
 				<a class="icon--sm" target="_blank" href="https://twitter.com/awakengroup"><i class="fi-social-twitter  icon--large"></i></a> &nbsp;&nbsp;
 				<a class="icon--sm" target="_blank" href="https://www.linkedin.com/company/awaken-group"><i class="fi-social-linkedin  icon--large"></i></a>
-				</p>
-				
-				<div class="clearfix">
+				</p>				
+			</div>
+			<div class="medium-6 columns">
+				<?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 1 ); }; ?>
+			</div>
+		</div>
+	</section>
+	
+	<section class="clearfix">
+		<div class="row text--center">
+			<div class="columns medium-6 section--cushion">
 				<address class="vcard"> 
 				<h2 class="text--bold org">Singapore</h2>
 				<div class="adr">
@@ -36,46 +44,21 @@ Template Name: Contact
 				</div>
 				<div class="tel">+65 6100 3018</div>
 				</address>
-				</div>
 				<br />
-				<div class="clearfix">
+			</div>
+			<div class="columns medium-6 section--cushion">
 				<address class="vcard"> 
 				<h2 class="text--bold org">USA</h2>
 				<div class="adr"><span class="street-address">5875 Green Valley Circle #200</span><br />
 				<span class="locality">Culver City</span> <abbr class="region" title="California">CA</abbr> <span class="postal-code">90230</span></div>
 				<div class="tel">+1 310 265 9029</div>
 				</address>
-				</div>
-				<br />&nbsp;<br />
+				<br />
 			</div>
-			<div class="medium-6 columns">
-				<?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 1 ); }; ?>
-			</div>
+		<div class="row">
+			<a href="https://www.google.com/maps/d/edit?mid=z5jNzN4zAPyg.kR--beATCaeo&usp=sharing" target="_blank"><img src="http://awakengroup.com/resources/ag-map.png" /></a>
 		</div>
 	</section>
-
-<!--	
-	<section class="clearfix l-map">
-		<div class="tile-panel">
-			<div id='ag_map'></div>
-		</div>
-		<div class="tile-panel">
-			<div class="row l-gray-light">
-				<div class="large-10 large-offset-1 columns">
-					<h2 class="text--bold">Getting to our office <img class="icon--map" src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/icon-map-pin.png" /></h2>
-					<p>
-					51 Waterloo St #03-06, Singapore 187969 &ndash; <a target="_blank" href="http://bit.ly/awaken-map">View Map</a>
-					</p><p>
-					We encourage using public transportation or taxis as parking nearby can be difficult. Our nearest MRT station is Bras Basah.
-					</p>
-					<h2 class="text--bold">Parking Directions  <img class="icon--map" src="<?php echo get_stylesheet_directory_uri() ; ?>/assets/img/icons/icon-map-p.png" /></h2>
-					<p>
-					The nearest carpark is located underground at NTUC and can be accessed from Queen Street. To get to our office, walk along Queen Street towards Middle Road. Turn left into the small street in front of Oxford Hotel and continue past the painted wall mural. Walk into the white colonial building and up to the 3rd floor. Make a right and you’ll find our office at the end of the hall!
-					</p>
- 			</div>
-		</div>		
-	</section>
--->	
 			
 	<?php endwhile; // end of the loop. ?>		
 
@@ -85,6 +68,6 @@ Template Name: Contact
 
 	<?php do_action('foundationPress_after_content'); ?>
 
-<script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script>
+<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAVw9OX04fiWX_vMaqxMGDCgHjpp3J8qWw&sensor=false&extension=.js'></script>
 
 <?php get_footer(); ?>
