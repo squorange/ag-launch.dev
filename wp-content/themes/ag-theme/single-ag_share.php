@@ -24,7 +24,7 @@
 						<div class="post__title">
 							<h1><?php the_title(); ?></h1>		
 							<div class="post__summary">
-							<?php echo __('Written by ', 'FoundationPress') . get_the_author(); ?><br />
+							<?php the_author_link(); ?><br />
 							<div class="text--gray"><?php the_time('F Y') ?></div>
 							</div>
 						</div>		
